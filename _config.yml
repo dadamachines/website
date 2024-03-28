@@ -6,8 +6,8 @@ email: hi@dadamachines.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://dadamachines.github.io/website/   # with the https protocol
-enforce_ssl: dadamachines.github.io/website/  # without any protocol
+url: https://dadamachines.github.io/ # with the https protocol
+enforce_ssl: dadamachines.github.io/ # without any protocol
 permalink: pretty
 #favicon: /path/to/favicon.png
 #gh_sponsor: nevvkid
