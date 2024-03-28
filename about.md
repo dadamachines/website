@@ -7,19 +7,25 @@ callouts:
 show_sidebar: false
 ---
 
-<div class="fluid-aspect_16x9"><span><img src="../img/about.jpg" alt="tollesbild"></span></div>
+<!-- Hero Image -->
+<div class="fluid-aspect_16x9">
+  <span>
+    <img src="../img/about.jpg" alt="tollesbild">
+  </span>
+</div>
 
 <!-- About -->
-<section class="dada-a section px-0 column is-8">
-    <h1 class="title is-size-1-desktop">About</h1>
-    <p class="subtitle is-size-3-desktop mt-1"><strong>Johannes Elias Lohbihler</strong> is a seasoned <strong>product designer / creative technologist</strong>. Amongst other ventures, he founded <a href="http://dadamachines.com" target="_blank">dadamachines</a> – a studio for multisensory experiences & open-source music technology. 
-    Recently he did a stint at <a href="https://supernova-lights.com/" target="_blank">Supernova</a> and helped <a href="http://www.korg.com" target="_blank">KORG</a> – setting up shop in <a href="http://korg.berlin" target="_blank">Berlin</a>. His expertise is ranging from crafts to creating digital and analog experiences, products, or services for large & small clients.</p>
-</section>
-
-
-  <div class="image-cropper mx-auto profile-image-container">
-      <img src="../img/johannes-elias-lohbihler-profileimage.jpg" alt="tollesbild" class="profile-image-inner">
+<div class="columns mt-4">
+    <div class="column is-8">
+        <h1 class="title is-size-1-desktop">About</h1>
+        <p class="subtitle is-size-3-desktop mt-1"><strong>Johannes Elias Lohbihler</strong> is a seasoned <strong>product designer / creative technologist</strong>. Amongst other ventures, he founded <a href="http://dadamachines.com" target="_blank">dadamachines</a> – a studio for multisensory experiences & open-source music technology. Recently he did a stint at <a href="https://supernova-lights.com/" target="_blank">Supernova</a> and helped <a href="http://www.korg.com" target="_blank">KORG</a> – setting up shop in <a href="http://korg.berlin" target="_blank">Berlin</a>. His expertise is ranging from crafts to creating digital and analog experiences, products, or services for large & small clients.</p>
     </div>
+    <div class="column is-4">
+      <div class="image-cropper mx-auto profile-image-container">
+        <img src="../img/johannes-elias-lohbihler-profileimage.jpg" alt="tollesbild" class="profile-image-inner">
+      </div>
+    </div>
+</div>
 
 <!-- Experience -->
 <div class="dada-a experience mt-6">

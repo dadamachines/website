@@ -30,6 +30,48 @@ body {
   font-kerning: normal;
 }
 
+
+// About Page Styles
+.About .fluid-aspect_16x9 {
+  @include fluid-aspect(16 9);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.About.section {
+  padding: 3rem 1.5rem;
+  padding-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem 3rem;
+  }
+
+  .section.is-medium {
+    padding: 9rem 4.5rem;
+  }
+
+  .section.is-large {
+    padding: 18rem 6rem;
+  }
+
+  .About.section {
+    padding: 3rem 3rem;
+    padding-top: 0;
+  }
+
+  .About.section.is-medium {
+    padding: 9rem 4.5rem;
+    padding-top: 0;
+  }
+
+  .About.section.is-large {
+    padding: 18rem 6rem;
+    padding-top: 0;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -130,7 +172,6 @@ ul.cv li {
   }
 }
 
-
 // Project Styles for Index
 .project-container {
   position: relative;
@@ -187,4 +228,36 @@ ul.cv li {
   &:hover .project-title, &:hover .project-title h2 {
     color: white;
   }
+}
+
+
+// Circular Profile Image
+.image-cropper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+}
+
+.profile-image-container {
+  margin-top: 5rem;
+
+  @include for-phone-only {
+    margin-top: 4rem;
+  }
+}
+
+.profile-image {
+  display: inline;
+  margin: 0 auto;
+  //margin-left: -25%; //centers the image
+  height: 100%;
+  width: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
 }
