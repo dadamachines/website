@@ -7,10 +7,10 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 3.9.5"
+gem "jekyll", "~> 3.9.5"
 
 # Github Pages
-gem "github-pages", "~> 231"
+# gem "github-pages", "~> 231"
 
 # Bulma Clean Theme with Github-Pages
 gem "bulma-clean-theme"
