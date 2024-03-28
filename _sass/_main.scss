@@ -1,0 +1,190 @@
+@charset "utf-8";
+@import "webfont";
+
+$family-sans-serif: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+$is-family-primary: "Lelo-Bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$is-family-secondary: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+$primary: #ffffff !default;
+
+$tabs-link-active-color: $primary;
+$tabs-link-active-border-bottom-color: $primary;
+
+$modal-content-width: 800px;
+
+@import "../node_modules/bulma/bulma.sass";
+$hero-darken: $dark !default;
+
+@import "layout";
+@import "syntax";
+@import "helpers";
+@import "showcase";
+@import "../node_modules/bulma-block-list/src/block-list.scss";
+
+body {
+  letter-spacing: 1px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern"1;
+  -moz-font-feature-settings: "kern"1;
+  -o-font-feature-settings: "kern"1;
+  font-feature-settings: "kern"1;
+  font-kerning: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+.strong {
+  font-family: $is-family-primary;
+}
+
+.dada-a {
+  a {
+    transition: color 0.4s;
+    text-decoration: none;
+    color: #111;
+    border-bottom: 3px solid #111;
+  
+    @include for-phone-only{
+      border-bottom: 2px solid #111;
+    }
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #0000ee;
+    border-bottom: 3px solid #0000ee;
+  
+    @include for-phone-only {
+      border-bottom: 2px solid #0000ee;
+    }
+  }
+}
+
+
+.navbar-item img.header__logo {
+  height: 31px;
+  max-width: none;
+}
+
+.navbar-item img, .navbar-item img.header__logo {
+  max-height: none;
+}
+
+.content {
+  img {
+    vertical-align: middle;
+    margin-bottom: 2rem;
+  }
+  .image-content {
+    margin-top: 2rem;
+  }
+}
+
+// Video Embeds
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.content ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ul.cv {
+
+  .time-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .time_period p {
+    color: #555;
+  }
+}
+
+ul.cv li {
+
+  &:hover {
+    background-color: #f3f3f3;
+  }
+}
+
+
+// Project Styles for Index
+.project-container {
+  position: relative;
+  @include fluid-aspect(16 9);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: $box-shadow;
+
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+
+  .overlay-outer {
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+  }
+
+  .overlay-inner {
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+  }
+
+  &:hover .image {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay-outer {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay-inner {
+    opacity: 1;
+  }
+
+  &:hover .project-title, &:hover .project-title h2 {
+    color: white;
+  }
+}

@@ -1,0 +1,20 @@
+- name: Products
+  link: /#
+  dropdown:
+    - name: Automat Toolkit
+      link: /products/automat-toolkit/
+    - name: Doppler
+      link: /products/doppler/
+- name: Shop
+  link: /shop/      
+- name: Projects
+  link: /projects/
+- name: About
+  link: /about/
+- name: Showcase
+  link: /showcase/
+- name: Docs
+  link: https://docs.dadamachines.com
+- name: Forum
+  link: https://forum.dadamachines.com
+

@@ -1,0 +1,42 @@
+<footer class="section has-background-black has-text-white">
+    <div class="container">
+      <div class="pb-5 is-flex is-flex-wrap-wrap is-justify-content-between is-align-items-center">
+        <div class="mr-auto is-size-3 pb-3">
+          <a class="is-inline-block" href="#">
+            <strong>dadamachines</strong>
+          </a>
+        </div>
+
+        {% if site.footer_menu %}
+        <div>
+            <ul class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
+            {% for item in site.data[site.footer_menu] %}
+                <li class="mr-4"><a class="button is-black" href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="pt-5" style="border-top: 1px solid #333;"></div>
+    <div class="container">
+      <div class="is-flex-tablet is-justify-content-between is-align-items-center">
+        <p>Copyright &copy; 2014-2024, <a href="https://lohbihler.com" target="_blank">Johannes Elias Lohbihler</a> for <a href="https://dadamachines.com" target="_blank">dadamachines</a></p>
+        <div class="py-2 is-hidden-tablet"></div>
+        <div class="ml-auto">
+          <a class="mr-4 is-inline-block" href="https://www.facebook.com/dadamachines" target="_blank">
+            <img src="{{ site.baseurl }}/img/facebook_bulma.svg" alt="">
+          </a>
+          <a class="mr-4 is-inline-block" href="https://github.com/dadamachines" target="_blank">
+            <img src="{{ site.baseurl }}/img/github_bulma.svg" alt="">
+          </a>
+          <a class="mr-4 is-inline-block" href="https://instagram.com/dadamachines" target="_blank">
+            <img src="{{ site.baseurl }}/img/instagram_bulma.svg" alt="">
+          </a>
+          <a class="is-inline-block" href="https://www.linkedin.com/in/johannes-elias-lohbihler/" target="_blank">
+            <img src="{{ site.baseurl }}/img/linkedin_bulma.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
