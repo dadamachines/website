@@ -49,7 +49,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-livereload: true
+livereload: false
 
 sass:
   style: compressed
