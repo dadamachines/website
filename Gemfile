@@ -9,11 +9,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.9.5"
 
-# Github Pages
-# gem "github-pages", "~> 231"
-
 # Bulma Clean Theme with Github-Pages
-gem 'bulma-clean-theme', '~> 0.13.3'
+gem 'bulma-clean-theme'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
