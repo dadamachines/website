@@ -29,7 +29,7 @@ disqus:
 
 # With GitHub Pages Gem
 theme: bulma-clean-theme
-remote_theme: chrisrhymes/bulma-clean-theme
+# remote_theme: chrisrhymes/bulma-clean-theme
 
 plugins:
   - jekyll-sitemap
