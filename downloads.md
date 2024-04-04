@@ -6,8 +6,6 @@ callouts:
 show_sidebar: false
 ---
 
-# Downloads
-
 ## automat toolkit
 - [firmware 1.0.0](https://docs.dadamachines.com/download/automat-sw_1.0.0.ino.automat.uf2){:target="_blank"}
 - [firmware 2.0.0](https://docs.dadamachines.com/download/automat-sw_2.0.0.ino.automat.uf2){:target="_blank"}
