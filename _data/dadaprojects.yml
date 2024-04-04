@@ -37,6 +37,15 @@ items:
     link: https://www.youtube.com/watch?v=hCZ63NLckO8
     link_text: View on Youtube
     tags:
+  - artist: Stubbleman
+    title: Live 2019
+    description: |-
+
+    image: /img/showcase/stubbleman-live2019.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=2xuT-iMCQpk
+    link_text: View on Youtube
+    tags:
   - artist: Portmanteaulabs
     title: Nautilus Music Machine - Demo Video
     description: |-
