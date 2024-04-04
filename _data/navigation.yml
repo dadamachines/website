@@ -10,7 +10,12 @@
 - name: Projects
   link: /projects/
 - name: About
-  link: /about/
+  link: /#
+  dropdown:
+    - name: dadamachines
+      link: /about/
+    - name: blog
+      link: /blog/
 - name: Showcase
   link: /showcase/
 - name: Docs

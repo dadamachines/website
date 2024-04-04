@@ -1,6 +1,6 @@
 ---
 title: doppler
-subtitle: This is the demo site for Bulma Clean Theme
+subtitle: create your own music hardware
 layout: page
 hide_hero: false
 hero_image: ../../img/projects/dadamachines-doppler-001.jpg
