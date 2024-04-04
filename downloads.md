@@ -1,6 +1,6 @@
 ---
 title: Downloads
-subtitle: This is the demo site for Bulma Clean Theme
+subtitle: Find Software, Firmware, Manual and other downloads here.
 layout: page
 callouts: 
 show_sidebar: false
