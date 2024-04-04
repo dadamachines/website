@@ -28,6 +28,7 @@ show_sidebar: false
 <div class="columns mt-4">
     <div class="column">
         <img style="box-shadow: none;" src="../../img/projects/doppler-003.jpg">
+        <img src="http://images.weserv.nl/?url={{ site.baseurl }}/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=65" />
     </div>
     <div class="column">
         <h1 class="is-size-2-desktop">doppler</h1>

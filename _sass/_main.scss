@@ -5,9 +5,11 @@ $family-sans-serif: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial"
 $is-family-primary: "Lelo-Bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 $is-family-secondary: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
 $primary: #ffffff !default;
+$active: #3a07f2;
 
-$tabs-link-active-color: $primary;
-$tabs-link-active-border-bottom-color: $primary;
+
+$tabs-link-active-color: $active;
+$tabs-link-active-border-bottom-color: $active;
 
 $modal-content-width: 800px;
 

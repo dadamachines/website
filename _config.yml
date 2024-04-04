@@ -4,10 +4,10 @@ title: dadamachines
 tagline: Awesome music machines for everyone!
 email: hi@dadamachines.com
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+  dadamachines &mdash; a studio for multisensory experiences & open-source music technology.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://new.dadamachines.com/ # with the https protocol
-enforce_ssl: new.dadamachines.com/ # without any protocol
+url: https://dadamachines.com/ # with the https protocol
+enforce_ssl: dadamachines.com/ # without any protocol
 permalink: pretty
 #favicon: /path/to/favicon.png
 #gh_sponsor: nevvkid

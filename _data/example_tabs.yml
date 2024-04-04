@@ -1,16 +1,19 @@
 alignment: is-left
-style: is-boxed
-size: is-large
+style:
+size: is-medium
 items:
-  - name: Tabs
-    link: /docs/page-components/tabs/
-    icon: fa-smile-wink
-  - name: Tab 2
+  - name: Intro
+    link: /tabdemo/
+    icon: 
+  - name: Automat
+    link: /tabdemo2/
+    icon: 
+  - name: Solenoids
     link: #
-    icon: fa-angle-double-right
-  - name: Tab 3
+    icon: 
+  - name: Adapters & Elements
     link: #
-    icon: fa-ellipsis-v
-  - name: Tab 4
+    icon:
+  - name: Extensions
     link: #
-    icon: fa-bars
+    icon:
