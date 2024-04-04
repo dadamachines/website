@@ -2,7 +2,7 @@
 title: the automat toolkit
 subtitle: create your own analog sound
 layout: page
-image: '../../img/products/dadamachines-automat-toolkit.jpg'
+image: '../../../img/products/dadamachines-automat-toolkit.jpg'
 hero_image: ../../img/projects/dadamachines-automat-toolkit.jpg
 hero_height: is-large
 hero_centered: has-text-centered

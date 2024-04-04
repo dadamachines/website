@@ -2,58 +2,33 @@
 layout: post
 title: a blog for dadamachines
 description: this is the first post
-date: 2024-04-01 11:11:11
+date: 2024-04-03 11:11:11
 image: '../../img/products/dadamachines-automat-toolkit.jpg'
-hero_image: ../../img/projects/dadamachines-automat-toolkit.jpg
+hero_image: ../../../../img/projects/dadamachines-automat-toolkit.jpg
 hero_height: is-large
 hero_darken: true
+hero_whitetxt: true
 tags: automat-toolkit dadamachines blog
-series: dada_blog_series
+series:
 ---
 
-From version 0.12, you can now make a post a part of a series of posts, linking to the other posts in the series, by creating a `series` data file and then setting the series in each of the post's front matter.  
+# a blog for dadamachines
 
-The current post in the list is highlighted to help give context of where you are in the series. 
+Hello and welcome to the dadamachines blog! 
+This space is dedicated to the latest happenings and creative explorations from the world of dadamachines, where we turn the real world into your instrument with our automat toolkit.
 
-## Blog Series Data File
+Expect to see:
 
-Start by creating a yml file in the _data directory, for example `my_blog_series.yml`. Give the series a title and, optionally, a description. 
+* **dadamachines News:** Quick updates on our products and the latest developments to keep you in the loop.
 
-## Sections
+* **Community Showcase:** Be inspired by the inventive uses of the automat toolkit featured in our Showcase section, where the creativity of our users shines.
 
-Next add sections. Each section can have a label (optional) and items. Each item is the title of an existing blog post. If the title is not found then the link will be empty.
+* **Collaborations & Events:** Stay informed about the exciting collaborations and events we’re involved in.
 
-If you just want one list without labels, then omit the label and just add the items. 
+* **Behind the Scenes:** Insights from the studio, sharing the journey of dadamachines and the stories behind our multisensory experiences and music technology.
 
-```yaml
-title: The series title
-sections:
-  - items:
-      - title: Why use a static site generator
-      - title: Getting started with Bulma Clean Theme for Jekyll
-```
+The blog will also be a place for you to discover the incredible projects from the dadamachines community. Take a moment to explore the [Showcase](/showcase/) to see the amazing things already being done with the automat toolkit.
 
-Here is a full example with multiple sections with labels.
+Thank you for joining us at the intersection of music, technology, and creativity. We can't wait to share more with you.
 
-```yaml
-title: The series title
-description: The series description text
-sections:
-  - label: The first section
-    items:
-      - title: Why use a static site generator
-      - title: Getting started with Bulma Clean Theme for Jekyll
-  - label: Another section
-    items:
-      - title: Introducing some new layouts to Bulma Clean Theme
-      - title: Creating a docs site with Bulma Clean Theme
-      - title: Creating a post series
-```
-
-## Update your posts
-
-Finally, add the series setting to your front matter in each post you want the series to show in. 
-
-```yaml
-series: my_blog_series
-```
+— Johannes
