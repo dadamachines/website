@@ -35,7 +35,3 @@ show_sidebar: false
         <a href="/products/doppler/" class="button is-info is-large">More</a>
     </div>
 </div>
-
-<!--
-{% include newsletter.html %}
--->
