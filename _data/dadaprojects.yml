@@ -127,6 +127,24 @@ items:
     link: https://www.damientraversaz.com/pyera
     link_text: View on Damien's Website
     tags:
+  - artist: Portmanteau & dadamachines for blackspace
+    title: AUDI MUSIC BOX
+    description: |-
+
+    image: /img/projects/dadamachines-audi-music-box.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=bstnULC-JVg
+    link_text: View on Youtube
+    tags:
+  - artist: dadamachines
+    title: Workshop Goethe Institut Beijing
+    description: |-
+
+    image: /img/projects/goethe-beijing.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=MczGVLDbZF8
+    link_text: View on Youtube
+    tags:
   - artist: dadamachines
     title: lund workshop 2014
     description: |-
