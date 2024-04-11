@@ -4,11 +4,11 @@ items:
   - artist: Barker
     title: Against The Clock
     description: |-
-      
+      More information on Barkers [Website.](https://www.voltek-labs.net/plate-reverb){:target="_blank"}
     image: /img/showcase/barker-fact.jpg
     image_ratio: is-16by9
-    link: https://www.voltek-labs.net/plate-reverb
-    link_text: View Barkers Website
+    link: https://www.youtube.com/watch?v=C9-qpMqhuPU
+    link_text: View on Youtube
     tags:
   - artist: Hauschka
     title: A Different Forest (UK & EU Tour 2019)
