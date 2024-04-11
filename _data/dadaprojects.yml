@@ -118,6 +118,15 @@ items:
     link: https://www.youtube.com/watch?v=mxcZoqZd5YA
     link_text: View on Youtube
     tags:
+  - artist: Damien Traversaz
+    title: Pyéra
+    description: |-
+
+    image: /img/showcase/damien-traversaz-pyera.jpg
+    image_ratio: is-16by9
+    link: https://www.damientraversaz.com/pyera
+    link_text: View on Damien's Website
+    tags:
   - artist: dadamachines
     title: lund workshop 2014
     description: |-
