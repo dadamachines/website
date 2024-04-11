@@ -82,6 +82,24 @@ items:
     link: https://www.youtube.com/watch?v=83yXCMHGr9A
     link_text: View on Youtube
     tags:
+  - artist: OK EG
+    title: WAVELENGTH II
+    description: |-
+
+    image: /img/showcase/ok-eg-wavelengthii.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=647MaczBo9w
+    link_text: View on Youtube
+    tags:
+  - artist: Danny Shaddick
+    title: Glockenspiel On A Turntable 1
+    description: |-
+
+    image: /img/showcase/danny-shaddick-glockenspiel-on-turntable.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=pXoWH_lT7OE
+    link_text: View on Youtube
+    tags:
   - artist: Portmanteau
     title: Nautilus Music Machine first try
     description: |-
