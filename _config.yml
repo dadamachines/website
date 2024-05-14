@@ -55,7 +55,7 @@ sass:
   style: compressed
   source_dir: _sass
 
-google_analytics: UA-63710315-1
+google_analytics: G-FRSRLSQFN5
 
 defaults:
   -
