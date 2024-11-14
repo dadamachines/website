@@ -12,7 +12,7 @@ rating:
 first_loop: true
 ---
 
-**The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.**
+**The automat controller is currently not available without power supply and solenoids. Please check for complete toolkits.**
 
 The automat controller comes with:
 
