@@ -55,7 +55,7 @@ first_loop: false
     </div>
     <div class="column">
         <h1>Get your toolkit now!</h1>
-        <p>Choose your favorite toolkit size. From 499 EURO incl. VAT</p>
+        <p>The automat toolkit comes with everything your need to get started.</p>
         <a href="/shop/" class="button is-info is-large">Buy now</a>
 </div>
 
