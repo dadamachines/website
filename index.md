@@ -21,13 +21,13 @@ show_sidebar: false
         <a href="/products/automat-toolkit/" class="button is-info is-large">More</a>
     </div>
     <div class="column">
-        <img src="http://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
+        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
     </div>
 </div>
 
 <div class="columns mt-4">
     <div class="column">
-        <img src="http://images.weserv.nl/?url=https://dadamachines.com/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=90" />
+        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=90" />
     </div>
     <div class="column">
         <h1 class="is-size-2-desktop">doppler</h1>
