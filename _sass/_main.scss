@@ -91,17 +91,17 @@ strong,
     text-decoration: none;
     color: #111;
     border-bottom: 3px solid #111;
-  
+
     @include for-phone-only{
       border-bottom: 2px solid #111;
     }
   }
-  
+
   a:hover {
     text-decoration: none;
     color: #0000ee;
     border-bottom: 3px solid #0000ee;
-  
+
     @include for-phone-only {
       border-bottom: 2px solid #0000ee;
     }
@@ -262,4 +262,22 @@ ul.cv li {
 
 .mx-auto {
   margin-left: auto;
+}
+
+// Footer Styles
+.footer-social, .footer-social a {
+  color: #fff !important;
+}
+
+.footer-social .footer-icon svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: opacity 0.2s;
+}
+
+.footer-social a:hover .footer-icon svg {
+  opacity: 0.8;
 }
