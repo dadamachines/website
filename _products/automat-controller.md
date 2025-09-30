@@ -7,6 +7,7 @@ layout: product
 hide_hero: true
 image: ../../img/products/dadamachines-automat.jpg
 price: 449,00€
+productshopurl: https://schneidersladen.de/en/dadamachines
 features:
 rating:
 first_loop: true
