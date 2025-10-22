@@ -62,7 +62,7 @@ layout: compress
     <!-- <script src="{{ site.baseurl }}/assets/js/app.js" type="text/javascript"></script> -->
 
 <script>
-  window.BOT9_DATA = {
+  BOT9_DATA = {
     bot9Id: "1e026351-762c-43d9-b3c7-429f1268fae1",
     // user: {
     //   userId: '<unique_user_id>',
@@ -75,11 +75,7 @@ layout: compress
     //   }
     // }
   };
-
-  var botScript = document.createElement("script");
-  botScript.src = "https://sdk.chatwidget.in/bot.js";
-  botScript.async = true;
-  document.head.appendChild(botScript);
+  document.head.appendChild(document.createElement('script')).src = 'https://sdk.chatwidget.in/bot.js';
 </script>
   </body>
 </html>
