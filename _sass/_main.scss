@@ -19,6 +19,7 @@ $hero-darken: $dark !default;
 @import "layout";
 @import "syntax";
 @import "helpers";
+@import "explore-link";
 @import "showcase";
 @import "../node_modules/bulma-block-list/src/block-list.scss";
 
@@ -232,6 +233,7 @@ ul.cv li {
   }
 }
 
+// Explore Link Styles moved to _explore-link.scss
 
 // Circular Profile Image
 .image-cropper {

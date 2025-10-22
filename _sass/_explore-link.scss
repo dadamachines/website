@@ -1,0 +1,38 @@
+// Minimal, reusable Explore Link component
+// Variants: .is-light (white outline), .is-dark (black outline)
+// Sizes: .is-large to match Bulma .button.is-large (≈24px)
+
+.explore-link {
+  --el-color: #111;
+  --el-hover-bg: #111;
+  --el-hover-color: #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .45rem 1.25rem;
+  border: 3px solid var(--el-color);
+  background: transparent;
+  border-radius: 0;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background-color .2s, color .2s, border-color .2s, transform .1s;
+  color: var(--el-color);
+}
+
+.explore-link:hover {
+  transform: translateY(-1px);
+  background: var(--el-hover-bg);
+  color: var(--el-hover-color);
+  border-color: var(--el-hover-bg);
+}
+
+// color variants
+.explore-link.is-dark { --el-color: #111; --el-hover-bg: #111; --el-hover-color: #fff; }
+.explore-link.is-light { --el-color: #fff; --el-hover-bg: #fff; --el-hover-color: #111; }
+
+// size variants
+.explore-link.is-large { font-size: 1.5rem; padding: .55rem 1.5rem; }
+.explore-link.is-medium { font-size: 1.125rem; }
