@@ -65,13 +65,13 @@
 .explore-link.is-blue {
   background: #0000ee;
   color: #fff;
-  border: 3px solid transparent;
+  border: 3px solid transparent !important;
 }
 
 .explore-link.is-blue:hover {
   background: #fff;
   color: #0000ee;
-  border-color: #0000ee;
+  border: 3px solid #0000ee !important;
   transform: translateY(-1px);
 }
 

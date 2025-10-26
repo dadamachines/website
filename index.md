@@ -19,7 +19,7 @@ show_sidebar: false
     <div class="column">
         <h1 class="is-size-2-desktop">automat toolkit</h1>
         <p class="is-size-5-desktop">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
-    <a href="/products/automat-toolkit/" class="explore-link is-dark is-large">Learn more</a> 
+    <a href="/products/automat-toolkit/" class="explore-link is-dark is-large">Explore</a> 
     <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
     </div>
     <div class="column">

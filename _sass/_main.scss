@@ -221,7 +221,7 @@ strong:not(.hero *),
 }
 
 .dada-a {
-  a {
+  a:not(footer a) {
     transition: color 0.4s;
     text-decoration: none;
     color: #111;
@@ -232,7 +232,7 @@ strong:not(.hero *),
     }
   }
 
-  a:hover {
+  a:not(footer a):hover {
     text-decoration: none;
     color: #0000ee;
     border-bottom: 3px solid #0000ee;
@@ -551,6 +551,50 @@ ul.cv li {
 
 // Footer Styles
 .footer-social, .footer-social a {
+  color: #fff !important;
+}
+
+// Footer navigation styling to match header navigation
+.footer-nav-item {
+  font-family: $is-family-primary;
+  font-size: 1.125rem !important; // Larger size to match header better
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: text-decoration 0.3s ease;
+  padding: 0.5rem 0.75rem; // Similar padding to navbar items
+  border-bottom: none !important; // Ensure no conflicting borders
+}
+
+.footer-nav-item:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+  text-decoration-color: #fff !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+  border-bottom: none !important; // Ensure no conflicting borders
+}
+
+// Ensure footer links stay white regardless of other classes - but exclude nav items
+footer.section.has-background-black a.has-text-white:not(.footer-nav-item),
+footer.section.has-background-black a.has-text-white:not(.footer-nav-item) strong,
+footer.section a.has-text-white:not(.footer-nav-item) {
+  color: #fff !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+footer.section.has-background-black a.has-text-white:not(.footer-nav-item):hover,
+footer.section a.has-text-white:not(.footer-nav-item):hover {
+  color: #fff !important;
+  opacity: 0.8;
+  border-bottom: none !important;
+}
+
+// Nuclear option - force all footer links to be white (except nav items which have their own styling)
+footer.section.has-background-black a:not(.footer-nav-item),
+footer.section.has-background-black a:not(.footer-nav-item) *,
+footer.has-background-black a:not(.footer-nav-item),
+footer.has-background-black a:not(.footer-nav-item) * {
   color: #fff !important;
 }
 

@@ -11,7 +11,7 @@
         <div>
             <ul class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
             {% for item in site.data[site.footer_menu] %}
-                <li class="mr-4"><a class="button is-black is-hoverable" href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+                <li class="mr-4"><a class="footer-nav-item has-text-white" href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
             {% endfor %}
             </ul>
         </div>
