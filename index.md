@@ -19,7 +19,8 @@ show_sidebar: false
     <div class="column">
         <h1 class="is-size-2-desktop">automat toolkit</h1>
         <p class="is-size-5-desktop">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
-    <a href="/products/automat-toolkit/" class="explore-link is-dark is-large">More</a>
+    <a href="/products/automat-toolkit/" class="explore-link is-dark is-large">Explore</a> 
+    <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
     </div>
     <div class="column">
         <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
@@ -33,6 +34,6 @@ show_sidebar: false
     <div class="column">
         <h1 class="is-size-2-desktop">doppler</h1>
         <p class="is-size-5-desktop">The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a Teensy and is open source.</p>
-    <a href="/products/doppler/" class="explore-link is-dark is-large">More</a>
+    <a href="/products/doppler/" class="explore-link is-dark is-large">Explore</a>
     </div>
 </div>
