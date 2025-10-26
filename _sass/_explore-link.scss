@@ -33,6 +33,20 @@
 .explore-link.is-dark { --el-color: #111; --el-hover-bg: #111; --el-hover-color: #fff; }
 .explore-link.is-light { --el-color: #fff; --el-hover-bg: #fff; --el-hover-color: #111; }
 
+// Blue variant with solid background
+.explore-link.is-blue {
+  background: #0000ee;
+  color: #fff;
+  border: 3px solid transparent;
+}
+
+.explore-link.is-blue:hover {
+  background: #fff;
+  color: #0000ee;
+  border-color: #0000ee;
+  transform: translateY(-1px);
+}
+
 // size variants
 .explore-link.is-large { font-size: 1.5rem; padding: .55rem 1.5rem; }
 .explore-link.is-medium { font-size: 1.125rem; }

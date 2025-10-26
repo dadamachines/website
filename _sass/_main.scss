@@ -23,6 +23,41 @@ $hero-darken: $dark !default;
 @import "showcase";
 @import "../node_modules/bulma-block-list/src/block-list.scss";
 
+// Remove gradient only from heroes without background images
+.hero.is-primary.is-bold.has-plain-background {
+  background-image: none !important;
+  background-color: #fff !important;
+}
+
+// Reduce padding for plain background heroes (Shop, Showcase, Projects)
+// Adjusted to account for section padding below to create equal top/bottom spacing
+.hero.is-primary.is-bold.has-plain-background .hero-body {
+  padding: 4.5rem 4.5rem 1.5rem 4.5rem !important;
+}
+
+// Fix spacing for Projects page specifically - match the reduced spacing
+.Projects.section {
+  padding-top: 4.5rem !important;
+}
+
+// Style text in plain background heroes (Shop, Showcase, Projects)
+// Only apply bold font and dark color to titles, not subtitles
+.hero.is-primary.is-bold.has-plain-background .title,
+.hero.is-primary.is-bold.has-plain-background h1,
+.hero.is-primary.is-bold.has-plain-background h2,
+.hero.is-primary.is-bold.has-plain-background h3,
+.hero.is-primary.is-bold.has-plain-background h4,
+.hero.is-primary.is-bold.has-plain-background h5,
+.hero.is-primary.is-bold.has-plain-background h6 {
+  color: #111 !important;
+  font-family: $is-family-primary !important;
+}
+
+// Ensure heroes with background images work properly
+.hero.is-primary.is-bold.has-hero-image {
+  background-color: transparent !important;
+}
+
 body {
   letter-spacing: 1px;
   -webkit-text-size-adjust: 100%;
@@ -75,15 +110,88 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-.strong {
+// Headings and strong text - exclude hero elements
+h1:not(.hero *),
+h2:not(.hero *),
+h3:not(.hero *),
+h4:not(.hero *),
+h5:not(.hero *),
+h6:not(.hero *),
+strong:not(.hero *),
+.strong:not(.hero *) {
   font-family: $is-family-primary;
+  color: #111 !important;
+}
+
+// Additional specific selectors for titles and content headings - exclude hero and white text elements
+.title:not(.hero *):not(.has-text-white),
+.subtitle:not(.hero *):not(.has-text-white),
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: #111 !important;
+}
+
+// Ensure product page titles use bold font family
+.title {
+  font-family: $is-family-primary !important;
+}
+
+// Ensure text in dark background sections remains white
+.has-background-dark .title,
+.has-background-dark .subtitle,
+.has-background-dark h1,
+.has-background-dark h2,
+.has-background-dark h3,
+.has-background-dark h4,
+.has-background-dark h5,
+.has-background-dark h6,
+.has-text-white {
+  color: #fff !important;
+}
+
+// Ensure hero text color is appropriate for background
+// White text only for dark hero backgrounds (like product pages)
+.hero.is-large.is-bold.is-primary h1,
+.hero.is-large.is-bold.is-primary h2,
+.hero.is-large.is-bold.is-primary h3,
+.hero.is-large.is-bold.is-primary h4,
+.hero.is-large.is-bold.is-primary h5,
+.hero.is-large.is-bold.is-primary h6,
+.hero.is-large.is-bold.is-primary .title,
+.hero.is-large.is-bold.is-primary .subtitle {
+  color: white !important;
+}
+
+// Dark text for light hero backgrounds (like projects, shop, showcase)
+.hero:not(.is-primary) h1,
+.hero:not(.is-primary) h2,
+.hero:not(.is-primary) h3,
+.hero:not(.is-primary) h4,
+.hero:not(.is-primary) h5,
+.hero:not(.is-primary) h6,
+.hero:not(.is-primary) .title,
+.hero:not(.is-primary) .subtitle {
+  color: #111 !important;
+}
+
+// Ensure explore links in dark heroes have white text/border to match
+.hero.is-large.is-bold.is-primary .explore-link {
+  --el-color: #fff !important;
+  --el-hover-bg: #fff !important;
+  --el-hover-color: #111 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+// Explicit hover state for explore links in dark heroes
+.hero.is-large.is-bold.is-primary .explore-link:hover {
+  background: #fff !important;
+  color: #111 !important;
+  border-color: #fff !important;
 }
 
 .dada-a {
@@ -117,6 +225,135 @@ strong,
 
 .navbar-item img, .navbar-item img.header__logo {
   max-height: none;
+}
+
+// Main navigation font styling
+.navbar .navbar-item {
+  font-family: $is-family-primary;
+  color: #111 !important;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.navbar .navbar-link {
+  font-family: $is-family-primary;
+  color: #111 !important;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+// Navigation hover effects - reset all text-decoration first
+.navbar .navbar-item,
+.navbar .navbar-link {
+  text-decoration: none !important;
+}
+
+// Apply underline only to direct navbar items (not dropdown items) on hover
+.navbar-end > .navbar-item:hover:not(.has-dropdown),
+.navbar-end > .navbar-item.has-dropdown > .navbar-link:hover {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+// Desktop: Add hover effect for dropdown items when individually hovered
+@media screen and (min-width: 1024px) {
+  .navbar .navbar-dropdown .navbar-item:hover {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
+// Mobile/Tablet: Ensure dropdown items don't show underlines
+@media screen and (max-width: 1023px) {
+  .navbar .navbar-dropdown .navbar-item:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Active state styling - show underline for current page
+.navbar-end > .navbar-item.is-active,
+.navbar .navbar-dropdown .navbar-item.is-active {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+// Additional safety: remove any inherited text-decoration from dropdown containers
+.navbar .navbar-dropdown {
+  text-decoration: none !important;
+}
+
+.navbar .has-dropdown .navbar-dropdown * {
+  text-decoration: none !important;
+}
+
+// Ensure navbar dropdown items also get the color
+.navbar .navbar-dropdown .navbar-item {
+  color: #111 !important;
+}
+
+// Desktop navigation font size (20px = 1.25rem)
+@media screen and (min-width: 1024px) {
+  .navbar .navbar-item,
+  .navbar .navbar-link {
+    font-size: 1.25rem;
+  }
+}
+
+// Mobile navigation sizing to match desktop
+@media screen and (max-width: 1023px) {
+  .navbar .navbar-item,
+  .navbar .navbar-link {
+    font-size: 1.25rem;
+  }
+
+  // Hamburger menu sizing to match header height (~80px)
+  .navbar-burger {
+    height: 5rem;
+    width: 5rem;
+    color: #111;
+  }
+
+  .navbar-burger span {
+    height: 3px;                    // Thicker lines to match docs site
+    width: 24px;                    // Wider lines for better visibility
+    background-color: #111;      // Use brand purple color
+    left: calc(50% - 12px);        // Center the lines properly
+    transition: transform 0.3s ease, opacity 0.3s ease; // Smooth animation
+  }
+
+  // Optimize line spacing to match docs site proportions
+  .navbar-burger span:nth-child(1) {
+    top: calc(50% - 8px);          // Top line positioned higher for better spacing
+  }
+
+  .navbar-burger span:nth-child(2) {
+    top: calc(50% - 1.5px);        // Middle line centered
+  }
+
+  .navbar-burger span:nth-child(3) {
+    top: calc(50% + 5px);          // Bottom line positioned lower for better spacing
+  }
+
+  // Ensure active (close) state also uses brand color
+  .navbar-burger.is-active span {
+    background-color: #111;
+  }
+
+  // Create X shape when burger menu is active (close icon)
+  .navbar-burger.is-active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .navbar-burger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-burger.is-active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
 }
 
 .content {
@@ -229,7 +466,7 @@ ul.cv li {
   }
 
   &:hover .project-title, &:hover .project-title h2 {
-    color: white;
+    color: white !important;
   }
 }
 
@@ -264,6 +501,26 @@ ul.cv li {
 
 .mx-auto {
   margin-left: auto;
+}
+
+// Product card styling for shop page - ryk-modular style
+.card {
+  transition: box-shadow 0.3s ease, transform 0.1s ease, border-color 0.3s ease;
+  border: 3px solid #111;        // 3px border to match explore links
+  border-radius: 0;              // Remove rounded corners
+}
+
+.card:hover {
+  border-color: #0000ee;         // Change border to blue on hover
+  box-shadow: 0 8px 16px rgba(0, 0, 238, 0.15); // Keep drop shadow but remove outline
+  transform: translateY(-2px);
+}
+
+// Ensure card images also have sharp corners
+.card .card-image,
+.card .card-image .image,
+.card .card-image img {
+  border-radius: 0;              // Remove rounded corners from images
 }
 
 // Footer Styles

@@ -56,6 +56,6 @@ first_loop: false
     <div class="column">
         <h1>Get your toolkit now!</h1>
         <p>The automat toolkit comes with everything your need to get started.</p>
-        <a href="/shop/" class="button is-info is-large">Buy now</a>
+        <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
 </div>
 
