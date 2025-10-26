@@ -33,6 +33,34 @@
 .explore-link.is-dark { --el-color: #111; --el-hover-bg: #111; --el-hover-color: #fff; }
 .explore-link.is-light { --el-color: #fff; --el-hover-bg: #fff; --el-hover-color: #111; }
 
+// Reversed light variant for main hero - starts filled, becomes outline on hover
+.explore-link.is-light.is-reversed {
+  background: #fff !important;
+  color: #111 !important;
+  border: 3px solid #fff !important;
+}
+
+.explore-link.is-light.is-reversed:hover {
+  background: transparent !important;
+  color: #fff !important;
+  border: 3px solid #fff !important;
+  transform: translateY(-1px);
+}
+
+// Reversed dark variant for showcase - starts filled, becomes outline on hover
+.explore-link.is-dark.is-reversed {
+  background: #111 !important;
+  color: #fff !important;
+  border: 3px solid #111 !important;
+}
+
+.explore-link.is-dark.is-reversed:hover {
+  background: transparent !important;
+  color: #111 !important;
+  border: 3px solid #111 !important;
+  transform: translateY(-1px);
+}
+
 // Blue variant with solid background
 .explore-link.is-blue {
   background: #0000ee;

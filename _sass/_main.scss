@@ -204,8 +204,8 @@ strong:not(.hero *),
   color: #111 !important;
 }
 
-// Ensure explore links in dark heroes have white text/border to match
-.hero.is-large.is-bold.is-primary .explore-link {
+// Ensure explore links in dark heroes have white text/border to match (but not reversed ones)
+.hero.is-large.is-bold.is-primary .explore-link:not(.is-reversed) {
   --el-color: #fff !important;
   --el-hover-bg: #fff !important;
   --el-hover-color: #111 !important;
@@ -213,8 +213,8 @@ strong:not(.hero *),
   border-color: #fff !important;
 }
 
-// Explicit hover state for explore links in dark heroes
-.hero.is-large.is-bold.is-primary .explore-link:hover {
+// Explicit hover state for explore links in dark heroes (but not reversed ones)
+.hero.is-large.is-bold.is-primary .explore-link:not(.is-reversed):hover {
   background: #fff !important;
   color: #111 !important;
   border-color: #fff !important;

@@ -1,6 +1,14 @@
 .showcase {
     margin-bottom: 3rem;
     box-shadow: $box-shadow;
+    border: 3px solid #111;        // 3px black border to match shop cards
+    border-radius: 0;              // Remove rounded corners
+    transition: box-shadow 0.3s ease, transform 0.1s ease;
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);  // Keep subtle shadow but with black
+        transform: translateY(-2px);
+    }
 
     &-content {
         padding: 1.5rem;
@@ -9,5 +17,11 @@
 
     .block-list {
         margin-bottom: 1.5rem;
+    }
+
+    // Ensure showcase images also have sharp corners
+    .image,
+    img {
+        border-radius: 0;              // Remove rounded corners from images
     }
 }
