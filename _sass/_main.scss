@@ -30,9 +30,18 @@ $hero-darken: $dark !default;
 }
 
 // Reduce padding for plain background heroes (Shop, Showcase, Projects)
-// Adjusted to account for section padding below to create equal top/bottom spacing
-.hero.is-primary.is-bold.has-plain-background .hero-body {
-  padding: 4.5rem 4.5rem 1.5rem 4.5rem !important;
+// Desktop padding - adjusted to account for section padding below to create equal top/bottom spacing
+@media screen and (min-width: 1024px) {
+  .hero.is-primary.is-bold.has-plain-background .hero-body {
+    padding: 4.5rem 4.5rem 1.5rem 4.5rem !important;
+  }
+}
+
+// Mobile padding for plain background heroes - minimal side padding for proper left alignment
+@media screen and (max-width: 1023px) {
+  .hero.is-primary.is-bold.has-plain-background .hero-body {
+    padding: 3rem 1.5rem 1.5rem 1.5rem !important;
+  }
 }
 
 // Fix spacing for Projects page specifically - match the reduced spacing
@@ -53,7 +62,24 @@ $hero-darken: $dark !default;
   font-family: $is-family-primary !important;
 }
 
-// Ensure heroes with background images work properly
+// Mobile responsive fixes for plain background heroes (Shop, Showcase, Projects)
+@media screen and (max-width: 1023px) {
+  // Remove centering on mobile and align left like content below
+  .hero.is-primary.is-bold.has-plain-background .container,
+  .hero.is-primary.is-bold.has-plain-background .container.has-text-centered {
+    text-align: left !important;
+  }
+
+  // Also ensure the hero body itself is left-aligned
+  .hero.is-primary.is-bold.has-plain-background .hero-body {
+    text-align: left !important;
+  }
+
+  // Make subtitle smaller on mobile to match automat-toolkit page style
+  .hero.is-primary.is-bold.has-plain-background .subtitle {
+    font-size: 1.25rem !important; // Same as is-size-5
+  }
+}// Ensure heroes with background images work properly
 .hero.is-primary.is-bold.has-hero-image {
   background-color: transparent !important;
 }
