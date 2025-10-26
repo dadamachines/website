@@ -6,18 +6,14 @@
     - name: Doppler
       link: /products/doppler/
 - name: Shop
-  link: /shop/      
-- name: Projects
-  link: /projects/
-- name: About
-  link: /#
-  dropdown:
-    - name: dadamachines
-      link: /about/
-    - name: blog
-      link: /blog/
+  link: /shop/
 - name: Showcase
   link: /showcase/
+- name: About
+  link: /about/
+  dropdown:
+    - name: Projects
+      link: /projects/
 - name: Docs
   link: https://docs.dadamachines.com
 - name: Forum

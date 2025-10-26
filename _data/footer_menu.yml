@@ -1,11 +1,9 @@
-- name: Home
-  link: /
-- name: Docs
-  link: https://docs.dadamachines.com
-- name: Downloads
-  link: /downloads/
 - name: Contact
   link: /contact/
+- name: Blog
+  link: /blog/
+- name: Downloads
+  link: /downloads/
 - name: Press
   link: /press/
 - name: Imprint
