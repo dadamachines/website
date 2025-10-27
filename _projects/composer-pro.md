@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Composer Pro
+title: dadamachines – composer Pro
 headline: music machines for everyone!
 picture: ../../img/projects/composer_3d_myst.jpeg
 class: ganztoll

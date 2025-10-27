@@ -31,7 +31,7 @@ show_sidebar: false
 <!-- Selected Projects -->
 {% assign projects = site.projects | sort: 'order' %}
 <div class="dada-a projects mt-6">
-    <h2 class="is-size-2 pt-6">Selected projects</h2>
+    <h2 class="is-size-2">Selected projects</h2>
     <ul class="list-reset mt-0">
 {% for project in projects %}
         <li><a class="is-size-3-desktop" href="{{ project.url }}">{{ project.title }}</a></li>

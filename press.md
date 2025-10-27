@@ -6,7 +6,7 @@ callouts:
 show_sidebar: false
 ---
 
-<h2 class="is-size-2 pt-6">Press Kit</h2>
+<h2 class="is-size-2">Press Kit</h2>
 <a href="https://drive.google.com/drive/folders/1jR_qShlWu7LrFDpk2TEnsgNzxpgnxH3q?usp=sharing" target="_blank" class="explore-link is-blue is-large">Got to Google Drive</a>
 
 
