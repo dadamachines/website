@@ -113,6 +113,20 @@ body {
   padding-top: 0;
 }
 
+// About text styling for better readability
+.about-text {
+  font-size: 1.5rem; // Match subtitle is-3 size
+  line-height: 1.6; // Improved line spacing for better readability
+  margin-bottom: 1.5rem; // Better spacing between paragraphs
+  font-weight: 400; // Normal weight for better readability
+
+  @media screen and (max-width: 1023px) {
+    font-size: 1.25rem; // Slightly smaller on mobile
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .section {
     padding: 3rem 3rem;
@@ -229,22 +243,28 @@ strong:not(.hero *),
 .dada-a {
   a:not(footer a) {
     transition: color 0.4s;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #111;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
     color: #111;
-    border-bottom: 3px solid #111;
 
     @include for-phone-only{
-      border-bottom: 2px solid #111;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
     }
   }
 
   a:not(footer a):hover {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #0000ee;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
     color: #0000ee;
-    border-bottom: 3px solid #0000ee;
 
     @include for-phone-only {
-      border-bottom: 2px solid #0000ee;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
     }
   }
 }

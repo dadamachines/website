@@ -10,15 +10,16 @@ show_sidebar: false
 <!-- Hero Image -->
 <div class="fluid-aspect_16x9">
   <span>
-    <img src="../img/about.jpg" alt="tollesbild">
+    <img src="../img/about.jpg" alt="dadamachines studio">
   </span>
 </div>
 
 <!-- About -->
-<div class="columns mt-4">
+<div class="columns mt-4 dada-a">
     <div class="column is-8">
         <h1 class="title is-2">About</h1>
-        <p class="subtitle is-3 mt-1"><strong>Johannes Elias Lohbihler</strong> is a seasoned <strong>product designer / creative technologist</strong>. Amongst other ventures, he founded <a href="http://dadamachines.com" target="_blank">dadamachines</a> – a studio for multisensory experiences & open-source music technology. Recently he did a stint at <a href="https://supernova-lights.com/" target="_blank">Supernova</a> and helped <a href="http://www.korg.com" target="_blank">KORG</a> – setting up shop in <a href="http://korg.berlin" target="_blank">Berlin</a>. His expertise is ranging from crafts to creating digital and analog experiences, products, or services for large & small clients.</p>
+        <p class="about-text"><strong>dadamachines</strong> is led by <a href="https://lohbihler.com" target="_blank">Johannes Elias Lohbihler</a>, a creative technologist living and working in berlin. seventh generation carpenter from bavaria, raised in the weilheim music scene alongside portmanteau, lali puna, and the notwist. dj turned creator, bridging analog craft and electronic music.</p>
+        <p class="about-text">he founded dadamachines – a studio for multisensory experiences & open-source music technology. supported by a network of collaborators and friends who create experimental sound tools for the real life, opening new possibilities for artists and musicians.</p>
     </div>
     <div class="column is-4">
       <div class="image-cropper mx-auto profile-image-container">
@@ -27,127 +28,15 @@ show_sidebar: false
     </div>
 </div>
 
-<!-- Experience -->
-<div class="dada-a experience mt-6">
-  <h2 class="is-size-2 pt-6">Experience</h2>
-  <ul class="cv list-reset mt-0">
-    <li class="time-item block mb-3">
-      <div class="time_period pt-3">
-        <p class="is-size-3-desktop m-0">2014 - Present</p>
-      </div>
-      <div class="timeline_title">
-          <h2 class="is-size-3-desktop m-0">Founder</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://dadamachines.com/" target="_blank" class="is-size-3-desktop m-0">dadamachines, Berlin</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period pt-3">
-        <p class="is-size-3-desktop m-0">2023</p>
-      </div>
-      <div class="timeline_title">
-        <h2 class="is-size-3-desktop m-0">Hardware Developer</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://supernova-lights.com/" target="_blank" class="is-size-3-desktop m-0">Supernova Design GmbH, Gundelfingen</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period pt-3">
-        <p class="is-size-3-desktop m-0">2020 - 2022</p>
-      </div>
-      <div class="timeline_title">
-        <h2 class="is-size-3-desktop m-0">Hardware Developer</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://korg.berlin/" target="_blank" class="is-size-3-desktop m-0">KORG, Berlin</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period pt-3">
-        <p class="is-size-3-desktop m-0">2008 - 2011</p>
-      </div>
-      <div class="timeline_title">
-        <h2 class="is-size-3-desktop m-0">Co-Founder and Lead product designer</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://www.luxoworks.com/" target="_blank" class="is-size-3-desktop m-0">LUXOWORKS GmbH, Munich</a>
-      </div>
-    </li>
-  </ul>
-</div>
-
-<!-- Education -->
-<div class="dada-a education mt-6">
-  <h2 class="is-size-2 pt-6">Education</h2>
-  <ul class="cv list-reset mt-0">
-    <li class="time-item block mb-3">
-      <div class="time_period mt-2">
-        <p class="is-size-3-desktop m-0">2013 - 2014</p>
-      </div>
-      <div class="timeline_title">
-          <h2 class="is-size-3-desktop m-0">Master of Arts – Interaction Design</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://www.kh-berlin.de/" target="_blank" class="is-size-3-desktop m-0">weißensee kunsthochschule berlin</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period mt-2">
-        <p class="is-size-3-desktop m-0">2012 - 2013</p>
-      </div>
-      <div class="timeline_title">
-          <h2 class="is-size-3-desktop m-0">Bachelor of Arts – Product Design</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://www.kh-berlin.de/" target="_blank" class="is-size-3-desktop m-0">weißensee kunsthochschule berlin</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period mt-2">
-        <p class="is-size-3-desktop m-0">2008 - 2012</p>
-      </div>
-      <div class="timeline_title">
-          <h2 class="is-size-3-desktop m-0">Bachelor of Arts – Product Design</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="https://www.hfg-gmuend.de/" target="_blank" class="is-size-3-desktop m-0">HfG Schwäbisch Gmünd</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period mt-2">
-        <p class="is-size-3-desktop m-0">2004 - 2005</p>
-      </div>
-      <div class="timeline_title">
-          <h2 class="is-size-3-desktop m-0">Gestalter im Handwerk (HWK)</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="http://www.hwk-muenchen.de/akademie" target="_blank" class="is-size-3-desktop m-0">Akademie für Gestaltung und Design</a>
-      </div>
-    </li>
-    <li class="time-item block mb-3">
-      <div class="time_period mt-2">
-        <p class="is-size-3-desktop m-0">2000 - 2003</p>
-      </div>
-      <div class="timeline_title">
-          <h2 class="is-size-3-desktop m-0">Apprenticeship Carpentry</h2>
-      </div>
-      <div class="about_time_period">
-        <a href="#" target="_blank" class="is-size-3-desktop m-0">Schreinerei Lohbihler, Bad Bayersoien</a>
-      </div>
-    </li>
-  </ul>
-</div>
-
-<!-- Awards -->
-<div class="dada-a awards mt-6">
-  <h2 class="is-size-2 pt-6">Awards</h2>
-  <ul class="list-reset mt-0">
-    <li><a class="is-size-3-desktop" href="https://ifworlddesignguide.com/entry/235025-audi-music-box" target="_blank">IF Design Award - Interior Architecture, 2018</a></li>
-    <li><a class="is-size-3-desktop" href="https://www.red-dot.org/about-red-dot/magazine/fair-stands-2017/" target="_blank">Red Dot: Best of the Best - Communication Design, 2017</a></li>
-    <li><a class="is-size-3-desktop" href="#">Meisterpreis der Bayerischen Staatsregierung, 2005</a></li>
-  </ul>
+<!-- Selected Projects -->
+{% assign projects = site.projects | sort: 'order' %}
+<div class="dada-a projects mt-6">
+    <h2 class="is-size-2 pt-6">Selected projects</h2>
+    <ul class="list-reset mt-0">
+{% for project in projects %}
+        <li><a class="is-size-3-desktop" href="{{ project.url }}">{{ project.title }}</a></li>
+{% endfor %}
+    </ul>
 </div>
 
 <!-- Selected exhibitions, talks and workshops -->
@@ -181,16 +70,13 @@ show_sidebar: false
     <li><a class="is-size-3-desktop" href="https://musictechfest.net/project/johannes-lohbihler-dadamachines-toolkit/" target="_blank">Music Tech Fest, Ljubljana 2015</a></li>
     <li><a class="is-size-3-desktop" href="https://kh-berlin.de/uploads/tx_khberlin/flyer-seeingashearing-final-220415.pdf" target="_blank">seeing as hearing @ Hochschule für Musik Hanns Eisler, Berlin 2015</a></li>
     <li><a class="is-size-3-desktop" href="http://musichackspace.org/events/dada-machines-at-the-music-hackspace/" target="_blank">Music Hackspace, London 2015</a></li>
-    <li><a class="is-size-3-desktop" href="https://www.detail.de/blog-artikel/premieren-jubilaeen-luxoworks-detail-und-der-salone-di-milano-23776/" target="_blank">SALONE DEL MOBILE / EUROLUCE, Milano 2011</a></li>
-    <li><a class="is-size-3-desktop" href="https://www.on-light.de/home/news/article/luxoworks-lichtplanung-der-naechsten-generation.html" target="_blank">Light and Building, Frankfurt 2010</a></li>
   </ul>
 </div>
 
 <!-- Selected Publications -->
 <div class="dada-a publicactions mt-6">
-  <h2 class="is-size-2 pt-6">Selected Publications</h2>
+  <h2 class="is-size-2 pt-6">Selected publications</h2>
   <ul class="list-reset mt-0">
-    <li><a class="is-size-3-desktop" href="https://www.goethe.de/ins/it/de/kul/sup/drb/20940598.html" target="_blank">Goethe Institute Blog</a></li>
     <li><a class="is-size-3-desktop" href="https://www.factmag.com/2017/03/29/dadamachines-automat-toolkit-kickstarter/" target="_blank">FACT Magazine</a></li>
     <li><a class="is-size-3-desktop" href="https://www.theverge.com/circuitbreaker/2017/3/30/15120290/midi-controlled-drum-beaters-dadamachines" target="_blank">THE VERGE</a></li>
     <li><a class="is-size-3-desktop" href="https://ask.audio/articles/review-dadamachines-automat-robotic-music-machines-toolkit" target="_blank">ASK AUDIO</a></li>
@@ -201,3 +87,4 @@ show_sidebar: false
     <li><a class="is-size-3-desktop" href="https://www.creativeapplications.net/news/dadamachines-by-johannes-lohbihler-on-kickstarter/ " target="_blank">CREATIVE APPLICATIONS NETWORK</a></li>
   </ul>
 </div>
+
