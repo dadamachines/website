@@ -9,9 +9,9 @@
 
         {% if site.footer_menu %}
         <div>
-            <ul class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
+            <ul class="footer-nav-list is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
             {% for item in site.data[site.footer_menu] %}
-                <li class="mr-4"><a class="footer-nav-item has-text-white" href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+                <li class="footer-nav-list-item"><a class="footer-nav-item has-text-white" href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
             {% endfor %}
             </ul>
         </div>
