@@ -14,15 +14,15 @@ first_loop: false
 ---
 
 <section class="section px-0 column is-8">
-    <h1 class="title is-size-1-desktop">automat toolkit</h1>
-    <p class="subtitle is-size-3-desktop mt-1">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
+    <h1 class="title is-2">automat toolkit</h1>
+    <p class="subtitle is-3 mt-1">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
 </section>
 
 <div class="embed-container"><iframe src='https://www.youtube.com/embed/YE7XhlgnaEQ' frameborder='0' allowfullscreen></iframe></div>
 
 <div class="columns mt-4">
     <div class="column">
-        <h1 class="is-size-2-desktop">Meet the automat</h1>
+        <h1 class="is-size-2">Meet the automat</h1>
         <p class="is-size-5-desktop">The center of each toolkit is the automat controller. Plug in your favorite software or hardware MIDI input directly into the controller. For output, automat controller has 12 universal DC outputs to connect motors, solenoids, LEDs – whatever you want to start playing. No coding or soldering required!</p>
     </div>
     <div class="column">
@@ -35,7 +35,7 @@ first_loop: false
         <img style="box-shadow: none;" src="../../img/products/automat-toolkit-how-it-works.png">
     </div>
     <div class="column">
-        <h1 class="is-size-2-desktop">How it works</h1>
+        <h1 class="is-size-2">How it works</h1>
         <p class="is-size-5-desktop">The automat is plug & play – offering unlimited possibilities. Simply connect your favorite MIDI hardware device, music App or DAW and trigger the actuators of your choice to create a composition.</p>
     </div>
 </div>
@@ -54,7 +54,7 @@ first_loop: false
         <img style="box-shadow: none;" src="../../img/projects/dadamachines-automat-toolkit.jpg">
     </div>
     <div class="column">
-        <h1 class="is-size-2-desktop">Get your toolkit now!</h1>
+        <h1 class="is-size-2">Get your toolkit now!</h1>
          <p class="is-size-5-desktop">The automat toolkit comes with everything your need to get started.</p>
         <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
 </div>

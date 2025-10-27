@@ -1,9 +1,9 @@
 - name: Products
   link: /#
   dropdown:
-    - name: Automat Toolkit
+    - name: automat toolkit
       link: /products/automat-toolkit/
-    - name: Doppler
+    - name: doppler
       link: /products/doppler/
 - name: Shop
   link: /shop/

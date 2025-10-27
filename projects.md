@@ -1,6 +1,6 @@
 ---
 title: Projects
-subtitle: Concepts, Workshops and Installations that kept us busy in the past.
+subtitle: Concepts, workshops and installations that kept us busy in the past.
 description: An example showcase page to help you easily display your work
 layout: page
 show_sidebar: false

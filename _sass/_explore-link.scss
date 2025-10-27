@@ -75,6 +75,6 @@
   transform: translateY(-1px);
 }
 
-// size variants
+// size variants - standardized to match navigation sizes
 .explore-link.is-large { font-size: 1.5rem; padding: .55rem 1.5rem; }
-.explore-link.is-medium { font-size: 1.125rem; }
+.explore-link.is-medium { font-size: 1.25rem; } // Match standard navigation size (20px)

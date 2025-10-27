@@ -5,8 +5,14 @@ $family-sans-serif: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial"
 $is-family-primary: "Lelo-Bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 $is-family-secondary: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
 $primary: #ffffff !default;
-$active: #3a07f2;
+$active: #0000ee;
 
+// Standardized typography variables for consistency
+$font-size-navigation: 1.25rem; // 20px - Standard for all navigation
+$font-size-body-large: 1.25rem; // 20px - For readable body text (is-size-5)
+$font-size-body-medium: 1.125rem; // 18px - For medium body text
+$font-size-body-standard: 1rem; // 16px - Default body text
+$font-size-small: 0.75rem; // 12px - For disclaimers only (is-size-7)
 
 $tabs-link-active-color: $active;
 $tabs-link-active-border-bottom-color: $active;
@@ -320,11 +326,11 @@ strong:not(.hero *),
   color: #111 !important;
 }
 
-// Desktop navigation font size (20px = 1.25rem)
+// Desktop navigation font size - using standardized variable
 @media screen and (min-width: 1024px) {
   .navbar .navbar-item,
   .navbar .navbar-link {
-    font-size: 1.25rem;
+    font-size: $font-size-navigation;
   }
 }
 
@@ -332,7 +338,7 @@ strong:not(.hero *),
 @media screen and (max-width: 1023px) {
   .navbar .navbar-item,
   .navbar .navbar-link {
-    font-size: 1.25rem;
+    font-size: $font-size-navigation;
   }
 
   // Hamburger menu sizing to match header height (~80px)
@@ -554,10 +560,10 @@ ul.cv li {
   color: #fff !important;
 }
 
-// Footer navigation styling to match header navigation
+// Footer navigation styling to match header navigation exactly
 .footer-nav-item {
   font-family: $is-family-primary;
-  font-size: 1.125rem !important; // Larger size to match header better
+  font-size: $font-size-navigation !important; // Match header navigation exactly
   color: #fff !important;
   text-decoration: none !important;
   transition: text-decoration 0.3s ease;
@@ -609,4 +615,15 @@ footer.has-background-black a:not(.footer-nav-item) * {
 
 .footer-social a:hover .footer-icon svg {
   opacity: 0.8;
+}
+
+// Responsive line breaks - hide on mobile, show on desktop
+.br-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .br-desktop {
+    display: inline;
+  }
 }

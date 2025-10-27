@@ -17,8 +17,8 @@ show_sidebar: false
 
 <div class="columns mt-4">
     <div class="column">
-        <h1 class="is-size-2-desktop">automat toolkit</h1>
-        <p class="is-size-5-desktop">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
+        <h1 class="title is-2">automat toolkit</h1>
+        <p class="subtitle is-3">The automat toolkit is a plug & play <br class="br-desktop">MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
     <a href="/products/automat-toolkit/" class="explore-link is-dark is-large is-reversed">Explore</a> 
     <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
     </div>
@@ -32,8 +32,8 @@ show_sidebar: false
         <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=90" />
     </div>
     <div class="column">
-        <h1 class="is-size-2-desktop">doppler</h1>
-        <p class="is-size-5-desktop">The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a Teensy and is open source.</p>
+        <h1 class="title is-2">doppler</h1>
+        <p class="subtitle is-3">The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a Teensy and is open source.</p>
     <a href="/products/doppler/" class="explore-link is-dark is-large is-reversed">Explore</a>
     </div>
 </div>

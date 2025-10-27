@@ -17,8 +17,8 @@ show_sidebar: false
 <!-- About -->
 <div class="columns mt-4">
     <div class="column is-8">
-        <h1 class="title is-size-1-desktop">About</h1>
-        <p class="subtitle is-size-3-desktop mt-1"><strong>Johannes Elias Lohbihler</strong> is a seasoned <strong>product designer / creative technologist</strong>. Amongst other ventures, he founded <a href="http://dadamachines.com" target="_blank">dadamachines</a> – a studio for multisensory experiences & open-source music technology. Recently he did a stint at <a href="https://supernova-lights.com/" target="_blank">Supernova</a> and helped <a href="http://www.korg.com" target="_blank">KORG</a> – setting up shop in <a href="http://korg.berlin" target="_blank">Berlin</a>. His expertise is ranging from crafts to creating digital and analog experiences, products, or services for large & small clients.</p>
+        <h1 class="title is-2">About</h1>
+        <p class="subtitle is-3 mt-1"><strong>Johannes Elias Lohbihler</strong> is a seasoned <strong>product designer / creative technologist</strong>. Amongst other ventures, he founded <a href="http://dadamachines.com" target="_blank">dadamachines</a> – a studio for multisensory experiences & open-source music technology. Recently he did a stint at <a href="https://supernova-lights.com/" target="_blank">Supernova</a> and helped <a href="http://www.korg.com" target="_blank">KORG</a> – setting up shop in <a href="http://korg.berlin" target="_blank">Berlin</a>. His expertise is ranging from crafts to creating digital and analog experiences, products, or services for large & small clients.</p>
     </div>
     <div class="column is-4">
       <div class="image-cropper mx-auto profile-image-container">
@@ -29,7 +29,7 @@ show_sidebar: false
 
 <!-- Experience -->
 <div class="dada-a experience mt-6">
-  <h2 class="is-size-1-desktop pt-6">Experience</h2>
+  <h2 class="is-size-2 pt-6">Experience</h2>
   <ul class="cv list-reset mt-0">
     <li class="time-item block mb-3">
       <div class="time_period pt-3">
@@ -80,7 +80,7 @@ show_sidebar: false
 
 <!-- Education -->
 <div class="dada-a education mt-6">
-  <h2 class="is-size-1-desktop pt-6">Education</h2>
+  <h2 class="is-size-2 pt-6">Education</h2>
   <ul class="cv list-reset mt-0">
     <li class="time-item block mb-3">
       <div class="time_period mt-2">
@@ -142,7 +142,7 @@ show_sidebar: false
 
 <!-- Awards -->
 <div class="dada-a awards mt-6">
-  <h2 class="is-size-1-desktop pt-6">Awards</h2>
+  <h2 class="is-size-2 pt-6">Awards</h2>
   <ul class="list-reset mt-0">
     <li><a class="is-size-3-desktop" href="https://ifworlddesignguide.com/entry/235025-audi-music-box" target="_blank">IF Design Award - Interior Architecture, 2018</a></li>
     <li><a class="is-size-3-desktop" href="https://www.red-dot.org/about-red-dot/magazine/fair-stands-2017/" target="_blank">Red Dot: Best of the Best - Communication Design, 2017</a></li>
@@ -152,7 +152,7 @@ show_sidebar: false
 
 <!-- Selected exhibitions, talks and workshops -->
 <div class="dada-a exhibitions mt-6">
-  <h2 class="is-size-1-desktop pt-6">Selected exhibitions, talks and workshops</h2>
+  <h2 class="is-size-2 pt-6">Selected exhibitions, talks and workshops</h2>
   <ul class="list-reset mt-0">
     <li><a class="is-size-3-desktop" href="https://www.cca.edu/" target="_blank">CCA - California College of the Arts, San Francisco 2019</a></li>
     <li><a class="is-size-3-desktop" href="#">Thoughtworks Berlin (dadamachines & playtronica)</a></li>
@@ -188,7 +188,7 @@ show_sidebar: false
 
 <!-- Selected Publications -->
 <div class="dada-a publicactions mt-6">
-  <h2 class="is-size-1-desktop pt-6">Selected Publications</h2>
+  <h2 class="is-size-2 pt-6">Selected Publications</h2>
   <ul class="list-reset mt-0">
     <li><a class="is-size-3-desktop" href="https://www.goethe.de/ins/it/de/kul/sup/drb/20940598.html" target="_blank">Goethe Institute Blog</a></li>
     <li><a class="is-size-3-desktop" href="https://www.factmag.com/2017/03/29/dadamachines-automat-toolkit-kickstarter/" target="_blank">FACT Magazine</a></li>
