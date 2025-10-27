@@ -8,8 +8,8 @@
         </div>
 
         {% if site.footer_menu %}
-        <div>
-            <ul class="footer-nav-list is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
+        <div class="footer-nav-container">
+            <ul class="footer-nav-list">
             {% for item in site.data[site.footer_menu] %}
                 <li class="footer-nav-list-item"><a class="footer-nav-item has-text-white" href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
             {% endfor %}
