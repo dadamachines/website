@@ -13,9 +13,9 @@ show_sidebar: false
 first_loop: false
 ---
 
-<section class="section px-0 column is-8">
+<section class="section px-0 column is-6">
     <h1 class="title is-2">automat toolkit</h1>
-    <p class="subtitle is-3 mt-1">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
+    <p class="subtitle is-4 mt-1">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
 </section>
 
 <div class="embed-container"><iframe src='https://www.youtube.com/embed/YE7XhlgnaEQ' frameborder='0' allowfullscreen></iframe></div>
@@ -23,7 +23,7 @@ first_loop: false
 <div class="columns mt-4">
     <div class="column">
         <h1 class="is-size-2">Meet the automat</h1>
-        <p class="is-size-5-desktop">The center of each toolkit is the automat controller. Plug in your favorite software or hardware MIDI input directly into the controller. For output, automat controller has 12 universal DC outputs to connect motors, solenoids, LEDs – whatever you want to start playing. No coding or soldering required!</p>
+        <p class="is-size-5">The center of each toolkit is the automat controller. Plug in your favorite software or hardware MIDI input directly into the controller. For output, automat controller has 12 universal DC outputs to connect motors, solenoids, LEDs – whatever you want to start playing. No coding or soldering required!</p>
     </div>
     <div class="column">
         <img src="../../img/products/dadamachines-automat-floating.jpg">
@@ -36,7 +36,7 @@ first_loop: false
     </div>
     <div class="column">
         <h1 class="is-size-2">How it works</h1>
-        <p class="is-size-5-desktop">The automat is plug & play – offering unlimited possibilities. Simply connect your favorite MIDI hardware device, music App or DAW and trigger the actuators of your choice to create a composition.</p>
+        <p class="is-size-5">The automat is plug & play – offering unlimited possibilities. Simply connect your favorite MIDI hardware device, music App or DAW and trigger the actuators of your choice to create a composition.</p>
     </div>
 </div>
 
@@ -52,7 +52,7 @@ first_loop: false
 <div class="columns mt-4">
     <div class="column">
         <h1 class="is-size-2">showcase</h1>
-        <p class="is-size-5-desktop"><strong>Barker × automat toolkit</strong> In FACT’s Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. <br>It’s a great example of how simple, plug‑and‑play control unlocks new, hands‑on sounds — from studio hacks to live setups. <br>See more artist builds in our showcase.</p>
+        <p class="is-size-5"><strong>Barker × automat toolkit</strong> In FACT’s Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. <br>It’s a great example of how simple, plug‑and‑play control unlocks new, hands‑on sounds — from studio hacks to live setups. <br>See more artist builds in our showcase.</p>
         <a href="/showcase/" class="explore-link is-dark is-large is-reversed">Explore</a> 
     </div>
     <div class="column">
@@ -66,7 +66,7 @@ first_loop: false
     </div>
     <div class="column">
         <h1 class="is-size-2">Get your toolkit now!</h1>
-         <p class="is-size-5-desktop">The automat toolkit comes with everything you need to get started. <br>It’s available via our long‑term partner <strong>SchneidersLaden</strong> in Berlin and in their <a href="https://schneidersladen.de/en/dadamachines-automat-toolkit" target="_blank" rel="noopener">webshop</a>.</p>
+         <p class="is-size-5">The automat toolkit comes with everything you need to get started. <br>It’s available via our long‑term partner <strong>SchneidersLaden</strong> in Berlin and in their <a href="https://schneidersladen.de/en/dadamachines-automat-toolkit" target="_blank" rel="noopener">webshop</a>.</p>
         <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
     </div>
 </div>

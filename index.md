@@ -21,7 +21,7 @@ show_sidebar: false
     </div>
     <div class="column">
         <h1 class="title is-2">automat toolkit</h1>
-        <p class="is-size-5-desktop">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
+        <p class="is-size-5">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
         <a href="/products/automat-toolkit/" class="explore-link is-dark is-large is-reversed">Explore</a> 
         <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
     </div>
@@ -30,7 +30,7 @@ show_sidebar: false
 <div class="columns mt-4">
     <div class="column">
         <h1 class="is-size-2">showcase</h1>
-        <p class="is-size-5-desktop"><strong>Barker × automat toolkit</strong> In FACT’s Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. <br>It’s a great example of how simple, plug‑and‑play control unlocks new, hands‑on sounds — from studio hacks to live setups. <br>See more artist builds in our showcase.</p>
+        <p class="is-size-5"><strong>Barker × automat toolkit</strong> In FACT’s Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. <br>It’s a great example of how simple, plug‑and‑play control unlocks new, hands‑on sounds — from studio hacks to live setups. <br>See more artist builds in our showcase.</p>
         <a href="/showcase/" class="explore-link is-dark is-large is-reversed">Explore</a> 
     </div>
     <div class="column">
@@ -45,7 +45,7 @@ show_sidebar: false
     </div>
     <div class="column">
         <h1 class="title is-2">doppler</h1>
-        <p class="is-size-5-desktop">The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a Teensy and is open source.</p>
+        <p class="is-size-5">The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a Teensy and is open source.</p>
         <a href="/products/doppler/" class="explore-link is-dark is-large is-reversed">Explore</a>
     </div>
 </div>
