@@ -51,11 +51,23 @@ first_loop: false
 
 <div class="columns mt-4">
     <div class="column">
+        <h1 class="is-size-2">Artist showcase</h1>
+        <p class="is-size-5-desktop"><strong>Barker × automat toolkit</strong> In FACT’s Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. <br>It’s a great example of how simple, plug‑and‑play control unlocks new, hands‑on sounds — from studio hacks to live setups. <br>See more artist builds in our showcase.</p>
+        <a href="/showcase/" class="explore-link is-dark is-large is-reversed">Explore</a> 
+    </div>
+    <div class="column">
+        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/showcase/barker-fact.jpg&w=660&h=440&output=jpg&q=90" alt="Sam Barker in FACT’s Against The Clock session using automat toolkit with plate reverb">
+    </div>
+</div>
+
+<div class="columns mt-4">
+    <div class="column">
         <img style="box-shadow: none;" src="../../img/projects/dadamachines-automat-toolkit.jpg">
     </div>
     <div class="column">
         <h1 class="is-size-2">Get your toolkit now!</h1>
-         <p class="is-size-5-desktop">The automat toolkit comes with everything your need to get started.</p>
+         <p class="is-size-5-desktop">The automat toolkit comes with everything you need to get started. <br>It’s available via our long‑term partner <strong>SchneidersLaden</strong> in Berlin and in their <a href="https://schneidersladen.de/en/dadamachines-automat-toolkit" target="_blank" rel="noopener">webshop</a>.</p>
         <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
+    </div>
 </div>
 
