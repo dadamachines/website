@@ -245,8 +245,8 @@ strong:not(.hero *),
     transition: color 0.4s;
     text-decoration: underline;
     text-decoration-color: #111;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
     color: #111;
 
     @include for-phone-only{
@@ -258,8 +258,8 @@ strong:not(.hero *),
   a:not(footer a):hover {
     text-decoration: underline;
     text-decoration-color: #0000ee;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
     color: #0000ee;
 
     @include for-phone-only {
