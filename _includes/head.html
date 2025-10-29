@@ -8,6 +8,69 @@
     />
     <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/b3bd25e1c2679eaf1e1311804b1bd488.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <script>
+    // CSS-Tricks Smart Navbar Implementation
+    document.addEventListener('DOMContentLoaded', function() {
+      const nav = document.querySelector(".product-sticky-nav");
+      if (!nav) return;
+
+      const supportPageOffset = window.pageXOffset !== undefined;
+      const isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+
+      let previousScrollPosition = 0;
+
+      const isScrollingDown = () => {
+        let scrolledPosition = supportPageOffset
+          ? window.pageYOffset
+          : isCSS1Compat
+          ? document.documentElement.scrollTop
+          : document.body.scrollTop;
+        let isScrollDown;
+
+        if (scrolledPosition > previousScrollPosition) {
+          isScrollDown = true;
+        } else {
+          isScrollDown = false;
+        }
+        previousScrollPosition = scrolledPosition;
+        return isScrollDown;
+      };
+
+      const handleNavScroll = () => {
+        if (isScrollingDown() && !nav.contains(document.activeElement)) {
+          nav.classList.add("scroll-down");
+          nav.classList.remove("scroll-up");
+        } else {
+          nav.classList.add("scroll-up");
+          nav.classList.remove("scroll-down");
+        }
+      };
+
+      var throttleTimer;
+
+      const throttle = (callback, time) => {
+        if (throttleTimer) return;
+
+        throttleTimer = true;
+        setTimeout(() => {
+          callback();
+          throttleTimer = false;
+        }, time);
+      };
+
+      const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      window.addEventListener("scroll", () => {
+        if (mediaQuery && !mediaQuery.matches) {
+          throttle(handleNavScroll, 250);
+        }
+      });
+
+      console.log('Smart navbar initialized');
+    });
+    </script>
+    </script>
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     {% unless site.hide_share_buttons %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">

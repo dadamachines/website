@@ -1,0 +1,77 @@
+.product-sticky-nav {
+  position: sticky;
+  top: 0; /* Start visible */
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: top 500ms ease-in-out;
+  z-index: 19;
+}
+
+.product-sticky-nav.scroll-up,
+.product-sticky-nav:focus-within {
+  top: 0; /* Show when scrolling up */
+}
+
+.product-sticky-nav.scroll-down {
+  top: -100%; /* Hide when scrolling down */
+}
+
+.product-sticky-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.product-sticky-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.75rem 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.product-sticky-nav-list .buy {
+  margin-left: auto;
+}
+
+.product-sticky-nav-list a:not(.explore-link) {
+  color: #363636;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.product-sticky-nav-list a:not(.explore-link):hover {
+  color: #0066ff;
+}
+
+.product-sticky-nav-list li.is-active a:not(.explore-link) {
+  color: #0066ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+  .product-sticky-nav-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .product-sticky-nav-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-sticky-nav-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
