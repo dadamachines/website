@@ -1,14 +1,22 @@
 ---
 title: automat toolkit
 manufacturer: dadamachines
-description: music machines for everyone!
+description: Plug & play MIDI toolkit for real‑life music making & kinetic installations
 product_code: DA-ATL0002
 layout: product
+category: automat-toolkit
 hide_hero: true
 image: ../../img/products/dadamachines-automat-toolkit-l.jpg
 price: 949,00€
 productshopurl: https://schneidersladen.de/en/dadamachines-automat-toolkit
-features:
+keyfeatures:
+    - ▶ No coding or soldering required
+    - ▶ Reliable DC-actuator MIDI-controller
+    - ▶ Works with standard MIDI gear
+    - ▶ Durable custom solenoids
+    - ▶ Extensive accessories included
+    - ▶ High-quality power supply
+
 rating:
 first_loop: true
 ---

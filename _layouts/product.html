@@ -11,18 +11,25 @@ layout: default
     </div>
 
     <div class="column is-6">
-        <p class="subtitle is-3">{{ page.manufacturer }}</p>
+        <!--<p class="subtitle is-3">{{ page.manufacturer }}</p>-->
         <p class="title is-3">{{ page.title }}</p>
-        <p class="title is-4 mt-4">{{ page.price }}</p>
+        <p class="subtitle is-4">{{ page.description }}</p>
+        <p class="is-size-3">{{ page.price }}</p>
         <p class="is-size-7">Includes 19% VAT / MwSt plus <a href="#" target="_blank">shipping</a></p>
-        <p class="is-size-7">Additional costs (e.g. for customs or taxes) may occur when shipping to non-EU countries.</p>
-        {% if page.product_code %}
+        <!--<p class="is-size-7">Additional costs (e.g. for customs or taxes) may occur when shipping to non-EU countries.</p>-->
+        <!--{% if page.product_code %}
         <p class="subtitle is-5 mt-4">SKU: {{ page.product_code }}</p>
+         {% endif %}-->
 
-        <a href="{{ page.productshopurl }}" class="explore-link is-blue is-large" target="_blank">Buy now</a>
+        <a href="{{ page.productshopurl }}" class="explore-link is-blue is-large mt-4" target="_blank">Buy now</a>
 
-        <p class="is-size-7 mt-4">This "Buy now" button brings you to the Website</br> of our Partner Schneidersladen</p>
-
+        {% if page.keyfeatures %}
+        <h3 class="is-size-5 has-text-weight-semibold mt-4">Key features</h3>
+        <ul class="keyfeatures">
+            {% for item in page.keyfeatures %}
+            <li class="is-size-5">{{ item }}</li>
+            {% endfor %}
+        </ul>
         {% endif %}
 
         {% if page.rating %}
@@ -49,8 +56,6 @@ layout: default
     <div class="column is-12">
         <p class="title is-4">Description</p>
         <div class="content">
-
-
             {{ content }}
         </div>
     </div>
