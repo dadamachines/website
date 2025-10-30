@@ -27,7 +27,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <h2 class="is-size-3">showcase</h2>
         <p class="is-size-5"><strong>Barker × automat toolkit</strong> In FACT’s Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. <br>It’s a great example of how simple, plug‑and‑play control unlocks new, hands‑on sounds — from studio hacks to live setups. <br>See more artist builds in our showcase.</p>
@@ -39,7 +39,7 @@ show_sidebar: false
 </div>
 
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=90" />
     </div>

@@ -6,12 +6,12 @@ hide_hero: true
 show_sidebar: false
 ---
 
-<section class="section px-0 pt-0 column is-6">
+<section class="section px-0 pt-0 pb-0 column is-6">
 <h1 class="title is-2">inside the automat toolkit</h1>
 <p class="subtitle is-4 mt-1">Turn any object into an instrument. Build percussive machines, kinetic sound sculptures, or interactive installations — all powered by your favorite MIDI setup.</p>
 </section>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/dadamachines-automat-top_side.jpg">
     </div>
@@ -33,7 +33,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/gifs/dada_solenoid.gif">
     </div>
@@ -44,7 +44,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/gifs/dada_mallet.gif">
     </div>
@@ -54,7 +54,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/gifs/dada_materialdrum.gif">
     </div>
@@ -64,7 +64,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/gifs/dada_littlewingman.gif">
     </div>
@@ -74,7 +74,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/gifs/dada_legoadapter.gif">
     </div>
@@ -84,7 +84,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img src="../../../img/products/gifs/dada_roundobjectmount.gif">
     </div>
@@ -94,7 +94,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <div class="embed-container"><iframe src='https://www.youtube.com/embed/mnedVLVNZiU' frameborder='0' allowfullscreen></iframe></div>
     </div>
@@ -104,7 +104,7 @@ show_sidebar: false
     </div>
 </div>
 
-<div class="columns mt-4">
+<div class="columns mt-6">
     <div class="column">
         <img style="box-shadow: none;" src="../../../img/projects/dadamachines-automat-toolkit.jpg">
     </div>
