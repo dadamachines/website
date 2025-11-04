@@ -61,3 +61,9 @@ Series Creators: Bob Boilen, Stephen Thompson, Robin Hilton
 ---
 
 Originally written by [Lars Gotrich](https://www.npr.org/people/300291407/lars-gotrich){:target="_blank"} for [NPR Music](https://www.npr.org/2025/10/31/g-s1-87236/clipping-tiny-desk-concert){:target="_blank"}.
+
+<section class="section is-small has-text-centered mt-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../../img/products/dadamachines-automat-toolkit-l-inside.jpg') center center; background-size: cover;">
+	<h2 class="is-size-3" style="color: white !important;">Want to build your own robot music setup?</h2>
+	<p class="is-size-5 has-text-white">Try the dadamachines automat toolkit and start composing with everyday objects.</p>
+	<a href="/products/automat-toolkit/" class="explore-link is-light is-large is-reversed">Learn more</a>
+</section>
