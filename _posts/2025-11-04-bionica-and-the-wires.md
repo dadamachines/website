@@ -24,7 +24,7 @@ Their art challenges the traditional notion that creativity is exclusively human
 
 ### The Automat Toolkit: Bridging Nature and Machines
 
-Central to their setup is the dadamachines automat toolkit—a plug & play MIDI-controller that Jon Ross purchased second-hand on reverb.com. Jon recently shared with us that he’s thrilled with the toolkit’s flexibility and reliability, which has helped bring their botanical bandmates to life on stage. The automat toolkit’s universal DC outputs and MIDI compatibility make it the perfect bridge between bio-signals and musical instruments.
+Central to their setup is the dadamachines automat toolkit—a plug & play MIDI-controller that Jon Ross purchased second-hand on reverb.com. Jon recently shared with us that he’s very happy with the toolkit’s flexibility and reliability, which has helped bring their botanical bandmates to life on stage. The automat toolkit’s universal DC outputs and MIDI compatibility make it the perfect bridge between bio-signals and musical instruments.
 
 ### How It Works: Plants Playing Instruments
 
@@ -34,7 +34,7 @@ The band’s invention works by capturing the electrical bio-signals generated b
 
 ### Meet the Artists
 
-**Jon Ross** is the visionary force behind Bionic and the Wires. As an artist, technologist, and environmental thinker, Jon engineers custom bionic arms that let plants and fungi express themselves. His work spans sculpture, performance, and electronics, always driven by a desire to reveal the hidden intelligence of nature. Jon is also the founder and CEO of Sow the City, a Manchester-based not-for-profit environmental organisation.
+**Jon Ross** is the visionary force behind Bionic and the Wires. As an artist, technologist, and environmental thinker, Jon assembled the bionic arms that let plants and fungi express themselves. His work spans sculpture, performance, and electronics, always driven by a desire to reveal the hidden intelligence of nature. Jon is also the founder and CEO of Sow the City, a Manchester-based not-for-profit environmental organisation.
 
 **Andy Kidd** is the sonic sorcerer behind the band’s sound. With a background in live performance and electronic music, Andy translates the subtle rhythms of the natural world into immersive musical experiences using synthesizers, keyboards, and digital soundscapes.
 
