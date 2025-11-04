@@ -41,7 +41,7 @@ show_sidebar: false
 
 <div class="columns mt-6">
     <div class="column">
-        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=90" />
+        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/blog/bionicandthewires-mushroom-keyboard.jpg&w=660&h=440&output=jpg&q=90" />
     </div>
     <div class="column">
         <h2 class="title is-3">blog</h2>
