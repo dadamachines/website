@@ -10,10 +10,19 @@ items:
     link: https://www.youtube.com/watch?v=C9-qpMqhuPU
     link_text: View on Youtube
     tags:
+  - artist: clipping.
+    title:  NRP Music – Tiny Desk Concert
+    description: |-
+
+    image: /img/showcase/clipping_tiny-desk-concert.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=h0-k7vW9Xek
+    link_text: View on Youtube
+    tags:
   - artist: Hauschka
     title: A Different Forest (UK & EU Tour 2019)
     description: |-
-      
+
     image: /img/showcase/hauschka-a-different-forest.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=GU9NX5AvXXM
@@ -26,6 +35,15 @@ items:
     image: /img/showcase/oh_no_noh-shrugging.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=ogamAKxlqkQ
+    link_text: View on Youtube
+    tags:
+  - artist: Bionica and the Wires
+    title: Mushroom in the Wild Playing Keyboard
+    description: |-
+
+    image: /img/blog/bionicandthewires-mushroom-keyboard.jpg
+    image_ratio: is-16by9
+    link: https://www.youtube.com/watch?v=NbP2DgDp890
     link_text: View on Youtube
     tags:
   - artist: reConvert
@@ -58,7 +76,7 @@ items:
   - artist: Joasihno
     title: Nuh Nuh
     description: |-
-      
+
     image: /img/showcase/joasihno-nuhnuh.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=mu5rS0rFy-k
@@ -109,7 +127,7 @@ items:
     link: https://www.youtube.com/watch?v=aUwM4YWjvJg
     link_text: View on Youtube
     tags:
-  - artist: Loopin'Lab 
+  - artist: Loopin'Lab
     title: MakerFaire 2021 • Creating Ghost
     description: |-
 
@@ -184,7 +202,7 @@ items:
   - artist: Mario G. Cortizo
     title: Só un solo - Teaser
     description: |-
-      
+
     image: /img/showcase/mario-g-cortizo-teaser.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=D5kV6LDe8iQ
@@ -193,7 +211,7 @@ items:
   - artist: Reiz Trigger
     title: Dada Machines 03
     description: |-
-      
+
     image: /img/showcase/reiztrigger-dada-machines03.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=A0tdZqokvPc
@@ -211,7 +229,7 @@ items:
   - artist: Bruno Kramm
     title: Dadamachines Tenori-On OP-Z
     description: |-
-      
+
     image: /img/showcase/bruno-kramm-tenori-on-op-z-dada.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=KAa85iU3qBA
@@ -220,7 +238,7 @@ items:
   - artist: Popp
     title: Xolotl (Robot Version)
     description: |-
-      
+
     image: /img/showcase/popp-xolotl-robot-version.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=U7U4PI_EI30
@@ -229,7 +247,7 @@ items:
   - artist: Joasihno
     title: Mobile Disko
     description: |-
-      
+
     image: /img/showcase/joasihno-mobiledisko.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=r9AFFyur3I0
@@ -256,7 +274,7 @@ items:
   - artist: Paperghost music
     title: Common Household Ceremony
     description: |-
-      
+
     image: /img/showcase/paperghost-common-household.jpg
     image_ratio: is-16by9
     link: https://www.youtube.com/watch?v=S_bVFwmV0iw
@@ -265,7 +283,7 @@ items:
   - artist: Jonas Urbat
     title: OTHER VOICES - a Cybermechanic Dance Performance (ft Dadamachines)
     description: |-
-      
+
 
     image: /img/showcase/jonas-urbat-other-voices.jpg
     image_ratio: is-16by9

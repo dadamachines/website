@@ -44,8 +44,8 @@ show_sidebar: false
         <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/projects/doppler-003.jpg&w=660&h=440&output=jpg&q=90" />
     </div>
     <div class="column">
-        <h2 class="title is-3">doppler</h2>
-        <p class="is-size-5">The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a Teensy and is open source.</p>
-        <a href="/products/doppler/" class="explore-link is-dark is-large is-reversed">Explore</a>
+        <h2 class="title is-3">blog</h2>
+    <p class="is-size-5">Discover our new blog section! Dive into stories about creative music machines, artist projects, technical deep-dives, and the latest news from dadamachines. Join us as we explore the intersection of technology, art, and sound.</p>
+        <a href="/blog/" class="explore-link is-dark is-large is-reversed">Read more</a>
     </div>
 </div>

@@ -419,6 +419,11 @@ strong:not(.hero *),
   }
 }
 
+// Blog post font size adjustment
+.content.blog p {
+  font-size: 1.125rem; // 18px
+}
+
 // Video Embeds
 .embed-container {
   position: relative;

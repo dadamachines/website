@@ -12,8 +12,6 @@ tags: automat-toolkit dadamachines blog
 series:
 ---
 
-# a blog for dadamachines
-
 Hello and welcome to the dadamachines blog! 
 This space is dedicated to the latest happenings and creative explorations from the world of dadamachines, where we turn the real world into your instrument with our automat toolkit.
 
