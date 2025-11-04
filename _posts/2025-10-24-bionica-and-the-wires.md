@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Bionic and the Wires – When Plants Play Music
-description: When Plants Play Music
-date: 2024-11-04 11:30:11
+title: Bionic and the Wires
+subtitle: When Plants Play Music
+date: 2024-10-25 11:30:11
 image: '../../img/blog/bionicandthewires-mushroom-keyboard.jpg'
 hero_image: ../../../../img/blog/bionicandthewires-mushroom-keyboard.jpg
 hero_height:
