@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bionic and the Wires
+title: Bionica and the Wires
 subtitle: When Plants Play Music
 date: 2024-10-25 11:30:11
 image: '../../img/blog/bionicandthewires-mushroom-keyboard.jpg'
@@ -12,7 +12,7 @@ tags: automat-toolkit dadamachines blog bio-sonification plant-music
 series:
 ---
 
-What if creativity wasn’t just a human trait? What if mushrooms and plants could compose music and create visual art? For Manchester-based band [Bionic and the Wires](https://bionicandthewires.com/){:target="_blank"}, this isn’t science fiction—it’s their daily reality, powered in part by the [dadamachines automat toolkit](/products/automat-toolkit/).
+What if creativity wasn’t just a human trait? What if mushrooms and plants could compose music and create visual art? For Manchester-based band [Bionica and the Wires](https://bionicandthewires.com/){:target="_blank"}, this isn’t science fiction—it’s their daily reality, powered in part by the [dadamachines automat toolkit](/products/automat-toolkit/).
 
 <div class="embed-container"><iframe src='https://www.youtube.com/embed/NbP2DgDp890' frameborder='0' allowfullscreen></iframe></div>
 
