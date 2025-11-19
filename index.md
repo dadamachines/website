@@ -49,3 +49,5 @@ show_sidebar: false
         <a href="/blog/" class="explore-link is-dark is-large is-reversed">Read more</a>
     </div>
 </div>
+
+{% include newsletter-bulma.html %}

@@ -1,27 +1,24 @@
-<section class="section">
-    <div class="container">
-      <div class="is-vcentered columns is-multiline">
-        <div class="column is-7 mb-4">
-          <div class="is-flex is-align-items-center">
-            <span class="has-text-white mr-4 is-flex has-background-primary is-justify-content-center is-align-items-center is-flex-shrink-0" style="width: 84px;height: 84px; border-radius: 50% !important;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path class="frame" d="M77.4 0H0v80h80V0h-2.6zM5.6 74.4V5.6h68.9v68.9l-68.9z"></path><path class="typo" d="M61.4 10.6c-4.4 0-8.1 3.6-8.1 8v50.8h5.6V42.8h5v26.7h5.6v-50.8c0-4.4-3.6-8-8.1-8zm-2.5 26.6v-18.6c0-1.5 1-2.7 2.5-2.7 1.5 0 2.5 1.2 2.5 2.7v18.6l-5 0zM37.4 64V48h2.7a2.7 2.7 0 0 1 2.7 2.7v10.7a2.7 2.7 0 0 1-2.7 2.7m8-13.3a8 8 0 0 0-8-8h-8V69.3h8m0 0a8 8 0 0 0 8-8V50.6M40 10.6c-4.4 0-7.8 3.6-7.8 8v18.6h5v-7.8h5.6v7.8h5v-18.6c0-4.4-3.4-8-7.8-8zm-2.8 13.3v-5.3c0-1.5 1.3-2.7 2.8-2.7 1.5 0 2.8 1.2 2.8 2.7v5.3h-5.6zM16 64v-48h2.7a2.7 2.7 0 0 1 2.7 2.7v42.7a2.7 2.7 0 0 1-2.7 2.7m8-45.3c0-4.4-3.6-8-8-8H10.7v58.7h8a8 8 0 0 0 8-8l0-42.7"></path></svg>
-            </span>
-            <div>
-              <h3 class="is-size-2 is-size-3-mobile has-text-weight-bold mb-0">Sign up for our mailing list</h3>
-              <p class="mb-0">Join our community of music makers!</p>
-            </div>
-          </div>
+<section class="section is-medium has-text-centered">
+  <h2 class="is-size-3">Sign up for our mailing list</h2>
+  <p class="is-size-5">Join our community of music makers!</p>
+
+  <div class="mt-5" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+    <form action="https://app.keila.io/forms/nfrm_kVPeqPR8" method="post">
+      <div class="field has-addons has-addons-centered">
+        <div class="control is-expanded">
+          <input class="input is-large" id="contact_email" name="contact[email]" type="email" placeholder="Your email address" required style="border: 3px solid #000; border-right: none; border-radius: 0;">
         </div>
-        <div class="column is-4 ml-auto mt-4">
-          <form class="#" action="#">
-            <div class="is-flex">
-              <div class="control mr-2 is-flex-grow-1">
-                <input class="input is-medium" type="email" placeholder="Type your e-mail">
-              </div>
-              <button class="button is-info is-medium">Sign Up</button>
-            </div>
-          </form>
+        <div class="control">
+          <button class="explore-link is-dark is-large is-reversed" type="submit" style="height: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0;">Sign up!</button>
         </div>
       </div>
-    </div>
-  </section>
+      <!-- Honeypot field for spam protection -->
+      <input aria-hidden="true" autocomplete="off" name="h[url]" novalidate style="display: none;" type="text">
+      <!-- hCaptcha -->
+      <div class="mt-4" style="display: flex; justify-content: center;">
+        <div class="h-captcha" data-sitekey="a1c5fab7-71df-4ea4-af75-87a3d07c61de" data-theme="light"></div>
+      </div>
+    </form>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+  </div>
+</section>
