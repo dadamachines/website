@@ -729,3 +729,67 @@ footer.has-background-black a:not(.footer-nav-item) * {
     display: inline;
   }
 }
+
+// Newsletter Form Styles
+.newsletter-section {
+  background-color: #fff;
+}
+
+.newsletter-form-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.newsletter-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.newsletter-input-control {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.newsletter-button-control {
+  flex: 1 1 100%;
+}
+
+.newsletter-input {
+  border: 3px solid #000;
+  border-radius: 0;
+  width: 100%;
+  height: 3.25rem;
+}
+
+.newsletter-button {
+  white-space: nowrap;
+  height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.newsletter-captcha {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .newsletter-form-group {
+    gap: 0;
+  }
+
+  .newsletter-input-control {
+    flex: 1 1 auto;
+  }
+
+  .newsletter-button-control {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}

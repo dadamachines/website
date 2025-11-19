@@ -1,21 +1,21 @@
-<section class="section is-medium has-text-centered">
+<section class="section is-medium has-text-centered newsletter-section">
   <h2 class="is-size-3">Sign up for our mailing list</h2>
   <p class="is-size-5">Join our community of music makers!</p>
 
-  <div class="mt-5" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+  <div class="newsletter-form-wrapper mt-5">
     <form action="https://app.keila.io/forms/nfrm_kVPeqPR8" method="post">
-      <div class="field has-addons has-addons-centered">
-        <div class="control is-expanded">
-          <input class="input is-large" id="contact_email" name="contact[email]" type="email" placeholder="Your email address" required style="border: 3px solid #000; border-right: none; border-radius: 0;">
+      <div class="newsletter-form-group">
+        <div class="newsletter-input-control">
+          <input class="input is-large newsletter-input" id="contact_email" name="contact[email]" type="email" placeholder="Your email address" required>
         </div>
-        <div class="control">
-          <button class="explore-link is-dark is-large is-reversed" type="submit" style="height: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0;">Sign up!</button>
+        <div class="newsletter-button-control">
+          <button class="explore-link is-dark is-large is-reversed newsletter-button" type="submit">Sign up!</button>
         </div>
       </div>
       <!-- Honeypot field for spam protection -->
       <input aria-hidden="true" autocomplete="off" name="h[url]" novalidate style="display: none;" type="text">
       <!-- hCaptcha -->
-      <div class="mt-4" style="display: flex; justify-content: center;">
+      <div class="newsletter-captcha mt-4">
         <div class="h-captcha" data-sitekey="a1c5fab7-71df-4ea4-af75-87a3d07c61de" data-theme="light"></div>
       </div>
     </form>
