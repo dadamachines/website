@@ -671,6 +671,13 @@ ul.cv li {
   .footer-nav-list-item:last-child .footer-nav-item {
     border-bottom: none !important;
   }
+
+  // Center dadamachines logo on mobile
+  footer .mr-auto {
+    margin-right: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
 }// Desktop: Keep horizontal layout with spacing
 @media screen and (min-width: 1024px) {
   .footer-nav-list-item {
