@@ -1,6 +1,6 @@
 ---
-title: TBD DSP Toolkit
-subtitle: The Next Generation Experience
+title: the TBD DSP toolkit
+subtitle: create your digital sound
 layout: page
 hide_hero: true
 hero_image:
@@ -13,7 +13,7 @@ show_sidebar: false
 ---
 
 <section class="section is-large has-background-dark has-text-centered">
-  <h2 class="is-size-3" style="color: white !important;">TBD DSP Toolkit</h2>
-  <p class="is-size-4 has-text-white">The Next Generation Experience</p>
+  <h2 class="is-size-3" style="color: white !important;">the TBD DSP toolkit</h2>
+  <p class="is-size-4 has-text-white">create your digital sound</p>
   <p class="is-size-5 has-text-white mt-5">Coming soon</p>
 </section>
