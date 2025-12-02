@@ -3,8 +3,8 @@ layout: post
 title: Announcing the TBD DSP Toolkit
 subtitle: Supported by NLnet NGI0 Commons Fund
 date: 2025-12-02 10:00:00
-image:
-hero_image:
+image: ../../../../img/blog/dada-tbd-16x9.jpg
+hero_image: ../../../../img/blog/dada-tbd-16x9.jpg
 hero_height:
 hero_darken: true
 hero_whitetxt: true
