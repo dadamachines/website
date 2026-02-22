@@ -23,10 +23,6 @@ first_loop: true
 
 **The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.**
 
-<div class="notification is-info is-light">
-    <p class="has-text-weight-bold">If Schneidersladen is out of stock you can also <a href="https://shop.watterott.com/Dadamachines-Automat-Toolkit_1" target="_blank">buy here</a>.</p>
-</div>
-
 The automat toolkit comes with:
 
 - 1 x dadamachines – automat controller
