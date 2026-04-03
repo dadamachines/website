@@ -1,0 +1,79 @@
+# =============================================================================
+# Pre-order Product Registry
+# =============================================================================
+# Single source of truth for all pre-order products.
+# Used by: _includes/preorder-form.html, assets/js/preorder.js, product pages
+#
+# IMPORTANT: If you change batch_size or sku here, also update the PRODUCTS
+# object in Code.gs to keep the Google Apps Script in sync.
+# =============================================================================
+
+tbd-16:
+  name: "TBD-16"
+  tagline: "16-channel open-source DSP toolkit"
+  sku: "DA-TBD16-001"
+  price: "399"
+  price_note: "+ VAT"
+  price_regular: "499"
+  price_regular_note: "incl. 19% VAT"
+  batch_size: 100
+  batch_next_size: 200
+  early_bird: true
+  early_bird_end: "2026-05-09"
+  product_group: "tbd"
+
+tbd-core:
+  name: "TBD-Core"
+  tagline: "Core DSP module for developers & musicians"
+  sku: "DA-TBDC-001"
+  price: "129"
+  price_note: "incl. 19% VAT"
+  price_regular: ""
+  price_regular_note: ""
+  batch_size: 100
+  batch_next_size: 100
+  early_bird: false
+  early_bird_end: ""
+  product_group: "tbd"
+
+everydiv:
+  name: "EveryDiv"
+  tagline: "Divide everything"
+  sku: "DA-EDIV-001"
+  price: "499"
+  price_note: "incl. 19% VAT"
+  price_regular: ""
+  price_regular_note: ""
+  batch_size: 100
+  batch_next_size: 100
+  early_bird: false
+  early_bird_end: ""
+  product_group: "everydiv"
+
+automat-mk2:
+  name: "automat toolkit MK2"
+  tagline: "The next generation of analog sound machines"
+  sku: "DA-ATMK2-001"
+  price: "949"
+  price_note: "incl. 19% VAT"
+  price_regular: ""
+  price_regular_note: ""
+  batch_size: 100
+  batch_next_size: 100
+  early_bird: false
+  early_bird_end: ""
+  product_group: "automat-mk2"
+
+automat-modular:
+  name: "automat Modular"
+  tagline: "Eurorack-ready modular music machine controller"
+  sku: "DA-ATMOD-001"
+  price: "399"
+  price_note: "+ VAT"
+  price_regular: ""
+  price_regular_note: ""
+  batch_size: 100
+  batch_next_size: 100
+  early_bird: false
+  early_bird_end: ""
+  product_group: "automat-modular"

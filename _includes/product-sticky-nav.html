@@ -1,16 +1,49 @@
+{% comment %}
+Product Sticky Nav — data-driven from page.product_nav front matter.
+Falls back to hardcoded automat-toolkit nav for backwards compatibility.
+
+Usage in front matter:
+  product_nav:
+    - label: Overview
+      url: /products/tbd/
+    - label: TBD-16
+      url: "#tbd-16"
+    - label: TBD-Core
+      url: "#tbd-core"
+  product_nav_cta:
+    label: Pre-order ↓
+    url: "#tbd-16"
+{% endcomment %}
+
 <nav class="product-sticky-nav">
   <div class="product-sticky-nav-container container">
     <ul class="product-sticky-nav-list">
-      <li{% if page.url == '/products/automat-toolkit/' %} class="is-active"{% endif %}>
-        <a href="/products/automat-toolkit/">Overview</a>
-      </li>
-      <li{% if page.url == '/products/automat-toolkit/inside/' %} class="is-active"{% endif %}>
-        <a href="/products/automat-toolkit/inside">Inside</a>
-      </li>
-      <li class="buy">
-        <a href="/shop/" class="explore-link is-blue is-medium">Buy now</a>
-      </li>
+      {% if page.product_nav %}
+        {% for item in page.product_nav %}
+        <li{% if page.url == item.url %} class="is-active"{% endif %}>
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+        {% endfor %}
+        <li class="buy">
+          {% if page.product_nav_cta %}
+          <a href="{{ page.product_nav_cta.url }}" class="explore-link is-blue is-medium">{{ page.product_nav_cta.label }}</a>
+          {% else %}
+          <a href="/shop/" class="explore-link is-blue is-medium">Shop</a>
+          {% endif %}
+        </li>
+      {% else %}
+        <li{% if page.url == '/products/automat-toolkit/' %} class="is-active"{% endif %}>
+          <a href="/products/automat-toolkit/">Overview</a>
+        </li>
+        <li{% if page.url == '/products/automat-toolkit/inside/' %} class="is-active"{% endif %}>
+          <a href="/products/automat-toolkit/inside">Inside</a>
+        </li>
+        <li class="buy">
+          <a href="/shop/" class="explore-link is-blue is-medium">Buy now</a>
+        </li>
+      {% endif %}
     </ul>
   </div>
 </nav>
+
 

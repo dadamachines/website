@@ -23,7 +23,9 @@ layout: compress
   <body>
     {% include header.html %}
     {% if page.layout == 'product-with-nav' or layout.name == 'product-with-nav' %}
+        {% unless page.hide_product_nav %}
         {% include product-sticky-nav.html %}
+        {% endunless %}
     {% endif %}
     {% unless page.hide_hero %}
         {% include hero.html %}

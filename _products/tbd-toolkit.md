@@ -10,6 +10,7 @@ hero_darken:
 hero_whitetxt:
 callouts:
 show_sidebar: false
+redirect_to: /products/tbd-16/
 ---
 
 <section class="section is-large has-background-dark has-text-centered">

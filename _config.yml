@@ -39,7 +39,7 @@ plugins:
   - kramdown-parser-gfm
   - jekyll-redirect-from
 
-exclude: 
+exclude:
   - Gemfile
   - clean-theme.gemspec
   - Gemfile.lock
@@ -56,6 +56,11 @@ sass:
   source_dir: _sass
 
 google_analytics: G-FRSRLSQFN5
+
+# Pre-order system — Google Apps Script Web App URL
+# Replace with your deployed Web App URL from Google Apps Script
+# Use test deployment URL for development, production URL for go-live
+preorder_endpoint: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec"
 
 defaults:
   -
@@ -82,7 +87,7 @@ footer_menu: footer_menu
 collections:
   projects:
     output: true
-  products: 
+  products:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600

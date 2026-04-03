@@ -9,18 +9,30 @@ show_sidebar: false
         {{ page.content }}
     </div>
 
-    <!-- We are filtering here so we only see one category of products -->
-    {% assign filtered_products = site.products | where: 'category', 'automat-toolkit' %}
+    {% comment %}
+    Show all products that have a category defined.
+    Products with preorder: true get a "Pre-order" badge overlay.
+    {% endcomment %}
+    {% assign filtered_products = site.products | where_exp: "p", "p.category" %}
     {% assign sorted_products = filtered_products | sort:page.sort %}
     {% for product in sorted_products %}
     <div class="column is-4-desktop is-6-tablet">
         <a href="{{ product.url | relative_url }}">
-            <div class="card">
+            <div class="card" style="position: relative;">
+            {% if product.preorder %}
+                <span class="tag is-dark preorder-badge">Pre-order</span>
+            {% endif %}
             {% if product.image %}
                 <div class="card-image">
                     <figure class="image is-square">
                         <img src="{{ product.image }}" alt="{{ product.title }}" />
                     </figure>
+                </div>
+            {% else %}
+                <div class="card-image">
+                    <div class="has-background-dark has-text-centered" style="aspect-ratio: 1; display: flex; align-items: center; justify-content: center;">
+                        <p class="is-size-4 has-text-white has-text-weight-bold">{{ product.title }}</p>
+                    </div>
                 </div>
             {% endif %}
                 <div class="card-content">
@@ -33,4 +45,3 @@ show_sidebar: false
     {% endfor %}
 
 </div>
-

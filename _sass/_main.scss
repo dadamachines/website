@@ -800,3 +800,245 @@ footer.has-background-black a:not(.footer-nav-item) * {
     width: auto;
   }
 }
+
+// =============================================================================
+// Pre-order Campaign System — Kickstarter-style layout
+// =============================================================================
+
+.section.preorder-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.preorder-title {
+    margin-bottom: 3rem !important;
+}
+.preorder-campaign {
+  padding: 2rem 0 3rem;
+  border-top: 3px solid #111;
+  margin-top: 0;
+}
+
+// Left column — product image
+.preorder-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.preorder-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+// Form panel (hidden by default, revealed on CTA click)
+.preorder-form-panel {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+// Right column — sidebar
+.preorder-sidebar {
+  position: sticky;
+  top: 5rem;
+}
+
+// Progress bar & stats
+.preorder-progress.progress {
+  height: 0.5rem;
+  border-radius: 0;
+  border: none;
+  background-color: #ddd;
+  margin-bottom: 0;
+
+  &::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 0;
+  }
+  &::-webkit-progress-value {
+    background-color: #0000ee;
+    border-radius: 0;
+    transition: width 0.6s ease;
+  }
+  &::-moz-progress-bar {
+    background-color: #0000ee;
+    border-radius: 0;
+    transition: width 0.6s ease;
+  }
+}
+
+.preorder-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.preorder-stat-number {
+  font-family: $is-family-primary;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.preorder-stat-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+// Price display
+.preorder-pricing {
+  border-top: 1px solid #eee;
+  padding-top: 1.25rem;
+
+  .preorder-price {
+    font-family: $is-family-primary;
+    letter-spacing: -0.02em;
+  }
+}
+
+.preorder-early-bird-tag {
+  font-family: $is-family-primary;
+  letter-spacing: 0.02em;
+  border-radius: 0;
+  border: 2px solid #111;
+}
+
+// Form
+.preorder-input.input {
+  border: 3px solid #000;
+  border-radius: 0;
+  height: 3rem;
+  font-size: $font-size-body-standard;
+  background-color: #fff;
+
+  &::placeholder {
+    color: #777;
+  }
+
+  &:focus {
+    border-color: $active;
+    box-shadow: none;
+  }
+}
+
+.preorder-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.preorder-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border: 3px solid #ddd;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+  width: 100%;
+
+  &:hover {
+    border-color: #111;
+  }
+
+  input[type="radio"] {
+    margin-top: 0.25rem;
+  }
+
+  input[type="radio"]:checked ~ .preorder-radio-label {
+    color: #111;
+  }
+}
+
+.preorder-radio:has(input[type="radio"]:checked) {
+  border-color: #111;
+  background: #fafafa;
+}
+
+// Submit button loading state
+.preorder-submit.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: -0.625rem 0 0 -0.625rem;
+    border: 3px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: preorder-spin 0.5s infinite linear;
+  }
+}
+
+@keyframes preorder-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// Notifications
+.preorder-soldout,
+.preorder-success,
+.preorder-error {
+  border-radius: 0;
+  border: 3px solid;
+}
+
+.preorder-soldout { border-color: #946c00; }
+.preorder-success { border-color: #257942; }
+.preorder-error   { border-color: #cc0f35; }
+
+// Pre-order badge on shop product cards
+.preorder-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  font-family: $is-family-primary;
+  border-radius: 0;
+  border: 2px solid #111;
+}
+
+// Superbooth landing page — mini progress bars in product grid
+.preorder-mini-progress.progress {
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0;
+  border: 1px solid #111;
+
+  &::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 0;
+  }
+  &::-webkit-progress-value {
+    background-color: #111;
+    border-radius: 0;
+  }
+  &::-moz-progress-bar {
+    background-color: #111;
+    border-radius: 0;
+  }
+}
