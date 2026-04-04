@@ -31,6 +31,9 @@ layout: compress
         {% include hero.html %}
     {% endunless %}
     {% include callouts.html %}
+    {% if page.full_width_content %}
+    {{ content }}
+    {% else %}
     <section class="{{ page.title }} section">
         <div class="container">
             <div class="columns is-multiline">
@@ -61,6 +64,7 @@ layout: compress
             </div>
         </div>
     </section>
+    {% endif %}
     {% unless page.hide_footer %}
         {% include footer.html %}
     {% endunless %}

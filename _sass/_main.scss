@@ -890,16 +890,15 @@ footer.has-background-black a:not(.footer-nav-item) * {
   gap: 2rem;
 }
 
-.preorder-stat-number {
+.preorder-stat-line {
   font-family: $is-family-primary;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #333;
 
-.preorder-stat-label {
-  font-size: 0.8rem;
-  color: #666;
+  .preorder-count {
+    font-size: 1.5rem;
+  }
 }
 
 // Price display
@@ -909,7 +908,21 @@ footer.has-background-black a:not(.footer-nav-item) * {
 
   .preorder-price {
     font-family: $is-family-primary;
+    font-size: 2rem;
     letter-spacing: -0.02em;
+  }
+
+  .preorder-price-note {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .preorder-price-regular {
+    font-size: 1rem;
+  }
+
+  .preorder-shipping-note {
+    font-size: 0.95rem;
   }
 }
 

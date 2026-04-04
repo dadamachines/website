@@ -49,21 +49,17 @@ Requires: site.preorder_endpoint in _config.yml
         <!-- Progress Bar -->
         <div class="preorder-progress-wrapper">
           <progress class="progress preorder-progress" value="0" max="{{ product.batch_size }}">0%</progress>
-          <div class="preorder-stats mt-1">
-            <div class="preorder-stat">
-              <p class="preorder-stat-number"><span class="preorder-count" data-product="{{ pid }}">–</span></p>
-              <p class="preorder-stat-label">of {{ product.batch_size }} reserved</p>
-            </div>
-            <div class="preorder-stat">
-              <p class="preorder-stat-number preorder-batch-label">Batch 1</p>
-              <p class="preorder-stat-label">current batch</p>
-            </div>
+          <div class="preorder-stats mt-2">
+            <p class="preorder-stat-line">
+              <span class="preorder-count has-text-weight-bold" data-product="{{ pid }}">–</span>
+              of {{ product.batch_size }} units reserved
+            </p>
           </div>
         </div>
 
         <!-- Sold Out Banner (hidden by default) -->
         <div class="notification is-warning preorder-soldout mt-4" style="display: none;">
-          <strong>Batch 1 is fully reserved!</strong><br>Join the waitlist for Batch 2.
+          <strong>This batch is fully reserved!</strong><br>Join the waitlist for the next batch.
         </div>
 
         <!-- Price -->
@@ -72,22 +68,22 @@ Requires: site.preorder_endpoint in _config.yml
           <div class="preorder-early-bird">
             <span class="tag is-dark preorder-early-bird-tag">Superbooth Early Bird</span>
             <p class="mt-2">
-              <span class="preorder-price is-size-3 has-text-weight-bold">{{ product.price }}€</span>
-              <span class="is-size-6">{{ product.price_note }}</span>
+              <span class="preorder-price has-text-weight-bold">{{ product.price }}€</span>
+              <span class="preorder-price-note">{{ product.price_note }}</span>
             </p>
-            <p class="preorder-price-regular is-size-6 has-text-grey">
+            <p class="preorder-price-regular has-text-grey">
               <s>{{ product.price_regular }}€ {{ product.price_regular_note }}</s>
             </p>
           </div>
           {% else %}
           <div>
             <p>
-              <span class="preorder-price is-size-3 has-text-weight-bold">{{ product.price }}€</span>
-              <span class="is-size-6">{{ product.price_note }}</span>
+              <span class="preorder-price has-text-weight-bold">{{ product.price }}€</span>
+              <span class="preorder-price-note">{{ product.price_note }}</span>
             </p>
           </div>
           {% endif %}
-          <p class="is-size-6 has-text-grey mt-1">+ shipping · No payment required now</p>
+          <p class="preorder-shipping-note has-text-grey mt-1">+ shipping · No payment required now</p>
         </div>
 
         <!-- Reserve Now CTA (shows form on click) -->

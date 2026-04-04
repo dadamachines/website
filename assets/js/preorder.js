@@ -159,14 +159,6 @@
     var soldOutEl = campaign.querySelector('.preorder-soldout');
     if (soldOutEl) soldOutEl.style.display = '';
 
-    // Update batch label
-    var batchLabel = campaign.querySelector('.preorder-batch-label');
-    if (batchLabel) {
-      batchLabel.textContent = 'Batch 1 — Sold out';
-      batchLabel.classList.remove('is-light');
-      batchLabel.classList.add('is-warning');
-    }
-
     // Update pre-order radio label to Batch 2
     var preorderRadio = campaign.querySelector('input[type="radio"][value="Pre-order"]');
     if (preorderRadio) {

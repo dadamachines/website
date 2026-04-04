@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if page.full_width_content %}
+{{ content }}
+{% else %}
 <div class="content">
     {{ content }}
 </div>
+{% endif %}

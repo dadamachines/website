@@ -4,6 +4,7 @@ subtitle: 16-channel open-source DSP toolkit
 layout: product-with-nav
 hide_hero: true
 hide_product_nav: true
+full_width_content: true
 show_sidebar: false
 published: false
 permalink: /products/tbd-16/
