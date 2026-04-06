@@ -1,6 +1,7 @@
+@charset "utf-8";
 // Minimal, reusable Explore Link component
 // Variants: .is-light (white outline), .is-dark (black outline)
-// Sizes: .is-large to match Bulma .button.is-large (≈24px)
+// Sizes: .is-large to match Bulma .button.is-large (~24px)
 
 .explore-link {
   --el-color: #111;
