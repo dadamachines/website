@@ -6,7 +6,9 @@ product_code: DA-ATL0002
 layout: product
 category: automat-toolkit
 hide_hero: true
-image: ../../img/products/dadamachines-automat-toolkit-l.jpg
+sort_order: 2
+shop_section: desktop
+image: ../../img/products/dadamachines-automat-toolkit.jpg
 price: 949,00€
 productshopurl: https://schneidersladen.de/en/dadamachines-automat-toolkit
 keyfeatures:

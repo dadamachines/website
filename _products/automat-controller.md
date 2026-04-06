@@ -6,7 +6,9 @@ product_code: DA-0000
 layout: product
 category: automat-toolkit
 hide_hero: true
-image: ../../img/products/dadamachines-automat.jpg
+sort_order: 1
+shop_section: desktop
+image: ../../img/products/dadamachines-automat-floating.jpg
 price: 449,00€
 productshopurl: https://schneidersladen.de/en/dadamachines
 keyfeatures:

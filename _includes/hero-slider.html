@@ -1,0 +1,80 @@
+{% comment %}
+Hero Slider — cycles through page.hero_slides[] with crossfade animation.
+Each slide supports:
+  image:      background image path
+  title:      slide title
+  subtitle:   slide subtitle
+  link:       CTA link URL
+  link_text:  CTA button text (default: "Explore")
+  text_color: hex color for title/subtitle (default: "#ffffff")
+  link_style: explore-link classes for the button (default: "is-light is-large is-reversed")
+  darken:     set to false to disable dark overlay (default: true)
+{% endcomment %}
+
+{% if page.hero_slides %}
+<section class="hero is-large hero-slider" id="heroSlider">
+  {% for slide in page.hero_slides %}
+  {% assign txt_color = slide.text_color | default: "#ffffff" %}
+  {% assign btn_style = slide.link_style | default: "is-light is-large is-reversed" %}
+  <div class="hero-slide{% if forloop.first %} is-active{% endif %}" style="background: url('{{ slide.image }}') no-repeat center center; background-size: cover;">
+    <div class="hero-body{% unless slide.darken == false %} hero-darken{% endunless %}">
+      <div class="container has-text-centered">
+        <h1 class="title is-2" style="color: {{ txt_color }} !important;">{{ slide.title }}</h1>
+        <p class="subtitle is-4" style="color: {{ txt_color }} !important;">{{ slide.subtitle }}</p>
+        {% if slide.link %}
+          <a href="{{ slide.link }}" class="explore-link {{ btn_style }}">{{ slide.link_text | default: "Explore" }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Navigation dots -->
+  <div class="hero-slider-dots">
+    {% for slide in page.hero_slides %}
+    <button class="hero-slider-dot{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Slide {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+(function() {
+  var slides = document.querySelectorAll('.hero-slide');
+  var dots = document.querySelectorAll('.hero-slider-dot');
+  var current = 0;
+  var count = slides.length;
+  var interval = 6000;
+  var timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    current = index % count;
+    slides[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+  }
+
+  function next() {
+    goTo(current + 1);
+  }
+
+  function startTimer() {
+    timer = setInterval(next, interval);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+  }
+
+  dots.forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      goTo(parseInt(this.dataset.index));
+      resetTimer();
+    });
+  });
+
+  if (count > 1) startTimer();
+})();
+</script>
+{% endif %}

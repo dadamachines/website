@@ -3,6 +3,27 @@ layout: default
 show_sidebar: false
 ---
 
+{% assign filtered_products = site.products | where_exp: "p", "p.category" %}
+{% assign sorted_products = filtered_products | sort:page.sort %}
+
+{% assign desktop = sorted_products | where: "shop_section", "desktop" %}
+{% assign eurorack = sorted_products | where: "shop_section", "eurorack" %}
+{% assign dev_boards = sorted_products | where: "shop_section", "dev-boards" %}
+{% assign accessories = sorted_products | where: "shop_section", "accessories" %}
+{% assign legacy = sorted_products | where: "legacy", true %}
+
+<!-- Sub-navigation tabs -->
+<div class="tabs is-medium is-centered shop-tabs mb-5">
+  <ul>
+    <li class="is-active" data-filter="all"><a>All</a></li>
+    {% if desktop.size > 0 %}<li data-filter="desktop"><a>Desktop</a></li>{% endif %}
+    {% if eurorack.size > 0 %}<li data-filter="eurorack"><a>Eurorack</a></li>{% endif %}
+    {% if dev_boards.size > 0 %}<li data-filter="dev-boards"><a>Dev Boards</a></li>{% endif %}
+    {% if accessories.size > 0 %}<li data-filter="accessories"><a>Accessories</a></li>{% endif %}
+    {% if legacy.size > 0 %}<li data-filter="legacy"><a>Legacy</a></li>{% endif %}
+  </ul>
+</div>
+
 <div class="columns is-multiline">
 
     <div class="column is-12">
@@ -13,24 +34,24 @@ show_sidebar: false
     Show all products that have a category defined.
     Products with preorder: true get a "Pre-order" badge overlay.
     {% endcomment %}
-    {% assign filtered_products = site.products | where_exp: "p", "p.category" %}
-    {% assign sorted_products = filtered_products | sort:page.sort %}
     {% for product in sorted_products %}
-    <div class="column is-4-desktop is-6-tablet">
+    <div class="column is-4-desktop is-6-tablet" data-section="{{ product.shop_section }}"{% if product.legacy %} data-legacy="true"{% endif %}>
         <a href="{{ product.url | relative_url }}">
             <div class="card" style="position: relative;">
-            {% if product.preorder %}
-                <span class="tag is-dark preorder-badge">Pre-order</span>
+            {% if product.legacy %}
+                <span class="tag preorder-badge" style="background: #666; color: #fff; border-color: #666;">Legacy</span>
+            {% elsif product.preorder %}
+                <span class="tag preorder-badge" style="background: #0000ee; color: #fff; border-color: #0000ee;">Pre-order</span>
             {% endif %}
             {% if product.image %}
                 <div class="card-image">
-                    <figure class="image is-square">
-                        <img src="{{ product.image }}" alt="{{ product.title }}" />
+                    <figure class="image is-16by9">
+                        <img src="{{ product.image }}" alt="{{ product.title }}" style="object-fit: cover;" />
                     </figure>
                 </div>
             {% else %}
                 <div class="card-image">
-                    <div class="has-background-dark has-text-centered" style="aspect-ratio: 1; display: flex; align-items: center; justify-content: center;">
+                    <div class="has-background-dark has-text-centered" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
                         <p class="is-size-4 has-text-white has-text-weight-bold">{{ product.title }}</p>
                     </div>
                 </div>
@@ -45,3 +66,26 @@ show_sidebar: false
     {% endfor %}
 
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var tabs = document.querySelectorAll('.shop-tabs li');
+  var cards = document.querySelectorAll('.columns [data-section]');
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('is-active'); });
+      tab.classList.add('is-active');
+
+      var filter = tab.getAttribute('data-filter');
+      cards.forEach(function (card) {
+        if (filter === 'all' || card.getAttribute('data-section') === filter || (filter === 'legacy' && card.getAttribute('data-legacy') === 'true')) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

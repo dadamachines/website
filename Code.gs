@@ -49,7 +49,7 @@ var PRODUCTS = {
   'tbd-core':        { sku: 'DA-TBDC-001',   batch1: 100, batch2: 100, price: '129' },
   'everydiv':        { sku: 'DA-EDIV-001',   batch1: 100, batch2: 100, price: '499' },
   'automat-mk2':     { sku: 'DA-ATMK2-001',  batch1: 100, batch2: 100, price: '949' },
-  'automat-modular': { sku: 'DA-ATMOD-001',  batch1: 100, batch2: 100, price: '399' }
+  'automat-eurorack': { sku: 'DA-ATEUR-001',  batch1: 100, batch2: 100, price: '349' }
 };
 
 // ---------------------------------------------------------------------------

@@ -30,6 +30,16 @@ first_loop: false
     </div>
 </div>
 
+<section class="section is-medium has-background-dark has-text-centered">
+  <h2 class="is-size-3" style="color: white !important;">automat MK2 — coming soon</h2>
+  <p class="is-size-5 has-text-white mt-4" style="max-width: 700px; margin: 0 auto;">The same automat you know, now with USB Host mode. Plug in a Novation Launchpad and the automat becomes a standalone instrument — no computer, no DAW. A full step sequencer with ratchets, ping-pong, random direction, polymetric lengths, and Elektron-style trig conditions, right on the Launchpad grid.</p>
+  <p class="is-size-5 has-text-white mt-4" style="max-width: 700px; margin: 0 auto;">Backward compatible with all existing accessories and the <a href="https://config.dadamachines.com/" target="_blank" rel="noopener" style="color: #7799ff;">WebUI configurator</a>. Same plug & play — more possibilities.</p>
+  <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+    <a href="/shop/automat-mk2/" class="explore-link is-light is-large is-reversed">Pre-order MK2</a>
+    <a href="/shop/automat-eurorack/" class="explore-link is-blue is-large">automat eurorack</a>
+  </div>
+</section>
+
 <div class="columns mt-6">
     <div class="column">
         <img style="box-shadow: none;" src="../../img/products/automat-toolkit-how-it-works.png">

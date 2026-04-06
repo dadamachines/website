@@ -84,11 +84,12 @@
     // ── DEV MODE: simulated counts when endpoint is not configured ──
     if (endpoint.indexOf('YOUR_DEPLOYMENT_ID') !== -1) {
       var simulated = {
-        'tbd-16':          { count: 73 },
-        'tbd-core':        { count: 12 },
-        'everydiv':        { count: 41 },
-        'automat-mk2':     { count: 98 },
-        'automat-modular': { count: 7 }
+        'tbd-16':                { count: 73 },
+        'tbd-core':              { count: 12 },
+        'everydiv':              { count: 41 },
+        'automat-mk2':           { count: 98 },
+        'automat-eurorack':      { count: 7 },
+        'automat-controller-mk2': { count: 34 }
       };
       var devCounts = {};
       productIds.forEach(function (pid) {

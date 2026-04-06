@@ -3,18 +3,12 @@
   dropdown:
     - name: automat toolkit
       link: /products/automat-toolkit/
-    - name: automat toolkit MK2
-      link: /products/automat-mk2/
-    - name: automat Modular
-      link: /products/automat-modular/
-    - name: EveryDiv
+    - name: automat eurorack
+      link: /products/automat-eurorack/
+    - name: everydiv eurorack
       link: /products/everydiv/
-    - name: TBD-16
+    - name: tbd-16
       link: /products/tbd-16/
-    - name: TBD-Core
-      link: /products/tbd-core/
-    - name: doppler
-      link: /products/doppler/
 - name: Shop
   link: /shop/
 - name: Showcase

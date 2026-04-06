@@ -9,9 +9,10 @@
 # =============================================================================
 
 tbd-16:
-  name: "TBD-16"
+  name: "tbd-16"
   tagline: "16-channel open-source DSP toolkit"
   sku: "DA-TBD16-001"
+  image: "/img/products/dadamachines-tbd-16_mockup_002.jpg"
   price: "399"
   price_note: "+ VAT"
   price_regular: "499"
@@ -23,9 +24,10 @@ tbd-16:
   product_group: "tbd"
 
 tbd-core:
-  name: "TBD-Core"
+  name: "tbd-core"
   tagline: "Core DSP module for developers & musicians"
   sku: "DA-TBDC-001"
+  image: "/img/products/dadamachines-tbd-16_mockup_003.jpg"
   price: "129"
   price_note: "incl. 19% VAT"
   price_regular: ""
@@ -37,8 +39,8 @@ tbd-core:
   product_group: "tbd"
 
 everydiv:
-  name: "EveryDiv"
-  tagline: "Divide everything"
+  name: "everydiv eurorack"
+  tagline: "Polytemporal instrument for eurorack"
   sku: "DA-EDIV-001"
   price: "499"
   price_note: "incl. 19% VAT"
@@ -50,10 +52,26 @@ everydiv:
   early_bird_end: ""
   product_group: "everydiv"
 
+automat-controller-mk2:
+  name: "automat controller MK2"
+  tagline: "MK2 controller with USB Host & sequencer — no accessories"
+  sku: "DA-ATCMK2-001"
+  image: "/img/products/dadamachines-automat-toolkit.jpg"
+  price: "499"
+  price_note: "incl. 19% VAT"
+  price_regular: ""
+  price_regular_note: ""
+  batch_size: 100
+  batch_next_size: 100
+  early_bird: false
+  early_bird_end: ""
+  product_group: "automat-mk2"
+
 automat-mk2:
   name: "automat toolkit MK2"
   tagline: "The next generation of analog sound machines"
   sku: "DA-ATMK2-001"
+  image: "/img/products/dadamachines-automat-toolkit.jpg"
   price: "949"
   price_note: "incl. 19% VAT"
   price_regular: ""
@@ -64,11 +82,12 @@ automat-mk2:
   early_bird_end: ""
   product_group: "automat-mk2"
 
-automat-modular:
-  name: "automat Modular"
-  tagline: "Eurorack-ready modular music machine controller"
-  sku: "DA-ATMOD-001"
-  price: "399"
+automat-eurorack:
+  name: "automat eurorack"
+  tagline: "Mechanical music inside your modular system"
+  sku: "DA-ATEUR-001"
+  image: "/img/products/dadamachines-automat.jpg"
+  price: "349"
   price_note: "+ VAT"
   price_regular: ""
   price_regular_note: ""
@@ -76,4 +95,4 @@ automat-modular:
   batch_next_size: 100
   early_bird: false
   early_bird_end: ""
-  product_group: "automat-modular"
+  product_group: "automat-eurorack"

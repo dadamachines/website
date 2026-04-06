@@ -2,34 +2,73 @@
 layout: default
 ---
 
-<div class="columns is-multiline">
+{% if page.preorder and page.preorder_id %}
 
-    <div class="column is-6">
-        <figure class="image is-square">
-            <img src="{{ page.image }}" />
-        </figure>
+<!-- ── Pre-order product layout ── -->
+
+<section class="section preorder-section" id="{{ page.preorder_id }}-section">
+  <div class="container">
+    {% include preorder-form.html product_id=page.preorder_id image=page.image %}
+  </div>
+</section>
+
+{% if content != "" %}
+<section class="section">
+  <div class="container">
+    <div class="content is-medium">
+      {{ content }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<script src="{{ '/assets/js/preorder.js' | relative_url }}"></script>
+
+{% else %}
+
+<!-- ── Regular product layout ── -->
+
+<div class="product-detail">
+  <div class="columns is-variable is-6">
+
+    <!-- LEFT: Product Image -->
+    <div class="column is-8-desktop is-12-tablet">
+      <div class="product-image-wrapper">
+        {% if page.image %}
+          <img src="{{ page.image }}" alt="{{ page.title }}" />
+        {% endif %}
+      </div>
     </div>
 
-    <div class="column is-6">
-        <!--<p class="subtitle is-3">{{ page.manufacturer }}</p>-->
-        <p class="title is-3">{{ page.title }}</p>
-        <p class="subtitle is-4">{{ page.description }}</p>
-        <p class="is-size-3">{{ page.price }}</p>
-        <p class="is-size-7">Includes 19% VAT / MwSt plus <a href="#" target="_blank">shipping</a></p>
-        <!--<p class="is-size-7">Additional costs (e.g. for customs or taxes) may occur when shipping to non-EU countries.</p>-->
-        <!--{% if page.product_code %}
-        <p class="subtitle is-5 mt-4">SKU: {{ page.product_code }}</p>
-         {% endif %}-->
+    <!-- RIGHT: Product Info -->
+    <div class="column is-4-desktop is-12-tablet">
+      <div class="product-sidebar">
 
+        <div class="product-sidebar-title">
+          <h2 class="product-detail-name">{{ page.title }}</h2>
+          <p class="product-detail-tagline">{{ page.description }}</p>
+        </div>
+
+        <div class="product-detail-pricing">
+          <p class="product-detail-price">{{ page.price }}</p>
+          <p class="product-detail-price-note">Includes 19% VAT / MwSt plus <a href="#" target="_blank">shipping</a></p>
+        </div>
+
+        {% if page.legacy %}
+        <span class="tag is-medium" style="background: #666; color: #fff; border-radius: 0; font-family: inherit;">Legacy</span>
+        {% elsif page.productshopurl %}
         <a href="{{ page.productshopurl }}" class="explore-link is-blue is-large mt-4" target="_blank">Buy now</a>
+        {% endif %}
 
         {% if page.keyfeatures %}
-        <h3 class="is-size-5 has-text-weight-semibold mt-4">Key features</h3>
-        <ul class="keyfeatures">
+        <div class="product-detail-features mt-5">
+          <h3 class="product-detail-features-title">Key features</h3>
+          <ul class="product-detail-features-list">
             {% for item in page.keyfeatures %}
-            <li class="is-size-5">{{ item }}</li>
+            <li>{{ item }}</li>
             {% endfor %}
-        </ul>
+          </ul>
+        </div>
         {% endif %}
 
         {% if page.rating %}
@@ -37,7 +76,7 @@ layout: default
         {% endif %}
 
         {% if page.features %}
-        <div class="content">
+        <div class="content mt-4">
             {% for feature in page.features %}
             <p>
                 <span class="icon">
@@ -51,23 +90,29 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
+      </div>
     </div>
 
-    <div class="column is-12">
-        <p class="title is-4">Description</p>
-        <div class="content">
-            {{ content }}
-        </div>
-    </div>
+  </div>
 
-    {% if site.data.reviews[page.product_code] %}
-    <div class="column is-12">
-        <p class="title is-4">Reviews</p>
-        {% for review in site.data.reviews[page.product_code] %}
-        {% include review.html %}
-        {% endfor %}
+  {% if content != "" %}
+  <div class="product-detail-description">
+    <div class="content is-medium">
+      {{ content }}
     </div>
-    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if site.data.reviews[page.product_code] %}
+  <div class="product-detail-reviews">
+    <h3 class="product-detail-features-title">Reviews</h3>
+    {% for review in site.data.reviews[page.product_code] %}
+    {% include review.html %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
 </div>
+
+{% endif %}
 

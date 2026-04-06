@@ -7,6 +7,7 @@ hide_product_nav: true
 full_width_content: true
 show_sidebar: false
 published: false
+redirect_to: /products/automat-toolkit/
 product_nav:
   - label: Overview
     url: /products/automat-mk2/
@@ -41,7 +42,7 @@ product_nav_cta:
   </div>
 </section>
 
-<!-- ── automat Modular Teaser ── -->
+<!-- ── automat eurorack Teaser ── -->
 
 <section class="section has-background-white-bis">
   <div class="container">
@@ -49,16 +50,16 @@ product_nav_cta:
       <div class="column is-6">
         <div class="has-background-dark has-text-centered" style="padding: 4rem 2rem; min-height: 250px; display: flex; align-items: center; justify-content: center;">
           <div>
-            <p class="is-size-2 has-text-white has-text-weight-bold">automat Modular</p>
-            <p class="is-size-5 has-text-white mt-2">Eurorack-ready</p>
+            <p class="is-size-2 has-text-white has-text-weight-bold">automat eurorack</p>
+            <p class="is-size-5 has-text-white mt-2">8HP — mechanical music module</p>
           </div>
         </div>
       </div>
       <div class="column is-6">
         <div class="content is-medium">
           <h2 class="is-size-3">Want Eurorack?</h2>
-          <p class="is-size-5">The automat Modular brings the dadamachines control concept into the Eurorack world. CV/Gate inputs, multiple DC outputs for solenoids & actuators.</p>
-          <a href="/products/automat-modular/" class="explore-link is-dark">Learn more & pre-order →</a>
+          <p class="is-size-5">The automat eurorack brings mechanical music directly into modular synth setups. 6 trigger/gate inputs, 6 DC outputs, USB Host for standalone Launchpad sequencing — all in 8HP.</p>
+          <a href="/products/automat-eurorack/" class="explore-link is-dark">Learn more & reserve →</a>
         </div>
       </div>
     </div>

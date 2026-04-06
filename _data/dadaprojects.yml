@@ -1,7 +1,8 @@
 intro: |-
 
 items:
-  - artist: Barker
+  - product: automat-toolkit
+    artist: Barker
     title: Against The Clock
     description: |-
       More information on Barkers [Website.](https://www.voltek-labs.net/plate-reverb){:target="_blank"}
@@ -10,7 +11,8 @@ items:
     link: https://www.youtube.com/watch?v=C9-qpMqhuPU
     link_text: View on Youtube
     tags:
-  - artist: clipping.
+  - product: automat-toolkit
+    artist: clipping.
     title:  NRP Music – Tiny Desk Concert
     description: |-
 
@@ -19,7 +21,8 @@ items:
     link: https://www.youtube.com/watch?v=h0-k7vW9Xek
     link_text: View on Youtube
     tags:
-  - artist: Hauschka
+  - product: automat-toolkit
+    artist: Hauschka
     title: A Different Forest (UK & EU Tour 2019)
     description: |-
 
@@ -28,7 +31,8 @@ items:
     link: https://www.youtube.com/watch?v=GU9NX5AvXXM
     link_text: View on Youtube
     tags:
-  - artist: Oh No Noh
+  - product: automat-toolkit
+    artist: Oh No Noh
     title: Shrugging (music video)
     description: |-
 
@@ -37,7 +41,8 @@ items:
     link: https://www.youtube.com/watch?v=ogamAKxlqkQ
     link_text: View on Youtube
     tags:
-  - artist: Bionica and the Wires
+  - product: automat-toolkit
+    artist: Bionica and the Wires
     title: Mushroom in the Wild Playing Keyboard
     description: |-
 
@@ -46,7 +51,8 @@ items:
     link: https://www.youtube.com/watch?v=NbP2DgDp890
     link_text: View on Youtube
     tags:
-  - artist: reConvert
+  - product: automat-toolkit
+    artist: reConvert
     title: (ex)tension, Fabrizio di Salvo & reConvert - Teaser
     description: |-
 
@@ -55,7 +61,8 @@ items:
     link: https://www.youtube.com/watch?v=hCZ63NLckO8
     link_text: View on Youtube
     tags:
-  - artist: Stubbleman
+  - product: automat-toolkit
+    artist: Stubbleman
     title: Live 2019
     description: |-
 
@@ -64,7 +71,8 @@ items:
     link: https://www.youtube.com/watch?v=2xuT-iMCQpk
     link_text: View on Youtube
     tags:
-  - artist: Portmanteaulabs
+  - product: automat-toolkit
+    artist: Portmanteaulabs
     title: Nautilus Music Machine - Demo Video
     description: |-
 
@@ -73,7 +81,8 @@ items:
     link: https://www.youtube.com/watch?v=ER4nbQy69Xk
     link_text: View on Youtube
     tags:
-  - artist: Joasihno
+  - product: automat-toolkit
+    artist: Joasihno
     title: Nuh Nuh
     description: |-
 
@@ -82,7 +91,8 @@ items:
     link: https://www.youtube.com/watch?v=mu5rS0rFy-k
     link_text: View on Youtube
     tags:
-  - artist: Evan Chapman
+  - product: automat-toolkit
+    artist: Evan Chapman
     title: ilomilo by Billie Eilish (Robot Percussion Cover)
     description: |-
 
@@ -91,7 +101,8 @@ items:
     link: https://www.youtube.com/watch?v=QTgmZWOkuUM
     link_text: View on Youtube
     tags:
-  - artist: Simone Giertz
+  - product: automat-toolkit
+    artist: Simone Giertz
     title: Building a Musical Instrument Out Of Teeth
     description: |-
 
@@ -100,7 +111,8 @@ items:
     link: https://www.youtube.com/watch?v=83yXCMHGr9A
     link_text: View on Youtube
     tags:
-  - artist: OK EG
+  - product: automat-toolkit
+    artist: OK EG
     title: WAVELENGTH II
     description: |-
 
@@ -109,7 +121,8 @@ items:
     link: https://www.youtube.com/watch?v=647MaczBo9w
     link_text: View on Youtube
     tags:
-  - artist: Danny Shaddick
+  - product: automat-toolkit
+    artist: Danny Shaddick
     title: Glockenspiel On A Turntable 1
     description: |-
 
@@ -118,7 +131,8 @@ items:
     link: https://www.youtube.com/watch?v=pXoWH_lT7OE
     link_text: View on Youtube
     tags:
-  - artist: Portmanteau
+  - product: automat-toolkit
+    artist: Portmanteau
     title: Nautilus Music Machine first try
     description: |-
 
@@ -127,7 +141,8 @@ items:
     link: https://www.youtube.com/watch?v=aUwM4YWjvJg
     link_text: View on Youtube
     tags:
-  - artist: Loopin'Lab
+  - product: automat-toolkit
+    artist: Loopin'Lab
     title: MakerFaire 2021 • Creating Ghost
     description: |-
 
@@ -136,7 +151,8 @@ items:
     link: https://www.youtube.com/watch?v=mxcZoqZd5YA
     link_text: View on Youtube
     tags:
-  - artist: Damien Traversaz
+  - product: automat-toolkit
+    artist: Damien Traversaz
     title: Pyéra
     description: |-
 
@@ -145,7 +161,8 @@ items:
     link: https://www.damientraversaz.com/pyera
     link_text: View on Damien's Website
     tags:
-  - artist: Portmanteau & dadamachines for blackspace
+  - product: automat-toolkit
+    artist: Portmanteau & dadamachines for blackspace
     title: AUDI MUSIC BOX
     description: |-
 
@@ -154,7 +171,8 @@ items:
     link: https://www.youtube.com/watch?v=bstnULC-JVg
     link_text: View on Youtube
     tags:
-  - artist: dadamachines
+  - product: automat-toolkit
+    artist: dadamachines
     title: Workshop Goethe Institut Beijing
     description: |-
 
@@ -163,7 +181,8 @@ items:
     link: https://www.youtube.com/watch?v=MczGVLDbZF8
     link_text: View on Youtube
     tags:
-  - artist: dadamachines
+  - product: automat-toolkit
+    artist: dadamachines
     title: lund workshop 2014
     description: |-
 
@@ -172,7 +191,8 @@ items:
     link: https://www.youtube.com/watch?v=It_b0GDMACo
     link_text: View on Youtube
     tags:
-  - artist: Alvaro Soler
+  - product: automat-toolkit
+    artist: Alvaro Soler
     title: La Cintura (Acoustic)
     description: |-
 
@@ -181,7 +201,8 @@ items:
     link: https://www.youtube.com/watch?v=efqt5sS2A2I
     link_text: View on Youtube
     tags:
-  - artist: Danny Shaddick
+  - product: automat-toolkit
+    artist: Danny Shaddick
     title: 6 Solenoids On A Drumset
     description: |-
 
@@ -190,7 +211,8 @@ items:
     link: https://www.youtube.com/watch?v=OOmUl9zdacc
     link_text: View on Youtube
     tags:
-  - artist: Planetary Cymatic Resonance
+  - product: automat-toolkit
+    artist: Planetary Cymatic Resonance
     title: dadamachines jam
     description: |-
       A video from this [Article.](https://ask.video/article/audio-hardware/review-dadamachines-automat-robotic-music-machines-toolkit){:target="_blank"}
@@ -199,7 +221,8 @@ items:
     link: https://www.youtube.com/watch?v=NPLHpHnyhwo
     link_text: View on Youtube
     tags:
-  - artist: Mario G. Cortizo
+  - product: automat-toolkit
+    artist: Mario G. Cortizo
     title: Só un solo - Teaser
     description: |-
 
@@ -208,7 +231,8 @@ items:
     link: https://www.youtube.com/watch?v=D5kV6LDe8iQ
     link_text: View on Youtube
     tags:
-  - artist: Reiz Trigger
+  - product: automat-toolkit
+    artist: Reiz Trigger
     title: Dada Machines 03
     description: |-
 
@@ -217,7 +241,8 @@ items:
     link: https://www.youtube.com/watch?v=A0tdZqokvPc
     link_text: View on Youtube
     tags:
-  - artist: Portmanteau
+  - product: automat-toolkit
+    artist: Portmanteau
     title: Nautilus@portmanteaulabs - works
     description: |-
 
@@ -226,7 +251,8 @@ items:
     link: https://www.youtube.com/watch?v=xcsexAlAtYc
     link_text: View on Youtube
     tags:
-  - artist: Bruno Kramm
+  - product: automat-toolkit
+    artist: Bruno Kramm
     title: Dadamachines Tenori-On OP-Z
     description: |-
 
@@ -235,7 +261,8 @@ items:
     link: https://www.youtube.com/watch?v=KAa85iU3qBA
     link_text: View on Youtube
     tags:
-  - artist: Popp
+  - product: automat-toolkit
+    artist: Popp
     title: Xolotl (Robot Version)
     description: |-
 
@@ -244,7 +271,8 @@ items:
     link: https://www.youtube.com/watch?v=U7U4PI_EI30
     link_text: View on Youtube
     tags:
-  - artist: Joasihno
+  - product: automat-toolkit
+    artist: Joasihno
     title: Mobile Disko
     description: |-
 
@@ -253,7 +281,8 @@ items:
     link: https://www.youtube.com/watch?v=r9AFFyur3I0
     link_text: View on Youtube
     tags:
-  - artist: Danny Shaddick
+  - product: automat-toolkit
+    artist: Danny Shaddick
     title: Beethoven ~ Symphony No. 6 (Glockenspiel, Solenoids)
     description: |-
 
@@ -262,7 +291,8 @@ items:
     link: https://www.youtube.com/watch?v=jFJi8UHYoJs
     link_text: View on Youtube
     tags:
-  - artist: Vulpestruments
+  - product: automat-toolkit
+    artist: Vulpestruments
     title: Hackoustic Showcase - DADA Machines
     description: |-
 
@@ -271,7 +301,8 @@ items:
     link: https://www.youtube.com/watch?v=UJsiPFkHEu4
     link_text: View on Youtube
     tags:
-  - artist: Paperghost music
+  - product: automat-toolkit
+    artist: Paperghost music
     title: Common Household Ceremony
     description: |-
 
@@ -280,7 +311,8 @@ items:
     link: https://www.youtube.com/watch?v=S_bVFwmV0iw
     link_text: View on Youtube
     tags:
-  - artist: Jonas Urbat
+  - product: automat-toolkit
+    artist: Jonas Urbat
     title: OTHER VOICES - a Cybermechanic Dance Performance (ft Dadamachines)
     description: |-
 

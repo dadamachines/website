@@ -36,11 +36,19 @@ $hero-darken: $dark !default;
   background-color: #fff !important;
 }
 
+// Container-width border between navbar and hero content
+.hero.is-primary.is-bold.has-plain-background .hero-body .container {
+  border-top: 3px solid #111;
+  padding-top: 4.5rem;
+  padding-bottom: 1.5rem;
+}
+
 // Reduce padding for plain background heroes (Shop, Showcase, Projects)
 // Desktop padding - adjusted to account for section padding below to create equal top/bottom spacing
 @media screen and (min-width: 1024px) {
   .hero.is-primary.is-bold.has-plain-background .hero-body {
     padding: 4.5rem 4.5rem 1.5rem 4.5rem !important;
+    padding-top: 0 !important;
   }
 }
 
@@ -48,12 +56,17 @@ $hero-darken: $dark !default;
 @media screen and (max-width: 1023px) {
   .hero.is-primary.is-bold.has-plain-background .hero-body {
     padding: 3rem 1.5rem 1.5rem 1.5rem !important;
+    padding-top: 0 !important;
   }
 }
 
-// Fix spacing for Projects page specifically - match the reduced spacing
-.Projects.section {
-  padding-top: 4.5rem !important;
+// Reduce section top padding on pages with plain background heroes
+// so title/subtitle is vertically centered between header border and content
+.Shop.section,
+.Showcase.section,
+.Projects.section,
+.Downloads.section {
+  padding-top: 1.5rem !important;
 }
 
 // Style text in plain background heroes (Shop, Showcase, Projects)
@@ -568,13 +581,15 @@ ul.cv li {
 // Product card styling for shop page - ryk-modular style
 .card {
   transition: box-shadow 0.3s ease, transform 0.1s ease, border-color 0.3s ease;
-  border: 3px solid #111;        // 3px border to match explore links
-  border-radius: 0;              // Remove rounded corners
+  border: 3px solid #111;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .card:hover {
-  border-color: #0000ee;         // Change border to blue on hover
-  box-shadow: 0 8px 16px rgba(0, 0, 238, 0.15); // Keep drop shadow but remove outline
+  border-color: #0000ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 238, 0.15);
   transform: translateY(-2px);
 }
 
@@ -582,7 +597,7 @@ ul.cv li {
 .card .card-image,
 .card .card-image .image,
 .card .card-image img {
-  border-radius: 0;              // Remove rounded corners from images
+  border-radius: 0;
 }
 
 // Footer Styles
@@ -802,6 +817,141 @@ footer.has-background-black a:not(.footer-nav-item) * {
 }
 
 // =============================================================================
+// Shop Tabs
+// =============================================================================
+
+.shop-tabs {
+  margin-top: -0.5rem;
+
+  ul {
+    border-bottom: 3px solid #dbdbdb !important;
+  }
+
+  li a {
+    font-family: $is-family-primary;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    border-bottom-width: 3px !important;
+    border-bottom-color: transparent !important;
+    margin-bottom: -3px !important;
+  }
+
+  li.is-active a {
+    border-bottom-color: $active !important;
+  }
+}
+
+// =============================================================================
+// Regular Product Detail — matches pre-order typography
+// =============================================================================
+
+.product-detail {
+  padding: 2rem 0 3rem;
+  border-top: 3px solid #111;
+  margin-top: 0;
+}
+
+// Reduce section padding when it wraps a product detail page
+.section:has(.product-detail) {
+  padding-top: 0 !important;
+}
+
+.product-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.product-sidebar {
+  position: sticky;
+  top: 5rem;
+}
+
+.product-sidebar-title {
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-name {
+  font-family: $is-family-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+  color: #111 !important;
+}
+
+.product-detail-tagline {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.product-detail-pricing {
+  border-top: 3px solid #111;
+  padding-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-detail-price {
+  font-family: $is-family-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.product-detail-price-note {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-detail-features {
+  border-top: 1px solid #eee;
+  padding-top: 1.25rem;
+}
+
+.product-detail-features-title {
+  font-family: $is-family-primary;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111 !important;
+}
+
+.product-detail-features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0.15rem 0;
+    color: #333;
+  }
+}
+
+.product-detail-description {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.product-detail-reviews {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+// =============================================================================
 // Pre-order Campaign System — Kickstarter-style layout
 // =============================================================================
 
@@ -817,6 +967,12 @@ footer.has-background-black a:not(.footer-nav-item) * {
   padding: 2rem 0 3rem;
   border-top: 3px solid #111;
   margin-top: 0;
+}
+
+// When preorder-campaign is used as a card (superbooth grid)
+.card.preorder-campaign {
+  padding: 0;
+  border-top: none;
 }
 
 // Left column — product image
@@ -846,13 +1002,45 @@ footer.has-background-black a:not(.footer-nav-item) * {
 }
 
 // Form panel (hidden by default, revealed on CTA click)
-.preorder-form-panel {
+.preorder-form-panel,
+.contact-form-panel {
   border-top: 1px solid #eee;
   padding-top: 2rem;
   background-color: #f9f9f9;
   padding: 2rem;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
+
+  .delete {
+    background-color: #111;
+
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+
+  .preorder-close-wrapper {
+    text-align: right;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.preorder-form-product-name {
+  font-size: 1.5rem;
+}
+
+.preorder-updates-link {
+  font-size: 0.95rem;
 }
 
 // Right column — sidebar
@@ -892,33 +1080,53 @@ footer.has-background-black a:not(.footer-nav-item) * {
 
 .preorder-stat-line {
   font-family: $is-family-primary;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.4;
   color: #333;
 
   .preorder-count {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
+}
+
+.preorder-sidebar-title {
+  margin-bottom: 1.5rem;
+}
+
+.preorder-product-name {
+  font-family: $is-family-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+}
+
+.preorder-product-tagline {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
 }
 
 // Price display
 .preorder-pricing {
-  border-top: 1px solid #eee;
+  border-top: 3px solid #111;
   padding-top: 1.25rem;
 
   .preorder-price {
     font-family: $is-family-primary;
     font-size: 2rem;
+    font-weight: 700;
     letter-spacing: -0.02em;
   }
 
   .preorder-price-note {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
   }
 
   .preorder-price-regular {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .preorder-shipping-note {
@@ -934,15 +1142,15 @@ footer.has-background-black a:not(.footer-nav-item) * {
 }
 
 // Form
-.preorder-input.input {
+.preorder-input.input,
+textarea.preorder-input {
   border: 3px solid #000;
   border-radius: 0;
-  height: 3rem;
-  font-size: $font-size-body-standard;
+  font-size: 1.25rem;
   background-color: #fff;
 
   &::placeholder {
-    color: #777;
+    color: rgb(74, 74, 74);
   }
 
   &:focus {
@@ -951,28 +1159,49 @@ footer.has-background-black a:not(.footer-nav-item) * {
   }
 }
 
+.preorder-input.input {
+  height: 3.25rem;
+}
+
 .preorder-radio-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  .radio + .radio {
+    margin-left: 0;
+  }
 }
 
 .preorder-radio {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  padding: 0.6rem 0.75rem;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
   border: 3px solid #ddd;
   cursor: pointer;
   transition: border-color 0.15s ease;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 
   &:hover {
     border-color: #111;
   }
 
   input[type="radio"] {
-    margin-top: 0.25rem;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .preorder-radio-label {
+    strong {
+      font-size: 1.125rem;
+    }
+    .is-size-7 {
+      font-size: 0.95rem !important;
+      color: rgb(74, 74, 74) !important;
+    }
   }
 
   input[type="radio"]:checked ~ .preorder-radio-label {
@@ -1032,7 +1261,7 @@ footer.has-background-black a:not(.footer-nav-item) * {
   z-index: 2;
   font-family: $is-family-primary;
   border-radius: 0;
-  border: 2px solid #111;
+  border: 2px solid transparent;
 }
 
 // Superbooth landing page — mini progress bars in product grid
@@ -1040,18 +1269,71 @@ footer.has-background-black a:not(.footer-nav-item) * {
   height: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0;
-  border: 1px solid #111;
+  border: 1px solid #ddd;
 
   &::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 0;
   }
   &::-webkit-progress-value {
-    background-color: #111;
+    background-color: #0000ee;
     border-radius: 0;
   }
   &::-moz-progress-bar {
-    background-color: #111;
+    background-color: #0000ee;
     border-radius: 0;
+  }
+}
+
+// ── Hero Slider ──
+
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+
+  &.is-active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hero-slider-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.hero-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease;
+
+  &.is-active {
+    background: #fff;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.6);
   }
 }

@@ -5,8 +5,44 @@
         <p>{{ showcase.intro | markdownify }}</p>
     </div>
 
+    {% comment %} Collect unique product categories {% endcomment %}
+    {% assign products = "" %}
     {% for item in showcase.items %}
-        <section class="showcase">
+      {% if item.product %}
+        {% unless products contains item.product %}
+          {% if products == "" %}
+            {% assign products = item.product %}
+          {% else %}
+            {% assign products = products | append: "," | append: item.product %}
+          {% endif %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% assign product_list = products | split: "," %}
+
+    {% comment %} Category tabs + layout toggle {% endcomment %}
+    <div class="tabs is-medium is-centered shop-tabs showcase-tabs mb-5" style="position: relative;">
+      <ul>
+        <li class="is-active" data-filter="all"><a>All</a></li>
+        {% for prod in product_list %}
+          {% assign label = prod | replace: "-", " " %}
+          <li data-filter="{{ prod }}"><a>{{ label }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="showcase-layout-toggle" id="showcase-toggle">
+        <span class="is-size-7 has-text-grey has-text-weight-bold" id="toggle-label">Grid</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="1" y="1" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+          <rect x="12" y="1" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+          <rect x="1" y="12" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+          <rect x="12" y="12" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="showcase-container" id="showcase-container">
+    {% for item in showcase.items %}
+        <section class="showcase showcase-item" data-product="{{ item.product }}">
             <figure class="image {% if item.image_ratio %} {{ item.image_ratio }} {% else %} is-16by9 {% endif %}">
                 <img src="{{ item.image | relative_url }}" />
             </figure>
@@ -61,4 +97,45 @@
             </div>
         </section>
     {% endfor %}
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      /* Category filtering */
+      var tabs = document.querySelectorAll('.showcase-tabs li');
+      var items = document.querySelectorAll('.showcase-item');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) { t.classList.remove('is-active'); });
+          tab.classList.add('is-active');
+          var filter = tab.getAttribute('data-filter');
+          items.forEach(function (item) {
+            if (filter === 'all' || item.getAttribute('data-product') === filter) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      /* Layout toggle */
+      var container = document.getElementById('showcase-container');
+      var toggle = document.getElementById('showcase-toggle');
+      var label = document.getElementById('toggle-label');
+      var isGrid = false;
+
+      toggle.addEventListener('click', function () {
+        isGrid = !isGrid;
+        if (isGrid) {
+          container.classList.add('showcase-grid');
+          label.textContent = 'List';
+        } else {
+          container.classList.remove('showcase-grid');
+          label.textContent = 'Grid';
+        }
+      });
+    });
+    </script>
 {% endif %}
