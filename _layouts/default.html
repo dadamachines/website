@@ -23,12 +23,21 @@ layout: compress
   <body>
     {% include header.html %}
     {% if page.layout == 'product-with-nav' or layout.name == 'product-with-nav' %}
+        {% unless page.hide_product_nav %}
         {% include product-sticky-nav.html %}
+        {% endunless %}
     {% endif %}
-    {% unless page.hide_hero %}
-        {% include hero.html %}
-    {% endunless %}
+    {% if page.hero_slides %}
+        {% include hero-slider.html %}
+    {% else %}
+        {% unless page.hide_hero %}
+            {% include hero.html %}
+        {% endunless %}
+    {% endif %}
     {% include callouts.html %}
+    {% if page.full_width_content %}
+    {{ content }}
+    {% else %}
     <section class="{{ page.title }} section">
         <div class="container">
             <div class="columns is-multiline">
@@ -59,6 +68,7 @@ layout: compress
             </div>
         </div>
     </section>
+    {% endif %}
     {% unless page.hide_footer %}
         {% include footer.html %}
     {% endunless %}

@@ -57,6 +57,11 @@ sass:
 
 google_analytics: G-FRSRLSQFN5
 
+# Pre-order system — Google Apps Script Web App URL
+# Replace with your deployed Web App URL from Google Apps Script
+# Use test deployment URL for development, production URL for go-live
+preorder_endpoint: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec"
+
 defaults:
   -
     scope:

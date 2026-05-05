@@ -25,3 +25,66 @@
         border-radius: 0;              // Remove rounded corners from images
     }
 }
+
+// Layout toggle (positioned inside tabs bar)
+.showcase-layout-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+// Grid layout mode
+.showcase-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .showcase-item {
+        width: calc(33.333% - 1rem);
+        margin-bottom: 0;
+
+        .showcase-content {
+            padding: 1rem;
+
+            .columns {
+                margin: 0;
+            }
+
+            .column {
+                padding: 0;
+                width: 100%;
+                flex: none;
+            }
+
+            .title {
+                font-size: 1.1rem !important;
+            }
+
+            .subtitle {
+                font-size: 0.9rem !important;
+            }
+
+            .content,
+            .buttons,
+            .block-list,
+            .tags {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1023px) {
+            width: calc(50% - 0.75rem);
+        }
+    }
+}

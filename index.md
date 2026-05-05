@@ -1,21 +1,39 @@
 ---
-title: the automat toolkit
-subtitle: create your own analog sound
+title: dadamachines
 layout: page
-image: '../../../img/products/dadamachines-automat-toolkit.jpg'
-hero_image: ../../img/projects/dadamachines-automat-toolkit.jpg
-hero_height: is-large
-hero_centered: has-text-centered
-hero_link: /products/automat-toolkit/
-hero_link_text: Explore
-hero_link_classes: explore-link is-light is-large is-reversed
-hero_darken: false
-hero_whitetxt: true
+hide_hero: true
+hero_slides:
+  - title: "tbd-16"
+    subtitle: "the open audio platform — plug in power and start making music"
+    image: "/img/products/dadamachines-tbd-16_samples_01.jpg"
+    text_color: "#ffffff"
+    link_style: "is-light is-large is-reversed"
+    link: /products/tbd-16/
+    link_text: Explore
+  - title: "the automat toolkit"
+    subtitle: "create your own analog sound"
+    image: "/img/projects/dadamachines-automat-toolkit.jpg"
+    text_color: "#ffffff"
+    link_style: "is-light is-large is-reversed"
+    link: /products/automat-toolkit/
+    link_text: Explore
 callouts:
 show_sidebar: false
 ---
 
 <div class="columns mt-4">
+    <div class="column">
+        <img src="/img/products/dadamachines-tbd-16_samples_01.jpg" alt="dadamachines tbd-16" />
+    </div>
+    <div class="column">
+        <h2 class="title is-3">tbd-16</h2>
+        <p class="is-size-5">The open audio platform for musicians and developers. 50+ DSP plugins, three processors, sub-millisecond latency. Plug in USB-C power, connect speakers or headphones, and it boots straight into music — no computer required.</p>
+        <a href="/products/tbd-16/" class="explore-link is-dark is-large is-reversed">Explore</a>
+        <a href="/shop/tbd-16/" class="explore-link is-blue is-large">Pre-order</a>
+    </div>
+</div>
+
+<div class="columns mt-6">
     <div class="column">
         <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
     </div>
