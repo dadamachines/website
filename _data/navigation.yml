@@ -1,10 +1,10 @@
 - name: Products
   link: /#
   dropdown:
+    - name: tbd-16
+      link: /products/tbd-16/
     - name: automat toolkit
       link: /products/automat-toolkit/
-    - name: doppler
-      link: /products/doppler/
 - name: Shop
   link: /shop/
 - name: Showcase

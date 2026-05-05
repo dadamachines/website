@@ -29,19 +29,19 @@ show_sidebar: false
         <h2 class="title is-3">tbd-16</h2>
         <p class="is-size-5">The open audio platform for musicians and developers. 50+ DSP plugins, three processors, sub-millisecond latency. Plug in USB-C power, connect speakers or headphones, and it boots straight into music — no computer required.</p>
         <a href="/products/tbd-16/" class="explore-link is-dark is-large is-reversed">Explore</a>
-        <a href="/shop/tbd-16/" class="explore-link is-blue is-large">Pre-order</a>
+        <a href="/shop/tbd-16/" class="explore-link is-blue is-large">Reserve</a>
     </div>
 </div>
 
 <div class="columns mt-6">
     <div class="column">
-        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
-    </div>
-    <div class="column">
         <h2 class="title is-3">automat toolkit</h2>
         <p class="is-size-5">The automat toolkit is a plug & play MIDI-controller and accessories kit that allows anyone to build awesome music machines using the real world as their instrument.</p>
         <a href="/products/automat-toolkit/" class="explore-link is-dark is-large is-reversed">Explore</a> 
         <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
+    </div>
+    <div class="column">
+        <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
     </div>
 </div>
 
