@@ -25,6 +25,31 @@ permalink: /products/every-division-and-duration/
     </div>
 </div>
 
+<div class="columns mt-6">
+    <div class="column">
+        <h2 class="is-size-3">The team behind every division and duration</h2>
+        <p class="is-size-5">A small team — an artist-researcher, a designer-coder, and a hardware studio — bringing a polytemporal instrument to life.</p>
+    </div>
+</div>
+
+<div class="columns is-multiline mt-5">
+    <div class="column is-one-third-desktop is-half-tablet">
+        <h3 class="is-size-5 has-text-weight-bold">Dr. Nicolas Bougaïeff</h3>
+        <p class="is-size-6 has-text-grey mb-2">Concept, UX &amp; testing</p>
+        <p class="is-size-6">Originated the polytemporal instrument concept; contributes UX input and playtesting. Releases on <a href="https://mute.com/artists/nicolas-bougaieff/" target="_blank" rel="noopener">Mute Records</a>; <a href="https://www.cambridge.org/core/journals/popular-music/article/pivot-mixing-tempo-modulation-in-electronic-dance-music/0B4FE501A63DF7B5D6B5D01167795990" target="_blank" rel="noopener">Cambridge University Press</a> author.</p>
+    </div>
+    <div class="column is-one-third-desktop is-half-tablet">
+        <h3 class="is-size-5 has-text-weight-bold">Jelle Akkerman</h3>
+        <p class="is-size-6 has-text-grey mb-2">UX, design &amp; code</p>
+        <p class="is-size-6">Leads UX, instrument design, and graphic design. Four years writing a clock engine capable of the most complex tuplet transitions. <a href="https://every-something.com" target="_blank" rel="noopener">every-something.com</a></p>
+    </div>
+    <div class="column is-one-third-desktop is-half-tablet">
+        <h3 class="is-size-5 has-text-weight-bold">Johannes Lohbihler</h3>
+        <p class="is-size-6 has-text-grey mb-2">Production &amp; hardware engineering</p>
+        <p class="is-size-6">Founder of <a href="/about/">dadamachines</a>. Brings the instrument to production — hardware engineering, mechanical, PCB, and industrial design.</p>
+    </div>
+</div>
+
 <section id="newsletter" class="section is-small has-text-centered mt-6 has-background-dark">
     <div class="container" style="max-width: 600px;">
         <h2 class="is-size-3 mb-2" style="color: #fff !important;">Stay in the loop</h2>
