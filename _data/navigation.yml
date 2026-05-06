@@ -1,10 +1,12 @@
 - name: Products
   link: /#
   dropdown:
-    - name: tbd-16
-      link: /products/tbd-16/
     - name: automat toolkit
       link: /products/automat-toolkit/
+    - name: tbd-16
+      link: /products/tbd-16/
+    - name: every division and duration
+      link: /products/every-division-and-duration/
 - name: Shop
   link: /shop/
 - name: Showcase

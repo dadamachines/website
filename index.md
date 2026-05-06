@@ -17,6 +17,13 @@ hero_slides:
     link_style: "is-light is-large is-reversed"
     link: /products/automat-toolkit/
     link_text: Explore
+  - title: "every division and duration"
+    subtitle: "a polytemporal instrument in 12HP Eurorack format"
+    image: "/img/products/every-division-and-duration.jpg"
+    text_color: "#ffffff"
+    link_style: "is-light is-large is-reversed"
+    link: /products/every-division-and-duration/
+    link_text: Explore
 callouts:
 show_sidebar: false
 ---
@@ -42,6 +49,17 @@ show_sidebar: false
     </div>
     <div class="column">
         <img src="https://images.weserv.nl/?url=https://dadamachines.com/img/products/dadamachines-automat-toolkit.jpg&w=660&h=371&output=jpg&q=90" />
+    </div>
+</div>
+
+<div class="columns mt-6">
+    <div class="column">
+        <img src="/img/products/every-division-and-duration.jpg" alt="every division and duration" />
+    </div>
+    <div class="column">
+        <h2 class="title is-3">every division and duration</h2>
+        <p class="is-size-5">A polytemporal instrument in 12HP Eurorack format. <br>Play with six different, musically connected tempi. <br>Create tuplets in realtime via grid MIDI controller. <br>Time itself as an expressive musical parameter.</p>
+        <a href="/products/every-division-and-duration/" class="explore-link is-dark is-large is-reversed">Explore</a>
     </div>
 </div>
 

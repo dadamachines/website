@@ -25,7 +25,7 @@ product_nav_cta:
     <p class="subtitle is-4 mt-1">A handheld groovebox with the depth of a full-size machine — open, hackable, and ready to play the moment you plug it in.</p>
 </section>
 
-<div class="embed-container"><video src="/img/products/te_animation_youtube_16x9.mp4" autoplay loop muted playsinline></video></div>
+<div class="embed-container"><iframe src='https://www.youtube.com/embed/eMGTP3dQRv0' frameborder='0' allowfullscreen></iframe></div>
 
 <div class="columns mt-6">
     <div class="column">
