@@ -817,6 +817,91 @@ footer.has-background-black a:not(.footer-nav-item) * {
   }
 }
 
+// Subscribe / preferences-center cards
+.subscribe-card {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  border: 3px solid #000;
+  background: #fff;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 #000;
+  }
+}
+
+.subscribe-card-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.subscribe-card-image {
+  width: 100%;
+  padding-top: 56.25%; // 16:9
+  background-size: cover;
+  background-position: center center;
+  background-color: #f5f5f5;
+  border-bottom: 3px solid #000;
+}
+
+.subscribe-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.subscribe-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  h3 {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.15;
+  }
+}
+
+.subscribe-card-check {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 6px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-45deg) translate(1px, -1px);
+    opacity: 0;
+  }
+}
+
+.subscribe-card-input:checked ~ .subscribe-card-body .subscribe-card-check {
+  background: #000;
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+.subscribe-card-input:focus-visible ~ .subscribe-card-body .subscribe-card-check {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
 // =============================================================================
 // Shop Tabs
 // =============================================================================

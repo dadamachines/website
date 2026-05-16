@@ -1,5 +1,7 @@
 - name: Contact
   link: /contact/
+- name: Subscribe
+  link: /subscribe/
 - name: Blog
   link: /blog/
 - name: Downloads

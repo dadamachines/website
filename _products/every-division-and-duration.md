@@ -55,20 +55,6 @@ permalink: /products/every-division-and-duration/
         <h2 class="is-size-3 mb-2" style="color: #fff !important;">Stay in the loop</h2>
         <p class="is-size-5 mb-5" style="color: #fff !important;">More on every division and duration soon. Sign up and we&rsquo;ll let you know when reservations open.</p>
 
-        <form action="https://app.keila.io/forms/nfrm_kVPeqPR8" method="post" style="max-width: 600px; margin: 0 auto;">
-            <div class="newsletter-form-group">
-                <div class="newsletter-input-control">
-                    <input class="input is-large newsletter-input" id="contact_email_everydiv" name="contact[email]" type="email" placeholder="Your email address" required style="border-color: #fff; color: #111;">
-                </div>
-                <div class="newsletter-button-control">
-                    <button class="explore-link is-blue is-large newsletter-button" type="submit" style="border-color: #fff;">Sign up</button>
-                </div>
-            </div>
-            <input aria-hidden="true" autocomplete="off" name="h[url]" novalidate style="display: none;" type="text">
-            <div class="newsletter-captcha mt-4">
-                <div class="h-captcha" data-sitekey="a1c5fab7-71df-4ea4-af75-87a3d07c61de" data-theme="dark"></div>
-            </div>
-        </form>
-        <script src="https://hcaptcha.com/1/api.js" async defer></script>
+        {% include newsletter-with-intent.html data_key="interest_edad" theme="dark" button_class="is-blue" %}
     </div>
 </section>

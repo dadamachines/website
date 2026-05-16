@@ -92,21 +92,27 @@ first_loop: false
     </div>
 </div>
 
-<div class="columns mt-6">
+<div class="columns mt-6 is-vcentered">
     <div class="column">
         <img style="box-shadow: none;" src="../../img/projects/dadamachines-automat-toolkit.jpg">
     </div>
     <div class="column">
         <h2 class="is-size-3">Get your toolkit now!</h2>
-        <p class="is-size-5">It’s available via our long‑term partner <strong>SchneidersLaden</strong> in Berlin and in their <a href="https://schneidersladen.de/en/dadamachines-automat-toolkit" target="_blank" rel="noopener">webshop</a>.</p>
-        <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
+        <p class="is-size-5">It’s available via our long‑term partner <strong>SchneidersLaden</strong> in Berlin and in their <a href="https://schneidersladen.de/en/dadamachines-automat-toolkit" target="_blank" rel="noopener">webshop</a>. The toolkit comes with everything you need to get started — see what’s inside the box.</p>
+        <div class="mt-4" style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
+            <a href="/products/automat-toolkit/inside/" class="explore-link is-dark is-large is-reversed">See inside</a>
+        </div>
     </div>
 </div>
 
-<section class="section is-small has-text-centered mt-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../img/products/dadamachines-automat-toolkit-l-inside.jpg') center center; background-size: cover;">
-   <h2 class="is-size-3" style="color: white !important;">Still want to know more?</h2>
-   <p class="is-size-5 has-text-white">The automat toolkit comes with everything you need to get started.</p>
-   <a href="/products/automat-toolkit/inside/" class="explore-link is-light is-large is-reversed">See inside</a>
+<section id="newsletter" class="section is-small has-text-centered mt-6" style="background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('../../img/products/dadamachines-automat-toolkit-l-inside.jpg') center center; background-size: cover; color: #fff;">
+    <div class="container" style="max-width: 600px;">
+        <h2 class="is-size-3 mb-2" style="color: #fff !important;">Stay in the loop</h2>
+        <p class="is-size-5 mb-5" style="color: #fff !important;">News on automat toolkit accessories, firmware updates, and what we’re building next.</p>
+
+        {% include newsletter-with-intent.html data_key="interest_automat_toolkit" theme="dark" button_class="is-blue" %}
+    </div>
 </section>
 
 

@@ -184,20 +184,6 @@ product_nav_cta:
         <p class="is-size-4 mb-3" style="color: #fff !important;"><strong style="color: #fff !important;">499 €</strong> incl. VAT — preorders open soon, no payment required.</p>
         <p class="is-size-5 mb-5" style="color: #fff !important;">Thanks to everyone who stopped by our booth at Superbooth 2026. <br>Sign up below and we&rsquo;ll let you know the moment reservations open.<br>Questions about tbd-16? <a href="https://forum.dadamachines.com/t/tbd-16-questions/776/19" target="_blank" rel="noopener" style="color: #fff !important; text-decoration: underline;">Join the conversation on our forum</a>.</p>
 
-        <form action="https://app.keila.io/forms/nfrm_kVPeqPR8" method="post" style="max-width: 600px; margin: 0 auto;">
-            <div class="newsletter-form-group">
-                <div class="newsletter-input-control">
-                    <input class="input is-large newsletter-input" id="contact_email" name="contact[email]" type="email" placeholder="Your email address" required>
-                </div>
-                <div class="newsletter-button-control">
-                    <button class="explore-link is-blue is-large newsletter-button" type="submit">Sign up</button>
-                </div>
-            </div>
-            <input aria-hidden="true" autocomplete="off" name="h[url]" novalidate style="display: none;" type="text">
-            <div class="newsletter-captcha mt-4">
-                <div class="h-captcha" data-sitekey="a1c5fab7-71df-4ea4-af75-87a3d07c61de" data-theme="dark"></div>
-            </div>
-        </form>
-        <script src="https://hcaptcha.com/1/api.js" async defer></script>
+        {% include newsletter-with-intent.html data_key="interest_tbd_sixteen" theme="dark" button_class="is-blue" %}
     </div>
 </section>
