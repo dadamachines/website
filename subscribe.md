@@ -93,6 +93,18 @@ permalink: /subscribe/
             <!-- Honeypot field for spam protection -->
             <input aria-hidden="true" autocomplete="off" name="h[url]" novalidate style="display: none;" type="text">
 
+            {%- comment -%}
+              Adoption-tracking timestamp for the Slice 1.5 "set your
+              preferences" campaign — populated by the inline JS below
+              right before submit. Keila silently drops this unless a
+              Custom field with Data Key `preferences_set_at` (Type:
+              Text) is configured on form nfrm_kVPeqPR8. When the field
+              is added, every submit stamps the contact with the time
+              they last touched this page, so we can answer "X of
+              3,412 set preferences within 30 days" later.
+            {%- endcomment -%}
+            <input type="hidden" name="contact[data][preferences_set_at]" id="contact_preferences_set_at" value="">
+
             <!-- hCaptcha -->
             <div class="mt-4 mb-4" style="display: flex; justify-content: center;">
                 <div class="h-captcha" data-sitekey="a1c5fab7-71df-4ea4-af75-87a3d07c61de" data-theme="light"></div>
@@ -110,3 +122,27 @@ permalink: /subscribe/
 </form>
 
 <script src="https://hcaptcha.com/1/api.js" async defer></script>
+<script>
+  (function () {
+    // Pre-fill the email field from ?email= so the Slice 1.5 campaign
+    // can deep-link people to a form that already knows who they are.
+    // Campaign template uses Keila's Liquid:
+    //   /subscribe/?email={{ contact.email | url_encode }}
+    var params = new URLSearchParams(window.location.search);
+    var emailFromUrl = params.get("email");
+    var emailEl = document.getElementById("contact_email_subscribe");
+    if (emailFromUrl && emailEl) {
+      emailEl.value = emailFromUrl;
+    }
+
+    // Stamp preferences_set_at on submit. Use the form submit event
+    // (not click) so it captures regardless of how the form is sent.
+    var form = emailEl ? emailEl.closest("form") : null;
+    var stampEl = document.getElementById("contact_preferences_set_at");
+    if (form && stampEl) {
+      form.addEventListener("submit", function () {
+        stampEl.value = new Date().toISOString();
+      });
+    }
+  })();
+</script>
