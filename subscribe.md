@@ -135,14 +135,19 @@ permalink: /subscribe/
       emailEl.value = emailFromUrl;
     }
 
-    // Stamp preferences_set_at on submit. Use the form submit event
-    // (not click) so it captures regardless of how the form is sent.
-    var form = emailEl ? emailEl.closest("form") : null;
+    // Stamp preferences_set_at. Set it on page load AND on form submit
+    // (belt-and-braces). Setting on load is the load-bearing one — Keila's
+    // Ecto cast/3 treats empty strings as "no value" and silently drops the
+    // field, so if the submit handler ever doesn't fire (programmatic
+    // .submit() bypasses the event, captcha re-submit, etc.) we'd lose
+    // the stamp entirely. Page-load means at-worst the timestamp is a few
+    // seconds older than the actual submit — fine for adoption tracking.
     var stampEl = document.getElementById("contact_preferences_set_at");
-    if (form && stampEl) {
-      form.addEventListener("submit", function () {
-        stampEl.value = new Date().toISOString();
-      });
-    }
+    var stamp = function () {
+      if (stampEl) stampEl.value = new Date().toISOString();
+    };
+    stamp();
+    var form = emailEl ? emailEl.closest("form") : null;
+    if (form) form.addEventListener("submit", stamp);
   })();
 </script>
