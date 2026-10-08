@@ -181,7 +181,7 @@ product_nav_cta:
 <section id="reserve" class="section is-medium has-text-centered mt-6" style="background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url('/img/products/dadamachines-tbd-16_samples_01.jpg') center center; background-size: cover; color: #fff;">
     <div class="container" style="color: #fff;">
         <h2 class="is-size-2 mb-2" style="color: #fff !important;">Reserve soon</h2>
-        <p class="is-size-4 mb-3" style="color: #fff !important;"><strong style="color: #fff !important;">499 €</strong> incl. VAT — preorders open soon, no payment required.</p>
+        <p class="is-size-4 mb-3" style="color: #fff !important;"><strong style="color: #fff !important;">599 €</strong> incl. VAT — preorders open soon, no payment required.</p>
         <p class="is-size-5 mb-5" style="color: #fff !important;">Thanks to everyone who stopped by our booth at Superbooth 2026. <br>Sign up below and we&rsquo;ll let you know the moment reservations open.<br>Questions about tbd-16? <a href="https://forum.dadamachines.com/t/tbd-16-questions/776/19" target="_blank" rel="noopener" style="color: #fff !important; text-decoration: underline;">Join the conversation on our forum</a>.</p>
 
         {% include newsletter-with-intent.html data_key="interest_tbd_sixteen" theme="dark" button_class="is-blue" %}

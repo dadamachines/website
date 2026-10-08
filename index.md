@@ -36,7 +36,7 @@ show_sidebar: false
         <h2 class="title is-3">tbd-16</h2>
         <p class="is-size-5">The open audio platform for musicians and developers. 50+ DSP plugins, three processors, sub-millisecond latency. Plug in USB-C power, connect speakers or headphones, and it boots straight into music — no computer required.</p>
         <a href="/products/tbd-16/" class="explore-link is-dark is-large is-reversed">Explore</a>
-        <a href="/shop/tbd-16/" class="explore-link is-blue is-large">Reserve</a>
+        <a href="/products/tbd-16/#reserve" class="explore-link is-blue is-large">Reserve</a>
     </div>
 </div>
 
