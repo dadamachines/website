@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title description">
+  <title id="title">How the automat toolkit works</title>
+  <desc id="description">MIDI hardware connects to the automat controller through DIN MIDI. A tablet, phone or computer connects through USB MIDI. The controller needs external power. Its twelve DC outputs drive solenoid beaters that play acoustic instruments and everyday objects.</desc>
+  <!-- Transparent black line artwork. Coordinates are grouped by input, controller and output. -->
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #111; }
+      .label { font-size: 24px; }
+      .small { font-size: 18px; fill: #111; }
+      .heading { font-size: 32px; font-weight: 700; }
+      .wire { fill: none; stroke: #111; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .outline { fill: none; stroke: #111; stroke-width: 2; stroke-linejoin: round; }
+      .panel-label, .panel-label text { fill: #111; font-size: 16px; }
+      .small text { fill: #111; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 8 5 1 9" fill="none" stroke="#111" stroke-width="1.5"/>
+    </marker>
+    <g id="din-socket">
+      <circle r="30" class="outline"/>
+      <path d="M-7-29 Q0-16 7-29" fill="none" stroke="#111" stroke-width="2"/>
+      <g fill="none" stroke="#111" stroke-width="2">
+        <circle cx="-15" cy="4" r="3"/><circle cx="-10" cy="14" r="3"/>
+        <circle cy="18" r="3"/><circle cx="10" cy="14" r="3"/><circle cx="15" cy="4" r="3"/>
+      </g>
+    </g>
+    <g id="output-pair" class="outline">
+      <circle cx="0" r="16"/><circle cx="55" r="16"/>
+    </g>
+    <!-- Front-panel fasteners: circular heads with hex sockets. -->
+    <g id="panel-screw" class="outline">
+      <circle r="8"/>
+      <path d="M-3-2 0-4 3-2V2L0 4-3 2Z"/>
+    </g>
+    <g id="beater">
+      <path class="outline" d="M-12 16H80V28H-12Z"/>
+      <path class="outline" d="M5 0H65V44H5Z"/>
+      <path class="wire" d="M24 0V-25H50V0"/>
+      <path class="wire" d="M0 22H-42"/>
+    </g>
+  </defs>
+  <!-- Headings centred over the three groups, on a shared baseline. -->
+  <g class="small" text-anchor="middle">
+    <text x="165" y="46">MIDI SOURCE</text>
+    <text x="620" y="46">CONTROLLER</text>
+    <text x="1020" y="46">PHYSICAL SOUND</text>
+  </g>
+  <!-- DIN MIDI and USB MIDI input cables. -->
+  <g class="wire" marker-end="url(#arrow)">
+    <path d="M155 162V100Q155 85 170 85H500Q515 85 515 100V185"/>
+    <path d="M260 355H282Q300 355 300 337V119Q300 105 316 105H601Q615 105 615 121V185"/>
+    <path d="M260 585H305Q325 585 325 565V140Q325 125 340 125H593Q615 125 615 145V185"/>
+    <path d="M695 145V185"/>
+  </g>
+  <!-- Connection labels beside their cables, never over the linework. -->
+  <g class="small">
+    <text x="495" y="166" text-anchor="end">DIN</text>
+    <text x="595" y="166" text-anchor="end">USB</text>
+    <text x="715" y="166">POWER</text>
+  </g>
+  <!-- MIDI keyboard. -->
+  <g transform="translate(50 162)">
+    <rect width="210" height="108" rx="3" class="outline"/>
+    <rect x="12" y="28" width="186" height="68" class="outline"/>
+    <g stroke="#111" stroke-width="1.5">
+      <path d="M28 28V96M44 28V96M60 28V96M76 28V96M92 28V96M108 28V96M124 28V96M140 28V96M156 28V96M172 28V96M188 28V96"/>
+    </g>
+    <g fill="#111"><path d="M23 28H33V69H23ZM39 28H49V69H39ZM71 28H81V69H71ZM87 28H97V69H87ZM103 28H113V69H103ZM135 28H145V69H135ZM151 28H161V69H151ZM183 28H193V69H183Z"/></g>
+    <rect x="12" y="10" width="45" height="8" fill="none" stroke="#111"/>
+    <circle cx="177" cy="14" r="4" fill="#111"/><circle cx="191" cy="14" r="4" fill="#111"/>
+    <text x="105" y="142" class="label" text-anchor="middle">MIDI hardware</text>
+  </g>
+  <!-- Tablet / phone. -->
+  <g transform="translate(85 318)">
+    <rect width="175" height="111" rx="8" class="outline"/>
+    <rect x="12" y="12" width="142" height="87" class="outline"/>
+    <circle cx="164" cy="55" r="4" fill="none" stroke="#111"/>
+    <g fill="#111"><path d="M29 70H39V80H29ZM47 70H57V80H47ZM58 28H68V38H58ZM77 44H87V54H77ZM92 60H126V70H92Z"/></g>
+    <text x="88" y="145" class="label" text-anchor="middle">Tablet &amp; phone</text>
+  </g>
+  <!-- Computer. -->
+  <g transform="translate(50 500)">
+    <rect x="17" width="193" height="113" rx="5" class="outline"/>
+    <rect x="25" y="8" width="177" height="101" class="outline"/>
+    <path d="M0 113H230V119Q230 126 222 126H8Q0 126 0 119Z" class="outline"/>
+    <text x="115" y="164" class="label" text-anchor="middle">Computer</text>
+  </g>
+  <!-- Automat front panel: MIDI in/thru and twelve universal DC outputs. -->
+  <g transform="translate(435 198)">
+    <rect width="370" height="370" class="outline"/>
+    <use href="#panel-screw" x="30" y="30"/>
+    <use href="#panel-screw" x="340" y="30"/>
+    <use href="#panel-screw" x="30" y="340"/>
+    <use href="#panel-screw" x="340" y="340"/>
+    <use href="#din-socket" x="64" y="66"/>
+    <use href="#din-socket" x="64" y="304"/>
+    <text x="108" y="72" class="panel-label">midi in</text>
+    <text x="108" y="310" class="panel-label">midi thru</text>
+    <!-- Original dadamachines emblem, reused from the site's vector logo. -->
+    <g transform="translate(111 114) scale(1.4)" fill="#111">
+      <path d="M2.2,27.9V2.1h25.7v25.7H2.2z M30,0.1H0.1v29.9H30V0.1z"/>
+      <path d="M22.1,14V7c0-0.5,0.4-1,0.9-1S24,6.5,24,7V14H22.1z M23,4c-1.6,0-3,1.3-3,3v19h2.1V16H24v10H26V7C26,5.4,24.7,4,23,4z"/>
+      <path d="M15.1,25.9c1.6,0,3-1.3,3-3v-4 M18,19c0-1.6-1.3-3-3-3h-3v10h3 M14.1,23.9v-6h1c0.5,0,1,0.4,1,1v4c0,0.5-0.4,1-1,1"/>
+      <path d="M14,9V7c0-0.5,0.5-1,1-1c0.5,0,1,0.4,1,1v2H14z M15,4c-1.6,0-2.9,1.3-2.9,3V14H14v-2.9h2.1V14h1.9V7C17.9,5.4,16.7,4,15,4z"/>
+      <path d="M10.1,7c0-1.6-1.3-3-3-3h-3v21.9h3c1.6,0,3-1.3,3-3V7 M6.1,23.9V6h1c0.5,0,1,0.4,1,1V23c0,0.5-0.4,1-1,1"/>
+    </g>
+    <g transform="translate(256 66)">
+      <use href="#output-pair"/><use href="#output-pair" y="47"/><use href="#output-pair" y="94"/>
+      <use href="#output-pair" y="141"/><use href="#output-pair" y="188"/><use href="#output-pair" y="235"/>
+      <g class="panel-label" text-anchor="end"><text x="-25" y="6">1</text><text x="-25" y="53">2</text><text x="-25" y="100">3</text><text x="-25" y="147">4</text><text x="-25" y="194">5</text><text x="-25" y="241">6</text></g>
+      <g class="panel-label"><text x="79" y="6">7</text><text x="79" y="53">8</text><text x="79" y="100">9</text><text x="79" y="147">10</text><text x="79" y="194">11</text><text x="79" y="241">12</text></g>
+    </g>
+    <text y="412" class="heading">automat</text>
+  </g>
+  <!-- Two example output cables and solenoid beaters. -->
+  <g class="wire">
+    <path d="M691 584V642Q691 658 707 658H841Q855 658 855 644V568Q855 552 872 552H920"/>
+    <path d="M746 584V621Q746 637 762 637H890Q907 637 907 621V618H920"/>
+  </g>
+  <g class="wire" marker-end="url(#arrow)"><path d="M691 584V553"/><path d="M746 584V553"/></g>
+  <g class="outline"><rect x="685" y="588" width="12" height="37"/><rect x="740" y="588" width="12" height="37"/></g>
+  <text x="890" y="228" class="heading">plug &amp; play</text>
+  <text x="890" y="362" class="small">1–12 DC outputs</text>
+  <text x="890" y="411" class="label">Acoustic instruments</text>
+  <text x="890" y="445" class="label">Everyday objects</text>
+  <use href="#beater" x="958" y="530"/>
+  <use href="#beater" x="958" y="596"/>
+  <!-- Stylised acoustic instrument with a mallet. -->
+  <g transform="translate(1050 519)">
+    <path class="outline" d="M0 137H100V151H0Z"/>
+    <g class="outline">
+      <path d="M0 137H100L94 121H6ZM8 117H92L87 102H13ZM16 98H84L79 83H21ZM24 79H76L71 64H29ZM32 60H68L63 45H37ZM39 41H61L58 28H42Z"/>
+    </g>
+    <path class="wire" d="M51 23 74 2"/><circle cx="49" cy="25" r="8" class="outline"/>
+  </g>
+</svg>

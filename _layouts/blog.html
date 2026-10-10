@@ -1,22 +1,20 @@
 ---
 layout: default
 ---
-
-{{ content }}
-
-<div class="columns is-multiline">
-    <div class="column is-12">
-        {% include pagination.html %}
-    </div>
+<div class="blog-index">
+  <header class="blog-index-heading">
+    <p class="blog-eyebrow">Stories from dadamachines</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
+  {{ content }}
+  <div class="blog-grid">
     {% for post in paginator.posts %}
-    <div class="column is-12">
-        {% include post-card.html %}
-    </div>
+      {% include post-card.html featured=forloop.first %}
     {% endfor %}
-    <div class="column is-12">
-        {% include pagination.html %}
-    </div>
-    <div class="column is-12">
-        {% include subscribe.html %}
-    </div>
+  </div>
+  {% if paginator.total_pages > 1 %}<div class="blog-pagination">{% include pagination.html %}</div>{% endif %}
+  <section class="blog-subscribe" aria-label="Newsletter signup">
+    {% include newsletter-bulma.html title="Stay in the loop" button_class="is-blue is-medium" %}
+  </section>
 </div>

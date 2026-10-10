@@ -1,10 +1,10 @@
-<nav class="navbar is-primary {% if site.fixed_navbar %} is-fixed-{{ site.fixed_navbar }} {% endif %}" x-data="{ openNav: false }">
+<nav class="navbar site-header is-primary {% if site.fixed_navbar %} is-fixed-{{ site.fixed_navbar }} {% endif %}" aria-label="Main navigation" x-data="{ openNav: false }">
     <div class="container">
         <div class="navbar-brand">
             <a href="{{ site.baseurl }}/" class="navbar-item">
-                <img class="header__logo my-4" alt="" src="{{ site.baseurl }}/img/dadamachines-logo_1.svg">
+                <img class="header__logo my-4" alt="dadamachines home" src="{{ site.baseurl }}/img/dadamachines-logo_1.svg">
             </a>
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+            <a role="button" tabindex="0" class="navbar-burger burger" aria-label="menu" :aria-expanded="openNav.toString()" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav" x-on:keydown.enter.prevent="openNav = !openNav" x-on:keydown.space.prevent="openNav = !openNav">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>

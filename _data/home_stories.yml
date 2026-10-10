@@ -1,0 +1,64 @@
+- id: tbd-16
+  eyebrow: Made in Berlin. Made to play.
+  title: tbd-16
+  description: A compact standalone groovebox with sixteen tracks, more than 40 machines and effects, and a hands-on sequencer. Plug in USB-C power, connect speakers or headphones, and start making music.
+  image: /img/products/tbd-16/hero.webp
+  alt: TBD-16 groovebox with OLED display, four potentiometers and RGB step keys
+  width: 1200
+  height: 1254
+  render: true
+  tone: blue
+  url: /products/tbd-16/
+  link_text: Explore tbd-16
+  notification_url: /products/tbd-16/#newsletter
+  status: Pre-orders aren't open yet. Sign up to hear when they open.
+- id: automat
+  eyebrow: MIDI meets the physical world.
+  title: Turn objects into instruments.
+  description: The automat toolkit brings together a plug-and-play MIDI controller, solenoid beaters and mounting accessories. Play everyday objects, acoustic instruments or your own kinetic installation. No coding or soldering required.
+  image: /img/products/dadamachines-automat-toolkit-1600.webp
+  image_small: /img/products/dadamachines-automat-toolkit-800.webp
+  alt: Automat controller connected to a MIDI keyboard and solenoid beaters playing brass bowls
+  width: 1920
+  height: 1080
+  image_right: true
+  tone: green
+  url: /products/automat-toolkit/
+  link_text: Explore automat toolkit
+  notification_url: /products/automat-toolkit/#newsletter
+  status: Currently sold out. Sign up to hear when it's back in stock.
+- id: every-division
+  eyebrow: A collaboration with polytemporal instruments
+  title: every division and duration
+  description: A polytemporal instrument in 12HP Eurorack format. Play with six musically connected tempi and create tuplets in real time via a grid MIDI controller. Time itself becomes an expressive musical parameter.
+  image: /img/products/dadamachines-everydiv_01.jpg
+  alt: Every division and duration Eurorack module
+  width: 1920
+  height: 1080
+  tone: sand
+  url: /products/every-division-and-duration/
+  link_text: Explore the collaboration
+- id: showcase
+  eyebrow: Artist builds
+  title: Hear what others make of it.
+  description: In FACT's Against The Clock, Berlin producer Sam Barker pairs a DIY plate reverb with solenoid percussion powered by the automat toolkit. Discover studio experiments, acoustic rhythms and live installations made by our community.
+  image: /img/showcase/barker-fact-1600.webp
+  image_small: /img/showcase/barker-fact-800.webp
+  alt: Sam Barker in his studio for FACT's Against The Clock
+  width: 1920
+  height: 1080
+  image_right: true
+  tone: blue
+  url: /showcase/
+  link_text: Explore the showcase
+- id: stories
+  eyebrow: Ideas, experiments and news
+  title: Behind the music machines.
+  description: Meet the artists, explore technical ideas and see what we're building. Stories from the intersection of technology, art and sound.
+  image: /img/blog/bionicandthewires-mushroom-keyboard.jpg
+  alt: Bionic and the Wires mushroom keyboard experiment
+  width: 1920
+  height: 1280
+  tone: lilac
+  url: /blog/
+  link_text: Read the stories

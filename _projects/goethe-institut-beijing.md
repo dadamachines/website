@@ -13,7 +13,7 @@ order: 2
     <p class="subtitle is-size-3-desktop mt-1">Back in 2017 Goethe Institute Beijing invited dadamachines to present their toolkit and radically new approach to the interested public.</p>
 </section>
 
-<div class='embed-container'><iframe src='https://www.youtube.com/embed/MczGVLDbZF8' frameborder='0' allowfullscreen></iframe></div>
+<div class='embed-container'><iframe src='https://www.youtube.com/embed/MczGVLDbZF8' title="Goethe Institut Beijing installation" loading="lazy" frameborder='0' allowfullscreen></iframe></div>
 
 ![tollesbild](../../img/projects/goethe-beijing.jpg){:class="img-responsive"}
 {: class="image-content"}
@@ -25,4 +25,4 @@ Technical consulting & hardware design
 **Credits**  
 Initiator & ??? [Adam Langer](https://neulantvanexel.de/)  
 Curation & coordination in China [Markus M Schneider](http://zmors.de)  
-{:class="dada-a is-size-3-desktop"}  
+{:class="dada-a is-size-3-desktop"}

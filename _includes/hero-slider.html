@@ -2,6 +2,7 @@
 Hero Slider — cycles through page.hero_slides[] with crossfade animation.
 Each slide supports:
   image:      background image path
+  mobile_image: optional square/portrait image for narrow screens
   title:      slide title
   subtitle:   slide subtitle
   link:       CTA link URL
@@ -12,17 +13,21 @@ Each slide supports:
 {% endcomment %}
 
 {% if page.hero_slides %}
-<section class="hero is-large hero-slider" id="heroSlider">
+<section class="hero is-large hero-slider" id="heroSlider" role="region" aria-roledescription="carousel" aria-label="Explore our instruments">
   {% for slide in page.hero_slides %}
   {% assign txt_color = slide.text_color | default: "#ffffff" %}
   {% assign btn_style = slide.link_style | default: "is-light is-large is-reversed" %}
-  <div class="hero-slide{% if forloop.first %} is-active{% endif %}" style="background: url('{{ slide.image }}') no-repeat center center; background-size: cover;">
+  <div class="hero-slide{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ page.hero_slides.size }}: {{ slide.title | escape }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"{% unless forloop.first %} inert{% endunless %}>
+    <picture>
+      {% if slide.mobile_image %}<source media="(max-width: 760px)" srcset="{{ slide.mobile_image | relative_url }}">{% endif %}
+      <img class="hero-slide-image{% if slide.image_fit == 'contain' %} hero-slide-image-contained{% endif %}" src="{{ slide.image | relative_url }}"{% if slide.image_large %} srcset="{{ slide.image_small | relative_url }} 800w, {{ slide.image | relative_url }} 1600w, {{ slide.image_large | relative_url }} 2400w" sizes="100vw"{% endif %}{% if slide.background_color %} style="background-color: {{ slide.background_color }};"{% endif %} alt=""{% if forloop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+    </picture>
     <div class="hero-body{% unless slide.darken == false %} hero-darken{% endunless %}">
       <div class="container has-text-centered">
-        <h1 class="title is-2" style="color: {{ txt_color }} !important;">{{ slide.title }}</h1>
+        {% if forloop.first %}<h1 class="title is-2" style="color: {{ txt_color }} !important;">{{ slide.title }}</h1>{% else %}<h2 class="title is-2" style="color: {{ txt_color }} !important;">{{ slide.title }}</h2>{% endif %}
         <p class="subtitle is-4" style="color: {{ txt_color }} !important;">{{ slide.subtitle }}</p>
         {% if slide.link %}
-          <a href="{{ slide.link }}" class="explore-link {{ btn_style }}">{{ slide.link_text | default: "Explore" }}</a>
+          <a href="{{ slide.link | relative_url }}" class="explore-link {{ btn_style }}">{{ slide.link_text | default: "Explore" }}</a>
         {% endif %}
       </div>
     </div>
@@ -30,51 +35,12 @@ Each slide supports:
   {% endfor %}
 
   <!-- Navigation dots -->
-  <div class="hero-slider-dots">
+  <div class="hero-slider-dots" hidden>
     {% for slide in page.hero_slides %}
-    <button class="hero-slider-dot{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Slide {{ forloop.index }}"></button>
+    <button type="button" class="hero-slider-dot{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Show {{ slide.title | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"></button>
     {% endfor %}
   </div>
+  <button type="button" class="hero-slider-pause" hidden>Pause slideshow</button>
 </section>
-
-<script>
-(function() {
-  var slides = document.querySelectorAll('.hero-slide');
-  var dots = document.querySelectorAll('.hero-slider-dot');
-  var current = 0;
-  var count = slides.length;
-  var interval = 6000;
-  var timer;
-
-  function goTo(index) {
-    slides[current].classList.remove('is-active');
-    dots[current].classList.remove('is-active');
-    current = index % count;
-    slides[current].classList.add('is-active');
-    dots[current].classList.add('is-active');
-  }
-
-  function next() {
-    goTo(current + 1);
-  }
-
-  function startTimer() {
-    timer = setInterval(next, interval);
-  }
-
-  function resetTimer() {
-    clearInterval(timer);
-    startTimer();
-  }
-
-  dots.forEach(function(dot) {
-    dot.addEventListener('click', function() {
-      goTo(parseInt(this.dataset.index));
-      resetTimer();
-    });
-  });
-
-  if (count > 1) startTimer();
-})();
-</script>
+<script src="{{ '/assets/js/hero-slider.js' | relative_url }}" defer></script>
 {% endif %}

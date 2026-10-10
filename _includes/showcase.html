@@ -44,7 +44,7 @@
     {% for item in showcase.items %}
         <section class="showcase showcase-item" data-product="{{ item.product }}">
             <figure class="image {% if item.image_ratio %} {{ item.image_ratio }} {% else %} is-16by9 {% endif %}">
-                <img src="{{ item.image | relative_url }}" />
+                <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title | default: item.artist | escape }}" loading="lazy" />
             </figure>
             <div class="showcase-content">
                 <div class="columns is-centered">

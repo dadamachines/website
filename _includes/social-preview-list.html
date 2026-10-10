@@ -1,0 +1,26 @@
+{% comment %}
+Reusable Instagram clip list. items: title + post URL; id: unique dialog ID;
+creator: visible attribution. Direct links work without JavaScript.
+{% endcomment %}
+<ol class="social-preview-list">
+  {% for item in include.items %}
+  <li>
+    <div class="social-preview-title">
+      <span class="social-preview-number" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>
+      <div><h3>{{ item.title }}</h3><p>{{ include.creator }}</p></div>
+    </div>
+    <div class="social-preview-actions">
+      <button type="button" data-social-dialog="{{ include.id }}" data-embed-url="{{ item.url }}embed/" data-embed-title="{{ item.title }} by {{ include.creator }}" data-post-url="{{ item.url }}" aria-label="Play {{ item.title }} by {{ include.creator }}" hidden><span aria-hidden="true">▶</span> Play</button>
+      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Watch {{ item.title }} on Instagram">Instagram <span aria-hidden="true">↗</span></a>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+<dialog class="social-preview-dialog" id="{{ include.id }}" aria-labelledby="{{ include.id }}-title">
+  <div class="social-preview-dialog-heading">
+    <h3 id="{{ include.id }}-title">Sound sketch by {{ include.creator }}</h3>
+    <button type="button" data-social-close aria-label="Close video">×</button>
+  </div>
+  <div data-social-player></div>
+  <a data-social-post href="{{ include.items.first.url }}" target="_blank" rel="noopener noreferrer">Watch on Instagram <span aria-hidden="true">↗</span></a>
+</dialog>

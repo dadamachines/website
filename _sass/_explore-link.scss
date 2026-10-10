@@ -9,6 +9,7 @@
   --el-hover-color: #fff;
 
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   padding: .45rem 1.25rem;
@@ -22,6 +23,11 @@
   cursor: pointer;
   transition: background-color .2s, color .2s, border-color .2s, transform .1s;
   color: var(--el-color);
+}
+.explore-link:focus-visible { outline: 3px solid #6969ff; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .explore-link { transition: none; }
+  .explore-link:hover { transform: none !important; }
 }
 
 .explore-link:hover {

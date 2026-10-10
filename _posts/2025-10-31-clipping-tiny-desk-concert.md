@@ -14,7 +14,7 @@ series:
 
 The pot lid didn't sound the way we wanted. "What about our Webby?" I suggested. The award statue's metallic spring had just the right amount of wobble — a ride cymbal with a drip like Dalí. What you're about to see has never been attempted at the Tiny Desk before: small, MIDI-triggered robots strike and vibrate glass bottles, coffee mugs, plastic wrap and a pizza box to make futuristic music out of the present's refuse and rubbish. What band besides [clipping.](https://www.npr.org/artists/488359767/clipping){:target="_blank"} could pull this off?
 
-<div class="embed-container"><iframe src='https://www.youtube.com/embed/h0-k7vW9Xek' frameborder='0' allowfullscreen></iframe></div>
+<div class="embed-container"><iframe src='https://www.youtube.com/embed/h0-k7vW9Xek' title="clipping. Tiny Desk Concert" loading="lazy" frameborder='0' allowfullscreen></iframe></div>
 Credit: Photo: Maansi Srivastava
 
 --- 

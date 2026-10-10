@@ -5,9 +5,13 @@ description: Plug & play MIDI to DC interface for creative music making & kineti
 product_code: DA-0000
 layout: product
 category: automat-toolkit
+sort_order: 1
+shop_section: desktop
+sold_out: true
+notification_url: /products/automat-toolkit/#newsletter
 hide_hero: true
-image: ../../img/products/dadamachines-automat.jpg
-price: 449,00€
+image: /img/products/dadamachines-automat-floating.jpg
+reference_price_key: automat_controller
 productshopurl: https://schneidersladen.de/en/dadamachines
 keyfeatures:
     - ▶ USB Midi & DIN Midi Input

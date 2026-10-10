@@ -1,116 +1,103 @@
 ---
 title: inside the automat toolkit
-subtitle: create your own analog sound
+description: Explore the automat controller, solenoid beaters, mounting accessories and optional configuration tools.
 layout: product-with-nav
 hide_hero: true
+full_width_content: true
 show_sidebar: false
+permalink: /products/automat-toolkit/inside/
+image: /img/products/dadamachines-automat-toolkit-l-inside.jpg
+product_nav:
+  - label: Overview
+    url: /products/automat-toolkit/
+  - label: Inside
+    url: /products/automat-toolkit/inside/
+product_section_nav:
+  - label: Controller
+    url: '#controller'
+  - label: Accessories
+    url: '#accessories'
+  - label: Configuration
+    url: '#configuration'
+product_nav_cta:
+  label: Get notified
+  url: '#newsletter'
 ---
 
-<section class="section px-0 pt-0 pb-0 column is-6">
-<h1 class="title is-2">inside the automat toolkit</h1>
-<p class="subtitle is-4 mt-1">Turn any object into an instrument. Build percussive machines, kinetic sound sculptures, or interactive installations — all powered by your favorite MIDI setup.</p>
-</section>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/dadamachines-automat-top_side.jpg">
+<link rel="stylesheet" href="{{ '/assets/css/product-story.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/automat-story.css' | relative_url }}">
+<main class="tbd-page automat-page automat-inside container" id="overview">
+  <header class="automat-guide-intro" aria-labelledby="inside-title">
+      <p class="tbd-eyebrow">The component guide</p>
+      <h1 id="inside-title">Inside the automat toolkit</h1>
+      <p>Get to know the hardware: what each part does, how it mounts, and what you can play with it.</p>
+  </header>
+  <section class="tbd-evolution automat-edge-split automat-component" id="controller" aria-labelledby="controller-title">
+      <figure class="automat-edge-photo"><img src="{{ '/img/products/dadamachines-automat-top_side.jpg' | relative_url }}" alt="Automat controller viewed from above and the side" width="1920" height="1080" fetchpriority="high"></figure>
+      <div class="tbd-story automat-edge-copy">
+        <p class="tbd-section-label">Control / Hardware specifications</p>
+        <h2 id="controller-title">automat controller</h2>
+        <h3>Hardware & connections</h3>
+        <ul class="automat-controller-specs">
+          <li>USB MIDI and DIN MIDI input</li>
+          <li>12 universal DC outputs, 12–24 V, max. 1.4 A</li>
+          <li>External 12–24 V power supply</li>
+          <li>Simple and advanced learn modes</li>
+          <li>Optional configuration tool</li>
+          <li>Anodised aluminium panel</li>
+          <li>Powder-coated steel enclosure</li>
+          <li>110 × 110 × 26 mm</li>
+        </ul>
+      </div>
+  </section>
+  <section class="automat-accessories" id="accessories" aria-labelledby="accessories-title">
+    <div class="tbd-wrap">
+      <p class="tbd-section-label">Beaters, surfaces & mounting</p>
+      <h2 id="accessories-title">The parts, in motion.</h2>
+      <div class="automat-accessory-grid">
+        <article class="automat-component automat-edge-split automat-component-sand">
+          <div class="tbd-story automat-edge-copy"><h2>Solenoid beater</h2>
+          <p>Custom-made frame solenoids chosen for durable, flexible assembly. Optimised to be quieter than standard solenoids, they can play fast rhythms and withstand repeated use in music machines and kinetic installations.</p></div>
+          {% include automat-motion.html name="solenoid" label="Solenoid beater moving in and out to create rhythmic strikes" %}
+        </article>
+        <article class="automat-component automat-edge-split automat-component-green">
+          {% include automat-motion.html name="mallet" label="Solenoid with a mallet adapter playing a percussion instrument" %}
+          <div class="tbd-story automat-edge-copy"><h2>Mallet</h2>
+          <p>Use real mallets to play glockenspiels, xylophones, frame drums, boxes or even keyboards. The adapter brings familiar percussion instruments into your MIDI-controlled setup.</p></div>
+        </article>
+        <article class="automat-component automat-edge-split automat-component-lilac">
+          <div class="tbd-story automat-edge-copy"><h2>materialdrum</h2>
+          <p>Place screws, coins, rice or other materials on the surface. A beater strikes from below, bringing out the rhythms and textures of the materials you choose.</p></div>
+          {% include automat-motion.html name="materialdrum" label="Materialdrum struck from below, moving loose materials on its surface" %}
+        </article>
+        <article class="automat-component automat-edge-split automat-component-sand">
+          {% include automat-motion.html name="littlewingman" label="Little wingman mount positioning a beater over an object" %}
+          <div class="tbd-story automat-edge-copy"><h2>little wingman</h2>
+          <p>Place it directly on an instrument, object or material. Without a fixed playing surface, it adapts to whatever you want to explore.</p></div>
+        </article>
+        <article class="automat-component automat-edge-split automat-component-green">
+          <div class="tbd-story automat-edge-copy"><h2>LEGO adapter</h2>
+          <p>Mount solenoid beaters using LEGO bricks. Build and adjust playful setups quickly as you experiment with new sounds.</p></div>
+          {% include automat-motion.html name="legoadapter" label="Solenoid beater mounted using a LEGO adapter and bricks" %}
+        </article>
+        <article class="automat-component automat-edge-split automat-component-lilac">
+          {% include automat-motion.html name="roundobjectmount" label="Round object mount attaching a beater to a circular surface" %}
+          <div class="tbd-story automat-edge-copy"><h2>Round object mount</h2>
+          <p>Attach a solenoid beater to a circular surface, such as a drum or bottle. A flexible way to bring curved objects into your instrument.</p></div>
+        </article>
+      </div>
     </div>
-    <div class="column">
-        <h2 class="is-size-3">automat controller</h2>        
-        <div class="mt-1">
-            <h3 class="is-size-5 has-text-weight-semibold mb-1">Features</h3>
-            <ul class="list-reset mt-0">
-                <li class="mt-0"><p class="is-size-5">▶ USB Midi & DIN Midi Input</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ 12 Universal DC Outputs (12-24V max. 1.4A)</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ External power supply 12-24V</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ Simple & Advanced learn mode</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ Optional configuration tool</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ Anodized aluminum panel</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ Robust steel shell (power coated)</p></li>
-                <li class="mt-0"><p class="is-size-5">▶ Dimensions 110 x 110 x 26mm</p></li>
-            </ul>
-        </div>
+  </section>
+  <section class="tbd-open automat-configuration" id="configuration" aria-labelledby="config-title">
+    <div class="tbd-wrap">
+    <p class="tbd-section-label">Go further when you need to</p>
+    <div class="tbd-story">
+      <h2 id="config-title">The optional automat configurator</h2>
+      <p class="automat-lead">For most setups, MIDI note on/off messages are enough to start playing. The configurator is for those who want advanced control over dynamics using velocity values. You don't need it to get started.</p>
     </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/gifs/dada_solenoid.gif">
     </div>
-    <div class="column">
-        <h2 class="is-size-3">solenoid</h2>
-        <p class="is-size-5">The automat toolkit comes with custom-made frame solenoids, chosen for their durability and flexible assembly. <br>We optimized them to be quieter than standard solenoids.</p> 
-        <p class="is-size-5 mt-2">They can play fast rhythms and withstand heavy use, making them perfect for creative music machines & kinectic installation.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/gifs/dada_mallet.gif">
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">mallet</h2>
-        <p class="is-size-5">The mallet adapter lets you use real mallets to play glockenspiels, xylophones, frame drums, boxes, and even keyboards. It’s a versatile way to add dynamic, acoustic sounds to your setup—perfect for exploring new rhythms and textures with classic percussion instruments.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/gifs/dada_materialdrum.gif">
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">materialdrum</h2>
-        <p class="is-size-5">The materialdrum lets you explore the unique sounds of everyday objects. Place screws, coins, rice, or other materials on the surface and discover new textures and rhythms. The solenoid beater strikes from below, bringing out the character of whatever you choose to play.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/gifs/dada_littlewingman.gif">
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">little wingman</h2>
-        <p class="is-size-5">The little wingman opens up new sound dimensions by letting you place it directly on instruments, objects, or materials. Without a fixed surface, it adapts to whatever you want to play—just set it on top and experiment with fresh textures and rhythms.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/gifs/dada_legoadapter.gif">
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">lego adapter</h2>
-        <p class="is-size-5">The lego adapter lets you quickly mount solenoid beaters using LEGO bricks. Build playful setups and experiment with new sounds in seconds.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img src="../../../img/products/gifs/dada_roundobjectmount.gif">
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">round object mount</h2>
-        <p class="is-size-5">The round object mount attaches solenoid beaters to circular surfaces like drums or bottles—simple and flexible for creative setups.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <div class="embed-container"><iframe src='https://www.youtube.com/embed/mnedVLVNZiU' frameborder='0' allowfullscreen></iframe></div>
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">automat configurator</h2>
-        <p class="is-size-5">The automat configurator is for users who want advanced control over dynamics using velocity values. For most setups, you can simply use MIDI note on/off messages to play—no configurator needed.</p>
-    </div>
-</div>
-
-<div class="columns mt-6">
-    <div class="column">
-        <img style="box-shadow: none;" src="../../../img/projects/dadamachines-automat-toolkit.jpg">
-    </div>
-    <div class="column">
-        <h2 class="is-size-3">Get your toolkit now!</h2>
-        <p class="is-size-5">The automat toolkit comes with everything you need to get started. <br>It’s available via our long‑term partner <strong>SchneidersLaden</strong> in Berlin and in their <a href="https://schneidersladen.de/en/dadamachines-automat-toolkit" target="_blank" rel="noopener">webshop</a>.</p>
-        <a href="/shop/" class="explore-link is-blue is-large">Buy now</a>
-    </div>
-</div>
+    <div class="embed-container"><iframe src="https://www.youtube-nocookie.com/embed/mnedVLVNZiU" title="Using the automat configurator for velocity and dynamics" loading="lazy" allowfullscreen></iframe></div>
+  </section>
+  {% include automat-story-newsletter.html %}
+</main>
+<script src="{{ '/assets/js/product-story.js' | relative_url }}" defer></script>

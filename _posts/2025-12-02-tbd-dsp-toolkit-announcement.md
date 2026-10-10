@@ -3,8 +3,14 @@ layout: post
 title: Announcing the TBD DSP Toolkit
 subtitle: Supported by NLnet NGI0 Commons Fund
 date: 2025-12-02 10:00:00
-image: ../../../../img/blog/dada-tbd-16x9.jpg
-hero_image: ../../../../img/blog/dada-tbd-16x9.jpg
+image: /img/blog/dada-tbd-16x9.jpg
+hero_image: /img/blog/dada-tbd-16x9.jpg
+image_alt: TBD open-source audio hardware
+summary: We're developing the TBD DSP Toolkit with Musical Instrument Designs, supported by the NLnet NGI0 Commons Fund. An open platform for musicians, students and developers.
+cta_title: Discover the TBD DSP Toolkit
+cta_description: An open platform for musicians, students and developers.
+cta_url: /products/tbd-toolkit/
+cta_label: Learn more
 hero_height:
 hero_darken: true
 hero_whitetxt: true
@@ -16,7 +22,7 @@ We are happy to share that **dadamachines** and **Musical Instrument Designs** w
 
 TBD is an open‑source platform for audio DSP that supports experimentation, learning and instrument design. We look forward to making the platform easier to use for musicians, students and developers.
 
-### What is the TBD DSP Toolkit?
+## What is the TBD DSP Toolkit?
 
 TBD DSP Toolkit is an open-source platform for audio DSP for experimentation, learning, and audio research. It combines more than 50 high-quality generators and effects within a modular, easily extensible architecture. TBD has a flexible approach to embedded audio processing, and tries to deliver an accessible, musician-friendly environment, both in software and hardware. 
 
@@ -24,7 +30,7 @@ A key new component is a standalone desktop version of the hardware, including s
 
 By uniting developer flexibility with musician usability, TBD aims to offer a resilient, open-source alternative in a landscape dominated by proprietary platforms. All software is released under GPL 3.0, and updated open hardware designs will be published in KiCad.
 
-### Get involved
+## Get involved
 - Learn more on the project page: [/products/tbd-toolkit/](/products/tbd-toolkit/)
 - Explore the source code on GitHub: <a href="https://github.com/ctag-fh-kiel/ctag-tbd" target="_blank" rel="noopener">ctag-fh-kiel/ctag-tbd</a>
 - NLnet project page: <a href="https://nlnet.nl/project/TBD-DSP-Toolkit/" target="_blank" rel="noopener">TBD DSP Toolkit at NLnet</a>
@@ -50,9 +56,3 @@ By uniting developer flexibility with musician usability, TBD aims to offer a re
 ---
 
 If you’re an educator, musician, or developer interested in open DSP tools, we’d love your feedback as we shape the next steps. Stay tuned — we’ll share updates and ways to contribute soon.
-
-<section class="section is-small has-text-centered mt-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../../img/blog/dada-tbd-16x9.jpg') center center; background-size: cover;">
-   <h2 class="is-size-3" style="color: white !important;">Discover the TBD DSP Toolkit</h2>
-   <p class="is-size-5 has-text-white">An open platform for musicians, students and developers.</p>
-   <a href="/products/tbd-toolkit/" class="explore-link is-light is-large is-reversed">Learn more</a>
-</section>

@@ -11,37 +11,48 @@ permalink: /products/tbd-16/
 product_nav:
   - label: Overview
     url: /products/tbd-16/
+product_section_nav:
   - label: Sound
     url: '#sound'
   - label: Sequencing
     url: '#sequencing'
   - label: Connections
     url: '#connections'
+  - label: Apps & code
+    url: '#open-platform'
   - label: Team
     url: '#team'
   - label: Specs
     url: '#specifications'
 product_nav_cta:
-  label: Find yours
-  url: '#reserve'
+  label: Get notified
+  url: '#newsletter'
+reference_price_key: tbd_16
+app_slides:
+  - label: MegaCommand Live
+    image: /img/products/tbd-16/mcl.webp
+    alt: TBD-16 running the MegaCommand Live sequencer app
+  - label: DOOM
+    image: /img/products/tbd-16/doom.webp
+    alt: TBD-16 running DOOM
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/tbd-16.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/product-story.css' | relative_url }}">
 <main class="tbd-page container" id="overview">
   <section class="tbd-hero" aria-labelledby="tbd-title">
     <div class="tbd-hero-copy">
       <p class="tbd-eyebrow">Made in Berlin. Made to play.</p>
       <h1 id="tbd-title">tbd-16</h1>
       <p class="tbd-hero-subtitle">compact, capable and open by design</p>
-      <p class="tbd-hero-intro">A standalone groovebox with synthesis, sampling, sequencing and effects in a handheld format. Plug in, start playing, and make it your own.</p>
+      <p class="tbd-hero-intro">Synthesis, sampling, sequencing and effects in a compact standalone instrument. Designed, assembled and tested in Berlin.</p>
+      {% include product-reference-price.html key=page.reference_price_key %}
       <div class="tbd-actions">
-        <a class="explore-link is-blue is-medium" href="https://schneidersladen.de/en/dadamachines-tbd-16" target="_blank" rel="noopener noreferrer">Schneidersladen <span aria-hidden="true">↗</span>
-        </a>
         <a class="explore-link is-dark is-medium is-reversed" href="#sound">Explore
         </a>
+        <a class="explore-link is-blue is-medium" href="#newsletter">Get notified
+        </a>
       </div>
-      <p class="tbd-hero-price">599 € <span>incl. 19% VAT · plus shipping</span>
-      </p>
+      <p class="tbd-launch-note">Pre-orders aren't open yet. Get notified when they open.</p>
     </div>
     <div class="tbd-hero-product">
       <img src="{{ '/img/products/tbd-16/hero.webp' | relative_url }}" alt="TBD-16 production hardware with OLED display, four potentiometers and RGB step keys" width="1200" height="1254" fetchpriority="high">
@@ -53,8 +64,10 @@ product_nav_cta:
       </a>
     </div>
   </section>
-  <section class="tbd-video tbd-wrap" aria-labelledby="video-title">
-    <h2 id="video-title">tbd-16 in action</h2>
+  <section class="tbd-video" aria-labelledby="video-title">
+    <div class="tbd-wrap tbd-video-heading">
+      <h2 id="video-title">tbd-16 in action</h2>
+    </div>
     <div class="embed-container">
       <iframe src="https://www.youtube-nocookie.com/embed/eMGTP3dQRv0" title="TBD-16 Groovebox demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
@@ -64,8 +77,8 @@ product_nav_cta:
     <div class="tbd-intro-grid">
       <h2 id="intro-title">Meet tbd-16</h2>
       <div class="tbd-prose">
-        <p>Sixteen tracks. More than 40 machines and effects. A deep sequencer and a hands-on workflow. All in a 110 × 110 × 25 mm instrument.</p>
-        <p>Plug in USB-C power, connect speakers or headphones, and start making music. You can play it straight out of the box, or explore the open-source CTAG TBD platform underneath. Openness is part of the instrument, without getting in the way of playing it.</p>
+        <p>Connect USB-C power and speakers or headphones: tbd-16 boots straight into the Groovebox, with no computer needed to play.</p>
+        <p>It is a finished instrument, but not a fixed one. Alternative firmware can give the same hardware a different role. You can write your own, too.</p>
       </div>
     </div>
     <dl class="tbd-facts">
@@ -82,23 +95,21 @@ product_nav_cta:
         <dd>steps per pattern</dd>
       </div>
       <div>
-        <dt>110 mm</dt>
-        <dd>wide. And just as deep.</dd>
+        <dt>16</dt>
+        <dd>scenes per song</dd>
       </div>
     </dl>
   </section>
   <section class="tbd-evolution" aria-labelledby="evolution-title">
     <div class="tbd-wrap tbd-split">
       <div class="tbd-photo">
-        <img src="{{ '/img/products/tbd-16/angle.webp' | relative_url }}" alt="Angled view of the production TBD-16 aluminium panel and steel enclosure" width="1600" height="1382" loading="lazy">
+        <img src="{{ '/img/products/tbd-16/production.webp' | relative_url }}" alt="Front-facing view of the production TBD-16 with its display, controls and USB connections" width="1600" height="1196" loading="lazy">
       </div>
       <div class="tbd-story">
         <p class="tbd-section-label">From Superbooth to your setup</p>
         <h2 id="evolution-title">From prototype to production</h2>
-        <p>Since its first presentation at Superbooth, tbd-16 has evolved considerably on its way to production.</p>
-        <p>The revised hardware brings significantly improved audio quality, a second stereo audio input and a separate headphone/cue output. Alongside it, the Groovebox firmware has grown with new features and refinements.</p>
-        <a class="tbd-text-link" href="#connections">Meet the connections <span aria-hidden="true">↗</span>
-        </a>
+        <p>If you saw <strong>tbd-16 at Superbooth</strong>, there is more here now. The production hardware brings significantly improved audio quality, a second stereo audio input and a separate headphone/cue output.</p>
+        <p>The Groovebox firmware has developed alongside the hardware, with new machines, effects and sequencing features.</p>
       </div>
     </div>
   </section>
@@ -106,8 +117,8 @@ product_nav_cta:
     <div class="tbd-wrap">
       <p class="tbd-section-label">Sound & machines</p>
       <div class="tbd-sound-heading">
-        <h2 id="sound-title">Choose your machines</h2>
-        <p>A Machine is a sound engine with its own character and controls. Any drum machine can run on any drum track. Any synth machine can run on any synth track. Choose the voices your music needs.</p>
+        <h2 id="sound-title">Find your sound. Choose your machines.</h2>
+        <p>Tracks aren't tied to a single sound engine. Choose any drum machine for any drum track, or any synth machine for any synth track. Each machine brings its own synthesis method and controls.</p>
       </div>
       <div class="tbd-machine-grid">
         <article><span class="tbd-machine-number">01</span>
@@ -127,7 +138,7 @@ product_nav_cta:
         <h3>Effects & master processing</h3>
         <div>
           <p>Two dedicated FX tracks use the same flexible machine concept. Choose delays, reverbs, modulation or Beat Repeat effects.</p>
-          <p>The master channel brings it all together with bus compression, sidechain and a DJ-style filter.</p>
+          <p>Shape the full mix with master bus compression, sidechain and a DJ-style filter.</p>
         </div>
       </div>
     </div>
@@ -137,22 +148,32 @@ product_nav_cta:
     <div class="tbd-split">
       <div class="tbd-story">
         <h2 id="sequence-title">Sequence, play and perform</h2>
-        <p>Quick to get started. Deep when you need it. Build patterns of up to 64 steps, shape each hit with parameter locks, and let probability, retriggers and modulation move your ideas forward.</p>
-        <p>Four high-resolution endless potentiometers with push and 16 RGB step keys keep the workflow direct and tactile. A 2.4″ OLED puts the detail in view.</p>
+        <p>Program a pattern on the 16 RGB step keys, then shape individual hits with the four endless potentiometers. Parameter locks, velocity and note length give each step its own sound; probability and retriggers introduce variation.</p>
         <ul class="tbd-feature-list">
-          <li>Per-step parameter locks, velocity and note length</li>
           <li>Independent track lengths, LFOs and random modulation</li>
           <li>Pattern window, rotation and flexible time signatures</li>
           <li>Arpeggiator, Euclidean sequencing and 16 scenes per song</li>
           <li>Metronome with cue routing</li>
         </ul>
-        <a class="tbd-text-link" href="https://docs.dadamachines.com/tbd-16/" target="_blank" rel="noopener noreferrer">Explore the interactive manual <span aria-hidden="true">↗</span>
-        </a>
       </div>
       <figure class="tbd-photo tbd-top-photo">
-        <img src="{{ '/img/products/tbd-16/top.webp' | relative_url }}" alt="Top view of the TBD-16 showing the full tactile control surface" width="1500" height="1500" loading="lazy">
-        <figcaption>Hands on the music. Eyes on the next step.</figcaption>
+        <img src="{{ '/img/products/tbd-16/controls.webp' | relative_url }}" alt="Top view of the TBD-16 showing the full tactile control surface" width="1018" height="1018" loading="lazy">
       </figure>
+    </div>
+  </section>
+  <section class="tbd-previews tbd-wrap" aria-labelledby="previews-title">
+    <div class="tbd-split">
+      <div class="tbd-story">
+        <p class="tbd-section-label">From the development studio</p>
+        <h2 id="previews-title">Sounds in progress</h2>
+        <p>Early tbd-16 sound sketches by <strong>Servando Barreiro</strong>, our collaborator on sound design, UX and testing.</p>
+        <p>Servando is a sound artist and creative technologist. Explore his work or get in touch about a collaboration.</p>
+        <a class="tbd-text-link" href="http://servando.teks.no/" target="_blank" rel="noopener noreferrer">Visit Servando's website <span aria-hidden="true">↗</span></a>
+      </div>
+      <div>
+        {% include social-preview-list.html items=site.data.tbd16_previews id="tbd-sound-preview" creator="Servando Barreiro" %}
+        <p class="tbd-preview-note">Work-in-progress recordings. Opening a player connects to Instagram.</p>
+      </div>
     </div>
   </section>
   <section class="tbd-connections" id="connections" aria-labelledby="connections-title">
@@ -161,26 +182,26 @@ product_nav_cta:
       <div class="tbd-intro-grid">
         <h2 id="connections-title">Connect your setup</h2>
         <div class="tbd-prose">
-          <p>Play on its own or bring the whole studio along. Audio, MIDI, USB and Eurorack clock/reset make tbd-16 a small instrument with a generous set of connections.</p>
-          <p>Ableton Link and automatic MIDI clock sync keep everything moving together. USB-C power works with standard 5 V USB power banks, with a mounting accessory included.</p>
+          <p>Connect external instruments, process incoming audio or sync with a modular system. Ableton Link and automatic MIDI clock sync keep tbd-16 in time with the rest of your setup.</p>
+          <p>A standard 5 V USB power bank can power the instrument away from the studio. The mounting accessory is included.</p>
         </div>
       </div>
       <figure class="tbd-connection-photo">
-        <img src="{{ '/img/products/tbd-16/back.webp' | relative_url }}" alt="Rear panel of TBD-16 with stereo audio, headphone/cue and TRS MIDI connections" width="1800" height="1800" loading="lazy">
+        <img src="{{ '/img/products/tbd-16/ports.webp' | relative_url }}" alt="Rear panel of TBD-16 with stereo audio, headphone/cue and TRS MIDI connections" width="1220" height="503" loading="lazy">
         <figcaption>Revised production hardware · separate main and headphone/cue outputs</figcaption>
       </figure>
       <div class="tbd-connection-grid">
         <article>
           <h3>Audio, with room to grow.</h3>
-          <p>Two stereo inputs, a stereo main output and a separate headphone/cue output. The second audio input shares the MIDI Input 1 socket in its switchable mode. A dedicated control sets headphone volume.</p>
+          <p>Two stereo inputs, a stereo main output and a separate headphone/cue output. USB audio also works in the default Groovebox firmware. The second audio input shares the MIDI Input 1 socket in its switchable mode. A dedicated control sets headphone volume.</p>
         </article>
         <article>
           <h3>Bring your instruments.</h3>
-          <p>USB host and USB MIDI device. Two TRS MIDI inputs and two TRS MIDI outputs. Switch MIDI Input 2 to Eurorack clock/reset and connect your modular rhythm.</p>
+          <p>USB host and USB MIDI device. Two TRS MIDI inputs and two TRS MIDI outputs. Switch MIDI Input 2 to Eurorack clock/reset to sync with a modular setup. Novation Launchpad Mini MK3 and Launchkey Mini MK4 integration extends the controls beyond the front panel.</p>
         </article>
         <article>
           <h3>A browser is all you need.</h3>
-          <p>The WebUI handles samples, presets and configuration over USB or Wi-Fi. Keep playing from the hardware, with a browser there when you want it.</p>
+          <p>Manage samples, presets and configuration in the WebUI over USB or Wi-Fi. It runs in your browser: no companion software to install. The instrument itself doesn't need a computer to play.</p>
         </article>
       </div>
     </div>
@@ -194,68 +215,79 @@ product_nav_cta:
       <figure>
         <a href="{{ '/img/products/tbd-16/player.webp' | relative_url }}" aria-label="Open larger photo of the TBD-16 player view">
           <img src="{{ '/img/products/tbd-16/player.webp' | relative_url }}" alt="TBD-16 seen from the player's position" width="1723" height="1800" loading="lazy">
-          <figcaption>Player view <span aria-hidden="true">↗</span>
-          </figcaption>
         </a>
       </figure>
       <figure>
         <a href="{{ '/img/products/tbd-16/front.webp' | relative_url }}" aria-label="Open larger photo of the TBD-16 USB connections">
           <img src="{{ '/img/products/tbd-16/front.webp' | relative_url }}" alt="Front edge of TBD-16 showing USB-C power, USB device and USB host ports" width="1800" height="741" loading="lazy">
-          <figcaption>USB & power <span aria-hidden="true">↗</span>
-          </figcaption>
         </a>
       </figure>
       <figure>
         <a href="{{ '/img/products/tbd-16/angle.webp' | relative_url }}" aria-label="Open larger photo of the TBD-16 enclosure">
           <img src="{{ '/img/products/tbd-16/angle.webp' | relative_url }}" alt="TBD-16 angled view showing aluminium top and steel base" width="1600" height="1382" loading="lazy">
-          <figcaption>Built in Berlin <span aria-hidden="true">↗</span>
-          </figcaption>
         </a>
       </figure>
     </div>
   </section>
-  <section class="tbd-open tbd-wrap" aria-labelledby="open-title">
-    <p class="tbd-section-label">Open by design</p>
-    <div class="tbd-intro-grid">
-      <h2 id="open-title">Ready to play. Open to explore.</h2>
-      <div class="tbd-prose">
-        <p>tbd-16 is built on the open-source CTAG TBD audio platform. The supplied Groovebox firmware makes it a standalone instrument; the underlying platform gives developers room to work on different engines and apps.</p>
-        <p>Explore the code, follow development, or join the community. You can go deeper into the platform whenever you want to.</p>
-        <div class="tbd-resource-links">
-          <a href="https://docs.dadamachines.com/tbd-16/" target="_blank" rel="noopener noreferrer">Interactive manual <span aria-hidden="true">↗</span>
-          </a>
-          <a href="https://github.com/dadamachines/" target="_blank" rel="noopener noreferrer">Open-source projects <span aria-hidden="true">↗</span>
-          </a>
-          <a href="https://forum.dadamachines.com/t/tbd-16-questions/776/19" target="_blank" rel="noopener noreferrer">Community & questions <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+  <section class="tbd-apps story-split story-split--image-right story-tone-sand" aria-labelledby="apps-title">
+    <figure class="story-media tbd-app-slideshow" data-app-slideshow role="region" aria-roledescription="carousel" aria-label="Alternative apps on TBD-16">
+      {% for slide in page.app_slides %}
+      <img data-app-slide src="{{ slide.image | relative_url }}" alt="{{ slide.alt }}" width="1800" height="1200" loading="lazy"{% unless forloop.first %} hidden{% endunless %}>
+      {% endfor %}
+      <div class="tbd-slideshow-controls" data-slideshow-controls hidden>
+        {% for slide in page.app_slides %}
+        <button class="tbd-slideshow-dot" type="button" data-slide-index="{{ forloop.index0 }}" aria-label="Show {{ slide.label }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+        {% endfor %}
+        <button class="tbd-slideshow-pause" type="button" data-slideshow-pause>Pause slideshow</button>
+      </div>
+    </figure>
+    <div class="story-copy tbd-story">
+      <p class="tbd-section-label">Same hardware, different instruments</p>
+      <h2 id="apps-title">Run your own apps</h2>
+      <p>Switch apps from the SD card at reboot. Run <strong>MCL (MegaCommand Live)</strong>, Justin Mammarella's sequencer for the Elektron Machinedrum, ported to tbd-16. More alternative firmware is in development.</p>
+      <p>And yes, it runs <strong>DOOM</strong>.</p>
+    </div>
+  </section>
+  <section class="tbd-open tbd-wrap" id="open-platform" aria-labelledby="open-title">
+    <div class="tbd-split">
+      <figure class="tbd-platform-diagram">
+        <img src="{{ '/img/products/tbd-16/open-platform.svg' | relative_url }}" alt="Two development paths into TBD-16: custom apps run on the RP2350B for controls and MIDI, while custom DSP plugins run on the ESP32-P4 for synthesis and effects. Both can work together in one instrument." width="1000" height="520" loading="lazy">
+      </figure>
+      <div class="tbd-story">
+        <p class="tbd-section-label">Open by design</p>
+        <h2 id="open-title">Your code. Your instrument.</h2>
+        <p>Write your own apps, sound engines or firmware. Change how tbd-16 plays, how it sounds, or both.</p>
+        <p>The firmware and DSP code are licensed under <strong>GPL 3.0</strong>, with source access initially available to device owners. No paid SDK or access tokens.</p>
+        <p>Supported by the <a href="https://nlnet.nl/project/TBD-DSP-Toolkit/" target="_blank" rel="noopener noreferrer">NLnet NGI0 Commons Fund</a>.</p>
       </div>
     </div>
   </section>
   <section class="tbd-team tbd-wrap" id="team" aria-labelledby="team-title">
-    <h2 id="team-title">The team behind tbd-16</h2>
-    <p>tbd-16 is the work of a small team, built on the open-source <a href="https://github.com/ctag-fh-kiel/ctag-tbd" target="_blank" rel="noopener noreferrer">CTAG TBD platform</a> and shaped by people who play, design and write code for music.</p>
+    <p class="tbd-section-label">The people behind tbd-16</p>
+    <h2 id="team-title">Made with friends.</h2>
+    <p>dadamachines is Johannes Elias Lohbihler's one-person studio in Berlin.<br>
+      tbd-16 brings together his work with friends and collaborators in sound, code and instrument design.</p>
     <div class="tbd-team-grid">
       <article>
         <h3>Johannes Lohbihler</h3>
-        <p class="tbd-team-role">Hardware, product & UX</p>
-        <p>Founder of <a href="/about/">dadamachines</a>. Designed the hardware and product; co-designed the UX.</p>
+        <p class="tbd-team-role">Vision, product & firmware</p>
+        <p>Founder of <a href="{{ '/about/' | relative_url }}">dadamachines</a>. Shapes the product and strategy, designs the hardware, and develops firmware and UX.</p>
       </article>
       <article>
         <h3>Robert Manzke</h3>
-        <p class="tbd-team-role">DSP engine & plugins</p>
-        <p>Creator of <a href="https://github.com/ctag-fh-kiel/ctag-tbd" target="_blank" rel="noopener noreferrer">CTAG TBD</a>. Designed the DSP engine, plugin architecture and many of its synths and effects.</p>
+        <p class="tbd-team-role">DSP engine & platform</p>
+        <p>Creator of <a href="https://github.com/ctag-fh-kiel/ctag-tbd" target="_blank" rel="noopener noreferrer">CTAG TBD</a>. Develops the DSP engine, new sound machines and essential Groovebox features.</p>
       </article>
       <article>
         <h3>Per-Olov Jernberg</h3>
-        <p class="tbd-team-role">Firmware & Groovebox app</p>
-        <p>Built the Groovebox firmware that turns tbd-16 into a 16-track multi-engine performance groovebox. <a href="https://possan.codes/" target="_blank" rel="noopener noreferrer">possan.codes</a>
+        <p class="tbd-team-role">Sequencer & Groovebox</p>
+        <p>Built the Groovebox, sequencer and user-interface foundations, including the macro and preset systems. <a href="https://possan.codes/" target="_blank" rel="noopener noreferrer">possan.codes</a>
         </p>
       </article>
       <article>
         <h3>Servando Barreiro</h3>
-        <p class="tbd-team-role">UX & sound design, QC and testing</p>
-        <p>Sound artist and creative technologist; long-time dadamachines collaborator. <a href="http://servando.teks.no/" target="_blank" rel="noopener noreferrer">servando.teks.no</a>
+        <p class="tbd-team-role">Sound, UX & testing</p>
+        <p>Sound artist, creative technologist and long-time collaborator, contributing sound design, UX and hands-on testing. <a href="http://servando.teks.no/" target="_blank" rel="noopener noreferrer">servando.teks.no</a>
         </p>
       </article>
       <article>
@@ -274,78 +306,34 @@ product_nav_cta:
     <div class="tbd-wrap">
       <p class="tbd-section-label">The details</p>
       <h2 id="specs-title">Technical specifications</h2>
-      <div class="tbd-spec-grid">
-        <article>
-          <h3>Sound & sequencing</h3>
-          <ul>
-            <li>16 audio or MIDI tracks, 2 FX tracks and a master track</li>
-            <li>More than 40 sound machines and effects</li>
-            <li>Flexible machine choice across drum and synth tracks</li>
-            <li>Drum, mono/poly synth, wavetable, physical-modelling, speech and sample engines</li>
-            <li>Two selectable FX tracks plus master bus compression, sidechain and DJ-style filter</li>
-            <li>Up to 64 steps per pattern and 16 scenes per song</li>
-            <li>Pattern window, rotation and flexible time signatures</li>
-            <li>Parameter locks, probability, retriggers, velocity and note length</li>
-            <li>Independent track lengths, LFO and random modulation</li>
-            <li>Arpeggiator and Euclidean sequencing</li>
-            <li>Metronome with cue routing</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Connections & workflow</h3>
-          <ul>
-            <li>Browser-based WebUI over USB and Wi-Fi</li>
-            <li>Ableton Link and automatic MIDI clock sync</li>
-            <li>USB host and USB MIDI device</li>
-            <li>2 × TRS MIDI in / 2 × TRS MIDI out</li>
-            <li>MIDI Input 2 switchable to Eurorack clock/reset input</li>
-            <li>2 × stereo audio inputs, with the second input switchable from the MIDI Input 1 socket</li>
-            <li>Stereo main output and separate headphone/cue output</li>
-            <li>Dedicated headphone volume control</li>
-            <li>USB-C powered (5 V), compatible with standard USB power banks</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Hardware & construction</h3>
-          <ul>
-            <li>2.4″ OLED display</li>
-            <li>4 high-resolution endless potentiometers with push</li>
-            <li>16 step keys with RGB feedback</li>
-            <li>Built-in 32 GB microSD card for projects and samples, user-replaceable</li>
-            <li>Power-bank mounting accessory included</li>
-            <li>Anodised aluminium top panel and powder-coated steel base</li>
-            <li>110 × 110 × 25 mm</li>
-            <li>Open-source CTAG TBD audio platform</li>
-            <li>Designed, assembled and tested in Berlin</li>
-          </ul>
-        </article>
-      </div>
+      {% include product-specifications.html groups=site.data.tbd16_specifications grid_class="tbd-spec-grid" %}
     </div>
   </section>
   <section class="tbd-dealer" id="reserve" aria-labelledby="dealer-title">
     <div class="tbd-wrap tbd-split">
       <div class="tbd-story">
         <p class="tbd-section-label">Your next music machine</p>
-        <h2 id="dealer-title">Get your tbd-16</h2>
-        <p class="tbd-dealer-price">599 € <span>incl. 19% VAT · plus shipping</span>
-        </p>
-        <p>Find tbd-16 at Schneidersladen, Berlin. Visit the dealer page for current availability and stock notifications.</p>
-        <a class="explore-link is-blue is-medium" href="https://schneidersladen.de/en/dadamachines-tbd-16" target="_blank" rel="noopener noreferrer">View at Schneidersladen <span aria-hidden="true">↗</span>
-        </a>
-        <a class="tbd-text-link" href="https://forum.dadamachines.com/t/tbd-16-questions/776/19" target="_blank" rel="noopener noreferrer">Have a question? Join the conversation <span aria-hidden="true">↗</span>
-        </a>
+        <h2 id="dealer-title">Pre-orders open soon.</h2>
+        {% include product-reference-price.html key=page.reference_price_key %}
+        <p>Pre-orders will open once the shipping date is confirmed. Get notified when you can order through Schneidersladen and future retail partners.</p>
+        <p class="tbd-dealer-note">Prices outside Germany may vary. Your dealer confirms local pricing and shipping.</p>
+        <div class="tbd-actions">
+          <a class="explore-link is-blue is-medium" href="#newsletter">Get notified</a>
+          <a class="explore-link is-dark is-medium" href="https://schneidersladen.de/en/dadamachines-tbd-16" target="_blank" rel="noopener noreferrer">View at Schneidersladen <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
       <div class="tbd-dealer-image">
         <img src="{{ '/img/products/tbd-16/hero.webp' | relative_url }}" alt="TBD-16 compact standalone groovebox" width="1200" height="1254" loading="lazy">
       </div>
     </div>
   </section>
-  <section class="tbd-newsletter section is-medium has-text-centered" id="newsletter" aria-labelledby="updates-title">
+  <section class="tbd-newsletter has-text-centered" id="newsletter" aria-labelledby="updates-title">
     <div class="tbd-newsletter-inner">
       <h2 id="updates-title">Stay in the loop</h2>
-      <p>News on tbd-16 firmware, new machines and what we're building next.</p>
+      <p>Sign up to hear when tbd-16 pre-orders open, plus news on firmware, new machines and what we're building next.</p>
       <label class="tbd-email-label" for="contact_email_tbd16_updates">Your email address</label>
       {% include newsletter-with-intent.html data_key="interest_tbd_sixteen" id_suffix="tbd16_updates" theme="dark" button_class="is-blue" %}
+      <p class="tbd-newsletter-disclaimer">Newsletter signup does not reserve a unit. The shipping date is not confirmed yet.</p>
       <p class="tbd-newsletter-question">Questions? <a href="https://forum.dadamachines.com/t/tbd-16-questions/776/19" target="_blank" rel="noopener noreferrer">Join the conversation on our forum.</a>
       </p>
     </div>
@@ -361,4 +349,4 @@ product_nav_cta:
     </div>
   </dialog>
 </main>
-<script src="{{ '/assets/js/tbd-16.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/product-story.js' | relative_url }}" defer></script>

@@ -1,28 +1,38 @@
 ---
 layout: default
 ---
-
-<div class="content blog">
-
-    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by dadamachines</p>
-
-    {{ content }}
-</div>
-
-<div class="tags">
-    {% for tag in page.tags %}
-      {% include tag.html tag=tag %}
-    {% endfor %}
-</div>
-
-{% if page.series %}
-{% include series.html %}
-{% endif %}
-
-{% unless site.hide_share_buttons %}
-{% include share-buttons.html %}
-{% endunless %}
-
-{% if site.disqus.shortname %}
-  {% include disqus.html %}
-{% endif %}
+<article class="blog-article">
+  <header class="blog-article-heading">
+    <a class="blog-back-link" href="{{ '/blog/' | relative_url }}">← All stories</a>
+    <p class="blog-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time> · {{ page.author | default: 'dadamachines' }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="blog-article-subtitle">{{ page.subtitle }}</p>{% endif %}
+  </header>
+  {% assign article_image = page.hero_image | default: page.image %}
+  {% if article_image %}{% unless article_image contains '://' %}{% assign article_image = article_image | relative_url %}{% endunless %}{% endif %}
+  {% if article_image %}<figure class="blog-article-image"><img src="{{ article_image }}" alt="{{ page.image_alt | default: page.title | escape }}"></figure>{% endif %}
+  <div class="content blog-article-body">{{ content }}</div>
+  {% if page.cta_url %}
+  <aside class="blog-callout">
+    <h2>{{ page.cta_title }}</h2>
+    {% if page.cta_description %}<p>{{ page.cta_description }}</p>{% endif %}
+    <a class="explore-link is-blue is-medium" href="{{ page.cta_url | relative_url }}">{{ page.cta_label | default: 'Learn more' }}</a>
+  </aside>
+  {% endif %}
+  <footer class="blog-article-footer">
+    {% if page.tags.size > 0 %}<div class="tags">{% for tag in page.tags %}{% include tag.html tag=tag %}{% endfor %}</div>{% endif %}
+    {% if page.series %}{% include series.html %}{% endif %}
+    {% unless site.hide_share_buttons %}
+    <nav class="blog-share" aria-label="Share this article">
+      <span>Share this story</span>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </nav>
+    {% endunless %}
+    <nav class="blog-next-stories" aria-label="More stories">
+      {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>Previous story</span>{{ page.previous.title }} →</a>{% endif %}
+      {% if page.next %}<a href="{{ page.next.url | relative_url }}"><span>Next story</span>{{ page.next.title }} →</a>{% endif %}
+    </nav>
+  </footer>
+</article>
+{% if site.disqus.shortname %}{% include disqus.html %}{% endif %}

@@ -5,9 +5,13 @@ description: Plug & play MIDI toolkit for real‑life music making & kinetic ins
 product_code: DA-ATL0002
 layout: product
 category: automat-toolkit
+sort_order: 2
+shop_section: desktop
+sold_out: true
+notification_url: /products/automat-toolkit/#newsletter
 hide_hero: true
-image: ../../img/products/dadamachines-automat-toolkit-l.jpg
-price: 949,00€
+image: /img/products/dadamachines-automat-toolkit.jpg
+reference_price_key: automat_toolkit
 productshopurl: https://schneidersladen.de/en/dadamachines-automat-toolkit
 keyfeatures:
     - ▶ No coding or soldering required

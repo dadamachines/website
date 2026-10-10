@@ -13,7 +13,7 @@ order: 3
     <p class="subtitle is-size-3-desktop mt-1">With a length of 10 meters and a height of 2.2 meters, the RBMA-20 is the largest sequencer ever built and it's fully functional. The sequencer features 427 knobs and faders, as well as four analog drummachines, a modular synthesizer and a sampling unit. Designed and built by the Berlin based creative studio NEULANT VAN EXEL, 30 technicians have been working for five weeks to assemble this unique piece of gear.</p>
 </section>
 
-<div class="embed-container mt4"><iframe src='https://www.youtube.com/embed/siNLuXdJXYw' frameborder='0' allowfullscreen></iframe></div>
+<div class="embed-container mt4"><iframe src='https://www.youtube.com/embed/siNLuXdJXYw' title="Red Bull Music Academy 20 installation" loading="lazy" frameborder='0' allowfullscreen></iframe></div>
 
 ![tollesbild](../../img/projects/rbma-sequencer.jpg){:class="img-responsive"}
 ![tollesbild](../../img/projects/rbma-sequencer-002.jpg){:class="img-responsive"}

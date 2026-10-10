@@ -1,6 +1,12 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-<script>
+<!-- CookieScript activates analytics only after performance-cookie consent. -->
+<script type="text/plain" data-cookiescript="accepted" data-cookiecategory="performance">
+  if (!document.getElementById('consented-google-analytics')) {
+    var analyticsScript = document.createElement('script');
+    analyticsScript.id = 'consented-google-analytics';
+    analyticsScript.async = true;
+    analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}';
+    document.head.appendChild(analyticsScript);
+  }
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

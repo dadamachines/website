@@ -31,10 +31,23 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Setup release checks
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      - name: Verify release before uploading
+        run: |
+          node --check assets/js/product-story.js
+          node --check assets/js/hero-slider.js
+          node scripts/test-hero-slider.mjs
+          node scripts/test-product-interactions.mjs
+          node scripts/audit-built-site.mjs _site --all
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

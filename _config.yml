@@ -40,6 +40,10 @@ plugins:
   - jekyll-redirect-from
 
 exclude: 
+  - docs
+  - scripts
+  - README.md
+  - font-analysis.md
   - Gemfile
   - clean-theme.gemspec
   - Gemfile.lock
@@ -77,7 +81,7 @@ defaults:
       author: "Johannes Elias Lohbihler"
       layout: post
       image: https://via.placeholder.com/1200x800
-      show_sidebar: true
+      show_sidebar: false
 
 markdown: kramdown
 highlighter: rouge
@@ -112,8 +116,6 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-
 
 
 

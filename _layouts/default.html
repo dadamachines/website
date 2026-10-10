@@ -3,6 +3,10 @@ layout: compress
 ---
 
 <!DOCTYPE html>
+{% assign use_page_frame = false %}
+{% if page.hero_slides or page.layout == 'product' or page.layout == 'blog' or page.layout == 'post' %}
+{% assign use_page_frame = true %}
+{% endif %}
 {% if page.menubar or page.menubar_toc %}
 {% assign has_left_sidebar = true %}
 {% endif %}
@@ -20,7 +24,7 @@ layout: compress
  lang="{{ site.lang | default: 'en' }}"
  {% if site.fixed_navbar %}class="has-navbar-fixed-{{ site.fixed_navbar }}"{% endif %}>
   {% include head.html %}
-  <body>
+  <body class="{% if page.hero_slides %}site-home{% else %}site-interior{% endif %}{% if use_page_frame %} site-framed{% endif %}{% if page.layout == 'product' %} site-shop-detail{% endif %}{% if page.layout == 'blog' or page.layout == 'post' %} site-blog{% endif %}">
     {% include header.html %}
     {% if page.layout == 'product-with-nav' or layout.name == 'product-with-nav' %}
         {% unless page.hide_product_nav %}
@@ -30,11 +34,12 @@ layout: compress
     {% if page.hero_slides %}
         {% include hero-slider.html %}
     {% else %}
-        {% unless page.hide_hero %}
+        {% unless page.hide_hero or page.layout == 'blog' or page.layout == 'post' %}
             {% include hero.html %}
         {% endunless %}
     {% endif %}
     {% include callouts.html %}
+    {% if use_page_frame %}<main class="site-main-frame container">{% endif %}
     {% if page.full_width_content %}
     {{ content }}
     {% else %}
@@ -69,6 +74,7 @@ layout: compress
         </div>
     </section>
     {% endif %}
+    {% if use_page_frame %}</main>{% endif %}
     {% unless page.hide_footer %}
         {% include footer.html %}
     {% endunless %}

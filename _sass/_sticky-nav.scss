@@ -20,6 +20,7 @@
 }
 
 .product-sticky-nav-container {
+  min-width: 0;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -34,7 +35,11 @@
   margin: 0;
   list-style: none;
   width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
 }
+.product-sticky-nav-list li { flex-shrink: 0; }
+@media (prefers-reduced-motion: reduce) { .product-sticky-nav { transition: none; } }
 
 .product-sticky-nav-list .buy {
   margin-left: auto;
@@ -56,6 +61,38 @@
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
+}
+
+// Page tabs, local section jumps and the notification action have distinct roles.
+.product-nav-grouped {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  max-width: none;
+  padding: 12px 1rem;
+}
+.product-nav-grouped .product-sticky-nav-list { width: auto; padding: 0; }
+.product-nav-pages { justify-self: start; }
+.product-nav-sections { justify-self: center; gap: 24px; }
+.product-nav-grouped .product-nav-sections a { font-size: .9rem; color: #666; }
+.product-nav-action { justify-self: end; }
+
+@media (max-width: 1100px) {
+  .product-nav-grouped { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+  .product-nav-pages { grid-column: 1; grid-row: 1; }
+  .product-nav-action { grid-column: 2; grid-row: 1; }
+  .product-nav-grouped .product-nav-sections {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: stretch;
+    justify-content: center;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding-top: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .product-nav-grouped .product-nav-sections { justify-content: flex-start; }
 }
 
 @media (max-width: 768px) {

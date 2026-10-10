@@ -1,0 +1,14 @@
+# German reference prices used by product stories and shop pages.
+# Availability and purchase links remain in each product's front matter.
+every_division:
+  amount: 499 €
+  note: Germany · incl. 19% VAT · plus shipping
+tbd_16:
+  amount: 599 €
+  note: Germany · incl. 19% VAT · plus shipping
+automat_toolkit:
+  amount: 949 €
+  note: Germany · incl. 19% VAT · plus shipping
+automat_controller:
+  amount: 449 €
+  note: Germany · incl. 19% VAT · plus shipping

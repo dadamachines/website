@@ -1,0 +1,7 @@
+<figure class="automat-component-demo">
+  <video data-automat-motion data-video-url="{{ '/img/products/animations/dada_' | append: include.name | append: '.mp4' | relative_url }}" data-gif-url="{{ '/img/products/gifs/dada_' | append: include.name | append: '.gif' | relative_url }}" muted loop playsinline preload="none" poster="{{ '/img/products/animations/dada_' | append: include.name | append: '.webp' | relative_url }}" width="680" height="382" aria-label="{{ include.label }}" hidden>
+    {{ include.label }}
+  </video>
+  <button type="button" class="automat-motion-toggle" aria-label="Pause animation" hidden>Pause</button>
+  <noscript><img src="{{ '/img/products/gifs/dada_' | append: include.name | append: '.gif' | relative_url }}" alt="{{ include.label }}" width="680" height="383" loading="lazy"></noscript>
+</figure>
