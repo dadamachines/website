@@ -1,0 +1,65 @@
+{% comment %}
+Product Sticky Nav — data-driven from page.product_nav front matter.
+Falls back to hardcoded automat-toolkit nav for backwards compatibility.
+
+Usage in front matter:
+  product_nav:
+    - label: Overview
+      url: /products/tbd/
+    - label: tbd-16
+      url: "#tbd-16"
+    - label: tbd-core
+      url: "#tbd-core"
+  product_nav_cta:
+    label: Pre-order ↓
+    url: "#tbd-16"
+{% endcomment %}
+
+<nav class="product-sticky-nav container" aria-label="Product navigation">
+  {% if page.product_section_nav %}
+  <div class="product-sticky-nav-container product-nav-grouped">
+    <ul class="product-sticky-nav-list product-nav-pages" aria-label="Product pages">
+      {% for item in page.product_nav %}
+      <li{% if page.url == item.url %} class="is-active"{% endif %}><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="product-sticky-nav-list product-nav-sections" aria-label="Sections on this page">
+      {% for item in page.product_section_nav %}
+      <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <a href="{{ page.product_nav_cta.url }}" class="explore-link is-blue is-medium product-nav-action">{{ page.product_nav_cta.label }}</a>
+  </div>
+  {% else %}
+  <div class="product-sticky-nav-container">
+    <ul class="product-sticky-nav-list">
+      {% if page.product_nav %}
+        {% for item in page.product_nav %}
+        <li{% if page.url == item.url %} class="is-active"{% endif %}>
+          {% assign first_character = item.url | slice: 0 %}
+          <a href="{% if first_character == '#' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.label }}</a>
+        </li>
+        {% endfor %}
+        <li class="buy">
+          {% if page.product_nav_cta %}
+          {% assign first_character = page.product_nav_cta.url | slice: 0 %}
+          <a href="{% if first_character == '#' %}{{ page.product_nav_cta.url }}{% else %}{{ page.product_nav_cta.url | relative_url }}{% endif %}" class="explore-link is-blue is-medium">{{ page.product_nav_cta.label }}</a>
+          {% else %}
+          <a href="/shop/" class="explore-link is-blue is-medium">Shop</a>
+          {% endif %}
+        </li>
+      {% else %}
+        <li{% if page.url == '/products/automat-toolkit/' %} class="is-active"{% endif %}>
+          <a href="/products/automat-toolkit/">Overview</a>
+        </li>
+        <li{% if page.url == '/products/automat-toolkit/inside/' %} class="is-active"{% endif %}>
+          <a href="/products/automat-toolkit/inside">Inside</a>
+        </li>
+        <li class="buy">
+          <a href="/shop/" class="explore-link is-blue is-medium">Buy now</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+</nav>

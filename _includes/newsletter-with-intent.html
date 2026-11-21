@@ -1,0 +1,71 @@
+{% comment %}
+  Newsletter signup form with a per-product interest flag — used on product
+  landing pages so Keila knows which product a subscriber was interested in
+  when they signed up.
+
+  The hidden `contact[data][<key>]` input is only honored by Keila if the
+  form (currently nfrm_kVPeqPR8) has a **custom Checkbox field** with the
+  matching Data Key configured in Keila → Forms → Edit → "Add custom field".
+  See docs/features/11-newsletter-and-crm-segmentation.md in dada-calculator
+  for the canonical Keila-side setup steps (per Philipp from Keila's email).
+
+  Each product gets its own boolean field — e.g.:
+    data.interest_tbd_sixteen       = true
+    data.interest_edad              = true
+    data.interest_automat_toolkit   = true
+
+  Note: Keila Data Keys must match ~r/^[a-zA-Z_]+$/ (letters + underscores
+  only — no digits, no dashes). That's why TBD-16's key is
+  `interest_tbd_sixteen`, not `interest_tbd_16`.
+
+  Segments in Keila then filter on:
+    { "data.interest_tbd_sixteen": true }
+
+  Parameters:
+    data_key   REQUIRED — Keila Data Key, e.g. "interest_tbd_sixteen". Must match
+                          exactly what's configured in the form's field settings.
+    id_suffix  OPTIONAL — appended to the email input's id so multiple forms
+                          on the same page don't share an id. Defaults to the
+                          data_key value.
+    theme      OPTIONAL — "dark" or "light", controls hCaptcha theme. Default "light".
+    button     OPTIONAL — button label text. Default "Sign up".
+    button_class OPTIONAL — extra class on the submit button. Default "is-dark is-reversed".
+{% endcomment %}
+
+{% assign data_key = include.data_key %}
+{% assign id_suffix = include.id_suffix | default: data_key %}
+{% assign theme = include.theme | default: "light" %}
+{% assign button = include.button | default: "Sign up" %}
+{% assign button_class = include.button_class | default: "is-dark is-reversed" %}
+
+<form action="https://app.keila.io/forms/nfrm_kVPeqPR8" method="post" style="max-width: 600px; margin: 0 auto;">
+  <div class="newsletter-form-group">
+    <div class="newsletter-input-control">
+      <input class="input is-large newsletter-input"
+             id="contact_email_{{ id_suffix }}"
+             name="contact[email]"
+             type="email"
+             placeholder="Your email address"
+             required>
+    </div>
+    <div class="newsletter-button-control">
+      <button class="explore-link {{ button_class }} is-large newsletter-button" type="submit">{{ button }}</button>
+    </div>
+  </div>
+
+  {%- comment -%}
+    Per-product interest flag. Keila stores this as `contact.data.<data_key> = true`
+    so segments can filter `{"data.<data_key>": true}`. Pattern recommended by
+    Philipp from Keila — see his email reply 2026-05-16.
+  {%- endcomment -%}
+  <input type="hidden" name="contact[data][{{ data_key }}]" value="true">
+
+  <!-- Honeypot field for spam protection -->
+  <input aria-hidden="true" autocomplete="off" name="h[url]" novalidate style="display: none;" type="text">
+
+  <!-- hCaptcha -->
+  <div class="newsletter-captcha mt-4">
+    <div class="h-captcha" data-sitekey="a1c5fab7-71df-4ea4-af75-87a3d07c61de" data-theme="{{ theme }}"></div>
+  </div>
+</form>
+<script src="https://hcaptcha.com/1/api.js" async defer></script>

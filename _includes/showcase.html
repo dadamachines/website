@@ -1,0 +1,141 @@
+{% if page.showcase %}
+    {% assign showcase = site.data.[page.showcase] %}
+
+    <div class="content">
+        <p>{{ showcase.intro | markdownify }}</p>
+    </div>
+
+    {% comment %} Collect unique product categories {% endcomment %}
+    {% assign products = "" %}
+    {% for item in showcase.items %}
+      {% if item.product %}
+        {% unless products contains item.product %}
+          {% if products == "" %}
+            {% assign products = item.product %}
+          {% else %}
+            {% assign products = products | append: "," | append: item.product %}
+          {% endif %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% assign product_list = products | split: "," %}
+
+    {% comment %} Category tabs + layout toggle {% endcomment %}
+    <div class="tabs is-medium is-centered shop-tabs showcase-tabs mb-5" style="position: relative;">
+      <ul>
+        <li class="is-active" data-filter="all"><a>All</a></li>
+        {% for prod in product_list %}
+          {% assign label = prod | replace: "-", " " %}
+          <li data-filter="{{ prod }}"><a>{{ label }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="showcase-layout-toggle" id="showcase-toggle">
+        <span class="is-size-7 has-text-grey has-text-weight-bold" id="toggle-label">Grid</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="1" y="1" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+          <rect x="12" y="1" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+          <rect x="1" y="12" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+          <rect x="12" y="12" width="7" height="7" rx="1" stroke="#888" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="showcase-container" id="showcase-container">
+    {% for item in showcase.items %}
+        <section class="showcase showcase-item" data-product="{{ item.product }}">
+            <figure class="image {% if item.image_ratio %} {{ item.image_ratio }} {% else %} is-16by9 {% endif %}">
+                <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title | default: item.artist | escape }}" loading="lazy" />
+            </figure>
+            <div class="showcase-content">
+                <div class="columns is-centered">
+                    <div class="column is-8-desktop is-12-tablet">
+                        <p class="title">{{ item.artist }}</p>
+                        <p class="subtitle">{{ item.title }}</p>
+
+                        {% if item.github %}
+                        <div class="buttons is-centered">
+                            <a href="https://github.com/{{ item.github }}/stargazers" class="button is-white is-small">
+                                <img alt="GitHub stars" src="https://img.shields.io/github/stars/{{ item.github }}?style=social">
+                            </a>
+                            <a href="https://github.com/{{ item.github }}/network/members" class="button is-white is-small">
+                                <img alt="GitHub forks" src="https://img.shields.io/github/forks/{{ item.github }}?style=social">
+                            </a>
+                            <a href="https://github.com/{{ item.github }}/watchers" class="button is-white is-small">
+                                <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/{{ item.github }}?style=social">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        <div class="content">
+                            <p>{{ item.description | markdownify }}</p>
+                        </div>
+
+                        {% if item.features %}
+                        <ul class="block-list {{ item.features_styles }}">
+                            {% for feature in item.features %}
+                            <li>{{ feature }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+
+                        {% if item.tags %}
+                        {% assign tags = item.tags | split: "," %}
+                        <div class="tags is-centered">
+                            {% for tag in tags %}
+                                {% include tag.html tag=tag style="is-dark" %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <a href="{{ item.link }}" class="explore-link is-dark is-large is-reversed" target="_blank">
+                            {{ item.link_text }}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    {% endfor %}
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      /* Category filtering */
+      var tabs = document.querySelectorAll('.showcase-tabs li');
+      var items = document.querySelectorAll('.showcase-item');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) { t.classList.remove('is-active'); });
+          tab.classList.add('is-active');
+          var filter = tab.getAttribute('data-filter');
+          items.forEach(function (item) {
+            if (filter === 'all' || item.getAttribute('data-product') === filter) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      /* Layout toggle */
+      var container = document.getElementById('showcase-container');
+      var toggle = document.getElementById('showcase-toggle');
+      var label = document.getElementById('toggle-label');
+      var isGrid = false;
+
+      toggle.addEventListener('click', function () {
+        isGrid = !isGrid;
+        if (isGrid) {
+          container.classList.add('showcase-grid');
+          label.textContent = 'List';
+        } else {
+          container.classList.remove('showcase-grid');
+          label.textContent = 'Grid';
+        }
+      });
+    });
+    </script>
+{% endif %}

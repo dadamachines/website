@@ -1,0 +1,14 @@
+<article class="blog-card{% if include.featured %} blog-card--featured{% endif %}">
+  {% if post.image %}
+  {% if post.image contains '://' %}{% assign card_image = post.image %}{% else %}{% assign card_image = post.image | relative_url %}{% endif %}
+  <a class="blog-card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ card_image }}" alt="" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="blog-card-copy">
+    <p class="blog-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>{% if include.featured %} · Latest story{% endif %}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="blog-card-summary">{{ post.summary | default: post.excerpt | strip_html | truncatewords: 38 }}</p>
+    <a class="blog-read-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">Read the story <span aria-hidden="true">→</span></a>
+  </div>
+</article>

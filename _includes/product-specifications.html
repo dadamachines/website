@@ -1,0 +1,11 @@
+{% comment %}Render editable specification groups. Pass groups, grid_class and optionally list_class.{% endcomment %}
+<div class="{{ include.grid_class }}">
+  {% for group in include.groups %}
+  <article>
+    <h3>{{ group.title | escape }}</h3>
+    <ul{% if include.list_class %} class="{{ include.list_class }}"{% endif %}>
+      {% for feature in group.features %}<li>{{ feature | escape }}</li>{% endfor %}
+    </ul>
+  </article>
+  {% endfor %}
+</div>

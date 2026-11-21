@@ -1,0 +1,78 @@
+// Shared page frame: use Bulma's container breakpoints throughout.
+// The homepage slider remains full bleed; interior headers share one rule.
+.site-interior .site-header > .container { border-bottom: 3px solid #111; }
+.site-header .navbar-brand > .navbar-item { padding-left: 0; }
+.site-header > .container .navbar-brand { margin-left: 0; }
+.site-header > .container .navbar-menu { margin-right: 0; }
+.site-header .navbar-end > .navbar-item:last-child { padding-right: 0; }
+.site-interior .hero.has-plain-background .hero-body .container {
+  border-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.site-interior .hero.has-plain-background .hero-body { padding: 48px 0 24px !important; }
+.site-interior .hero.has-hero-image { margin-left: auto; margin-right: auto; }
+.product-sticky-nav {
+  border-top: 0;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.product-sticky-nav-container { max-width: none; padding: 0 16px; }
+.product-sticky-nav-container.product-nav-grouped { min-height: 76px; padding: 12px 16px; }
+.product-nav-grouped .product-nav-action { min-height: 48px; white-space: nowrap; line-height: 1.2; }
+.site-footer { padding: 48px 32px; }
+.site-footer > .container { width: auto; max-width: none; }
+.site-framed { background: #f1f1f1; }
+.site-framed .site-header { background: transparent; }
+.site-framed .site-header > .container { background: #fff; padding: 0 32px; }
+.site-home .site-header { background: #fff; }
+.site-main-frame { background: #fff; }
+.site-main-frame > .section { padding: 32px 32px 0; }
+.site-main-frame > .section > .container { width: auto; max-width: none; }
+.site-main-frame > .section > .container > .columns { margin-bottom: 0; }
+.site-main-frame > .section > .container > .columns > .column { padding-bottom: 0; }
+.site-home .site-main-frame > .section { padding-top: 48px; }
+.site-blog .site-main-frame > .section { padding-bottom: 48px; }
+.site-home .newsletter-section { padding: 64px 0; }
+.site-shop-detail .product-detail { padding-bottom: 0; }
+.site-shop-detail .product-detail-description > .content { margin-bottom: 0; }
+.site-shop-detail .product-detail-description .tbd-newsletter { margin: 0 -32px; }
+.site-shop-detail .product-detail-description .tbd-newsletter h2 { margin-bottom: 16px; }
+.product-detail-demo .embed-container + .embed-container { margin-top: 24px; }
+.product-image-wrapper--render { background: #f4f4f4; }
+.product-image-wrapper--render img, .card .card-image img.shop-render-image { object-fit: contain; padding: 24px; background: #f4f4f4; }
+.site-interior .product-detail { border-top: 0; }
+.product-description-prose { max-width: 78ch; }
+.product-detail-description .product-description-prose h2 { font-size: 2rem; line-height: 1.2; }
+.product-detail-description .product-description-prose h3 { font-size: 1.5rem; line-height: 1.3; margin-top: 36px; }
+.product-description-prose p { line-height: 1.65; }
+.product-specifications { margin-top: 48px; padding-top: 36px; border-top: 3px solid #111; }
+.product-specification-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 32px; }
+.product-specification-grid > article { display: flex; flex-direction: column; min-width: 0; }
+.product-detail-description .product-specification-grid h3 { font-size: 1.35rem; margin: 0 0 20px; }
+.product-detail-description .product-brand-list { display: flex; flex-direction: column; flex: 1; list-style: none; padding: 0; margin: 0; }
+.product-brand-list li { flex: 1; position: relative; padding: 12px 0 12px 1.35em; margin: 0 !important; border-top: 1px solid #ddd; font-size: 1.05rem; line-height: 1.5; }
+.product-brand-list li::before { content: "▶"; position: absolute; left: 0; top: 12px; font-family: sans-serif; font-size: .65em; line-height: 1.5; transform: translateY(.3em); }
+.product-launch-info { margin-top: 48px; margin-bottom: 40px; }
+.product-detail-demo { margin-top: 48px; padding-top: 36px; border-top: 1px solid #ddd; }
+.product-detail-demo h2 { margin-bottom: 24px; }
+.product-detail-description .tbd-newsletter h2 { color: #fff !important; }
+.product-detail-description .tbd-newsletter p { color: #fff; }
+.product-detail-features--below { margin-top: 32px; padding-top: 32px; }
+.product-detail-features--below .product-detail-features-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; }
+
+@media screen and (max-width: 1023px) {
+  .site-main-frame { width: calc(100% - 48px); margin: 0 24px; }
+  .site-interior .hero.has-plain-background .hero-body { padding: 48px 24px 24px !important; }
+  .site-header > .container { width: calc(100% - 48px); margin-left: 24px; margin-right: 24px; }
+  .site-header .navbar-menu { box-shadow: none; }
+}
+@media screen and (max-width: 760px) {
+  .site-main-frame { width: 100%; margin: 0; }
+  .site-framed .site-header > .container { padding: 0; }
+  .site-main-frame > .section { padding-left: 24px; padding-right: 24px; }
+  .site-shop-detail .product-detail-description .tbd-newsletter { margin-left: -24px; margin-right: -24px; }
+  .product-specification-grid, .product-detail-features--below .product-detail-features-list { grid-template-columns: 1fr; }
+  .product-detail-description .product-description-prose h2 { font-size: 1.75rem; }
+  .site-footer { padding: 36px 16px; }
+}

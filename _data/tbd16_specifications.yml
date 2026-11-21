@@ -1,0 +1,38 @@
+# Shared by the product story and shop detail page. Keep features in their
+# relevant category; ten entries per group currently balances the layout.
+- title: Sound & sequencing
+  features:
+    - 16 audio or MIDI tracks, 2 FX tracks and a master track
+    - More than 40 sound machines and effects, with flexible choice across drum and synth tracks
+    - Drum, mono/poly synth, wavetable, physical-modelling, speech and sample engines
+    - Two selectable FX tracks plus master bus compression, sidechain and DJ-style filter
+    - Up to 64 steps per pattern and 16 scenes per song
+    - Pattern window, rotation and flexible time signatures
+    - Parameter locks, probability, retriggers, velocity and note length
+    - Independent track lengths, LFO and random modulation
+    - Arpeggiator and Euclidean sequencing
+    - Metronome with cue routing
+- title: Connections & workflow
+  features:
+    - Browser-based WebUI over USB and Wi-Fi
+    - Ableton Link and automatic MIDI clock sync
+    - USB host and USB MIDI device
+    - USB audio in the default Groovebox firmware
+    - 2 × TRS MIDI in / 2 × TRS MIDI out
+    - MIDI Input 2 switchable to Eurorack clock/reset input
+    - 2 × stereo audio inputs; second input switchable from the MIDI Input 1 socket
+    - Stereo main output and separate headphone/cue output
+    - Dedicated headphone volume control
+    - Switch apps from the SD card at boot
+- title: Hardware & platform
+  features:
+    - 2.4″ OLED display
+    - 4 high-resolution endless potentiometers with push
+    - 16 step keys with RGB feedback
+    - Built-in 32 GB microSD card for projects and samples, user-replaceable
+    - USB-C powered (5 V), compatible with standard USB power banks
+    - Power-bank mounting accessory included
+    - Anodised aluminium top panel and powder-coated steel base
+    - 110 × 110 × 25 mm
+    - Open-source CTAG TBD audio platform
+    - Designed, assembled and tested in Berlin

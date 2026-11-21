@@ -1,0 +1,187 @@
+{% comment %}
+=============================================================================
+Pre-order Form Component — Kickstarter-style layout
+=============================================================================
+Usage: {% include preorder-form.html product_id="tbd-16" %}
+
+Reads config from: _data/preorder_products.yml
+Requires: assets/js/preorder.js (loaded at bottom)
+Requires: site.preorder_endpoint in _config.yml
+=============================================================================
+{% endcomment %}
+
+{% assign product = site.data.preorder_products[include.product_id] %}
+{% assign pid = include.product_id %}
+
+<section class="preorder-campaign" id="{{ pid }}"
+  data-product-id="{{ pid }}"
+  data-endpoint="{{ site.preorder_endpoint }}"
+  data-batch-size="{{ product.batch_size }}"
+  {% if product.early_bird and product.early_bird_end != "" %}
+  data-early-bird-end="{{ product.early_bird_end }}"
+  {% endif %}
+>
+  <div class="columns is-variable is-6">
+
+    <!-- ── LEFT: Product Image ── -->
+    <div class="column is-8-desktop is-12-tablet">
+      <div class="preorder-image-wrapper">
+        {% if include.image %}
+          <img src="{{ include.image }}" alt="{{ product.name }}">
+        {% else %}
+          <div class="preorder-image-placeholder">
+            <p class="is-size-2 has-text-white has-text-weight-bold">{{ product.name }}</p>
+            <p class="is-size-5 has-text-white mt-2">{{ product.tagline }}</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- ── RIGHT: Campaign Stats + CTA ── -->
+    <div class="column is-4-desktop is-12-tablet">
+      <div class="preorder-sidebar">
+
+        <!-- Title -->
+        <div class="preorder-sidebar-title">
+          <h2 class="preorder-product-name">{{ product.name }}</h2>
+          <p class="preorder-product-tagline">{{ product.tagline }}</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="preorder-progress-wrapper">
+          <progress class="progress preorder-progress" value="0" max="{{ product.batch_size }}">0%</progress>
+          <div class="preorder-stats mt-2">
+            <p class="preorder-stat-line">
+              <span class="preorder-count has-text-weight-bold" data-product="{{ pid }}">–</span>
+              of {{ product.batch_size }} units reserved
+            </p>
+          </div>
+        </div>
+
+        <!-- Sold Out Banner (hidden by default) -->
+        <div class="notification is-warning preorder-soldout mt-4" style="display: none;">
+          <strong>This batch is fully reserved!</strong><br>Join the waitlist for the next batch.
+        </div>
+
+        <!-- Price -->
+        <div class="preorder-pricing mt-4">
+          {% if product.early_bird and product.price_regular != "" %}
+          <div class="preorder-early-bird">
+            <span class="tag is-dark preorder-early-bird-tag">Superbooth Early Bird</span>
+            <p class="mt-2">
+              <span class="preorder-price has-text-weight-bold">{{ product.price }}€</span>
+              <span class="preorder-price-note">{{ product.price_note }}</span>
+            </p>
+            <p class="preorder-price-regular has-text-grey">
+              <s>{{ product.price_regular }}€ {{ product.price_regular_note }}</s>
+            </p>
+          </div>
+          {% else %}
+          <div>
+            <p>
+              <span class="preorder-price has-text-weight-bold">{{ product.price }}€</span>
+              <span class="preorder-price-note">{{ product.price_note }}</span>
+            </p>
+          </div>
+          {% endif %}
+          <p class="preorder-shipping-note has-text-grey mt-1">+ shipping · No payment required now</p>
+        </div>
+
+        <!-- Reserve Now CTA (shows form on click) -->
+        <div class="field mt-4">
+          <div class="control">
+            <button class="explore-link is-blue is-large preorder-open-form" type="button" style="width: 100%; text-align: center;" data-target="preorder-form-{{ pid }}">
+              Reserve now
+            </button>
+          </div>
+        </div>
+
+        <p class="has-text-centered mt-2">
+          <a href="#" class="preorder-open-form preorder-updates-link has-text-grey" data-target="preorder-form-{{ pid }}">or just get updates</a>
+        </p>
+
+      </div><!-- /.preorder-sidebar -->
+    </div>
+
+  </div><!-- /.columns -->
+
+  <!-- ── Form (hidden by default, revealed on CTA click) ── -->
+  <div class="preorder-form-panel mt-5" id="preorder-form-{{ pid }}" style="display: none;">
+    <!-- Close button -->
+    <div class="preorder-close-wrapper">
+      <button class="delete is-medium preorder-close-form" type="button" aria-label="Close form" data-target="preorder-form-{{ pid }}"></button>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-6-desktop is-8-tablet is-12-mobile">
+
+        <p class="preorder-form-product-name has-text-centered mb-4">
+          <strong>{{ product.name }}</strong>
+        </p>
+
+        <form class="preorder-form" data-product-id="{{ pid }}" autocomplete="on" novalidate>
+          <div class="field is-grouped">
+            <div class="control is-expanded">
+              <input class="input preorder-input" type="text" id="preorder-firstname-{{ pid }}"
+                     name="firstName" placeholder="First name" required autocomplete="given-name">
+            </div>
+            <div class="control is-expanded">
+              <input class="input preorder-input" type="text" id="preorder-lastname-{{ pid }}"
+                     name="lastName" placeholder="Last name" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input preorder-input" type="email" id="preorder-email-{{ pid }}"
+                     name="email" placeholder="Email address" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field mt-3">
+            <div class="control preorder-radio-group">
+              <label class="radio preorder-radio">
+                <input type="radio" name="choice-{{ pid }}" value="Pre-order" checked>
+                <span class="preorder-radio-label">
+                  <strong>Reserve my pre-order</strong><br>
+                  <span class="is-size-7 has-text-grey">{{ product.price }}€ {{ product.price_note }} · Pay later when ready</span>
+                </span>
+              </label>
+              <label class="radio preorder-radio">
+                <input type="radio" name="choice-{{ pid }}" value="Updates">
+                <span class="preorder-radio-label">
+                  <strong>Just send me updates</strong><br>
+                  <span class="is-size-7 has-text-grey">No commitment — get notified about launch & availability</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Honeypot -->
+          <input aria-hidden="true" autocomplete="off" name="h_url" novalidate
+                 style="display: none;" type="text" tabindex="-1">
+
+          <div class="field mt-4">
+            <div class="control">
+              <button class="explore-link is-blue is-large preorder-submit" type="submit" style="width: 100%; text-align: center;">
+                Complete reservation
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Success Message (hidden by default) -->
+        <div class="notification is-success preorder-success mt-4" style="display: none;">
+          <p class="preorder-success-text has-text-weight-bold"></p>
+          <p class="mt-2">We'll email you when it's time to complete your order.</p>
+        </div>
+
+        <!-- Error Message (hidden by default) -->
+        <div class="notification is-danger preorder-error mt-4" style="display: none;">
+          <p class="preorder-error-text"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>

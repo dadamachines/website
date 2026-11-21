@@ -1,0 +1,89 @@
+/* Product-specific composition; typography, spacing and colours are shared. */
+.automat-hero { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr) auto; align-items: center; height: var(--product-hero-height); background: #f4f4f4; }
+.automat-hero-copy { width: 100%; min-width: 0; margin: 0; padding: 32px 48px; }
+.automat-hero .automat-hero-bottom { margin: 0 48px; }
+.automat-page h1 { font-size: clamp(2.5rem, 4.5vw, 4rem); line-height: 1.1; margin: 16px 0; }
+.automat-page .automat-subtitle { font-size: 1.5rem; margin-bottom: 24px; }
+.automat-hero-image { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: calc(50% + 70px) center; }
+.automat-page .automat-stock-note { font-size: 1rem; line-height: 1.5; color: #555; margin-top: 20px; }
+.automat-section-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; padding: 24px 32px; background: #f4f4f4; border-top: 1px solid var(--line); }
+.automat-section-nav span { color: var(--muted); font-size: .95rem; }
+.automat-section-nav a { font-size: 1rem; text-decoration: underline; text-underline-offset: 5px; }
+.automat-kit-photo img { display: block; width: 100%; height: auto; }
+.automat-page .automat-use-row h3 { font-size: 2rem; line-height: 1.2; margin-bottom: 24px; }
+.automat-use-row .embed-container { padding: 0; height: auto; min-height: 440px; background: #111; }
+.automat-play { background: #eee9e1; color: #111; }
+.automat-compose { background: #e9edf0; color: #111; }
+.automat-page .automat-use .automat-play h3, .automat-page .automat-use .automat-compose h3 { color: #111 !important; }
+.automat-photo { padding: 24px; }
+.automat-photo img { display: block; width: 100%; height: auto; }
+.automat-diagram { margin: 40px auto 0 !important; max-width: 900px; padding: 0; }
+.automat-diagram img { display: block; width: 100%; height: auto; }
+.automat-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+.automat-steps span { display: block; color: var(--muted); font-size: .85rem; margin-bottom: 12px; }
+.automat-steps h3 { margin-bottom: 12px; }
+.automat-steps p { font-size: 1.1rem; }
+.automat-kit { background: #e6ece6; }
+.automat-lead { max-width: 900px; margin-top: 24px !important; }
+.automat-kit-grid { margin-top: 32px; }
+.automat-kit-grid .tbd-feature-list { margin-top: 0; margin-bottom: 24px; }
+.automat-use { --line: #4b514d; background: #202722; color: #e1e3dd; }
+.automat-page .automat-use h2, .automat-page .automat-use h3 { color: #fafaf5 !important; }
+.automat-page .automat-use .tbd-section-label { color: #b9c1b7; }
+.automat-page .tbd-gallery .explore-link { margin-top: 24px; }
+.automat-accessories { background: #eee9e1; }
+.automat-accessory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
+.automat-accessory-grid article { background: #fff; padding: 24px; }
+.automat-accessory-grid img { display: block; width: 100%; aspect-ratio: 680 / 383; object-fit: contain; }
+.automat-accessory-grid h3 { margin: 24px 0 16px; }
+.automat-accessory-grid p { font-size: 1.1rem; }
+.automat-controller-specs { padding: 0; margin: 24px 0 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
+.automat-controller-specs li { padding: 12px 0; border-top: 1px solid var(--line); font-size: 1rem; }
+.automat-guide-intro { padding: 64px 48px 48px; background: #f4f4f4; }
+.automat-guide-intro > p:last-child { max-width: 760px; margin-top: 24px; }
+.automat-page .automat-component h2 { font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.15; }
+.automat-component { min-height: 420px; }
+.automat-component-demo { position: relative; background: #111; }
+.automat-component-demo [hidden] { display: none !important; }
+.automat-motion-toggle { position: absolute; z-index: 1; bottom: 12px; right: 12px; border: 1px solid #fff; background: #111; color: #fff; padding: 6px 10px; cursor: pointer; opacity: 0; }
+.automat-component-demo:hover .automat-motion-toggle,
+.automat-motion-toggle:focus-visible { opacity: 1; }
+.automat-motion-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.automat-component-demo img,
+.automat-component-demo video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+.automat-inside .automat-component-sand { background: #eee9e1; }
+.automat-inside .automat-component-green { background: #e6ece6; }
+.automat-inside .automat-component-lilac { background: #ece9f2; }
+.automat-inside .automat-configuration { background: #e9edf0; }
+.automat-inside .automat-accessories > .tbd-wrap { width: 100%; padding: 0; }
+.automat-inside .automat-accessories > .tbd-wrap > h2 { padding: 0 48px 48px; background: #202722; color: #fafaf5 !important; }
+.automat-inside .automat-accessories > .tbd-wrap > .tbd-section-label { padding: 48px 48px 24px; margin: 0 !important; background: #202722; color: #b9c1b7; }
+.automat-inside .automat-accessory-grid { display: block; margin: 0; }
+.automat-inside .automat-accessory-grid article { padding: 0; }
+.automat-inside .automat-accessory-grid h2 { margin: 0 0 24px; }
+.automat-inside .automat-accessory-grid p { font-size: 1.25rem; }
+.automat-guide-footer { padding: 40px 48px; background: #f4f4f4; }
+.automat-guide-footer .tbd-text-link { margin-top: 16px; }
+@media (max-width: 760px) {
+  .automat-guide-intro { padding: 40px 16px; }
+  .automat-guide-footer { padding: 32px 16px; }
+  .automat-component { min-height: 0; }
+  .automat-component-demo { order: 2; }
+  .automat-component-demo img,
+  .automat-component-demo video { position: static; height: auto; object-fit: contain; }
+  .automat-inside .automat-accessories > .tbd-wrap > h2 { padding: 0 16px 32px; }
+  .automat-inside .automat-accessories > .tbd-wrap > .tbd-section-label { padding: 32px 16px 20px; }
+  .automat-hero { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; min-height: 0; }
+  .automat-hero .automat-hero-bottom { margin: 0 16px; }
+  .automat-hero-copy { width: 100%; padding: 36px 16px; }
+  .automat-hero-image { height: auto; object-fit: contain; }
+  .automat-section-nav { padding: 20px 16px; gap: 16px 20px; }
+  .automat-section-nav span { flex-basis: 100%; }
+  .automat-steps, .automat-accessory-grid, .automat-controller-specs { grid-template-columns: 1fr; }
+  .automat-use-row .embed-container { min-height: 0; height: 0; padding-bottom: 56.25%; }
+  .automat-use-row h3 { font-size: 1.75rem; }
+  .automat-compose .embed-container { order: 2; }
+  .automat-photo, .automat-accessory-grid article { padding: 16px; }
+}
+.automat-page .tbd-dealer .automat-edge-photo { margin: 0; overflow: hidden; }
+.automat-page .tbd-dealer .automat-edge-photo img { object-position: 55% center; }

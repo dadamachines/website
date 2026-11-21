@@ -1,0 +1,1443 @@
+@charset "utf-8";
+@import "webfont";
+
+$family-sans-serif: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+$is-family-primary: "Lelo-Bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$is-family-secondary: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+$primary: #ffffff !default;
+$active: #0000ee;
+
+// Standardized typography variables for consistency
+$font-size-navigation: 1.25rem; // 20px - Standard for all navigation
+$font-size-body-large: 1.25rem; // 20px - For readable body text (is-size-5)
+$font-size-body-medium: 1.125rem; // 18px - For medium body text
+$font-size-body-standard: 1rem; // 16px - Default body text
+$font-size-small: 0.75rem; // 12px - For disclaimers only (is-size-7)
+
+$tabs-link-active-color: $active;
+$tabs-link-active-border-bottom-color: $active;
+
+$modal-content-width: 800px;
+
+@import "../node_modules/bulma/bulma.sass";
+$hero-darken: $dark !default;
+
+@import "layout";
+@import "syntax";
+@import "helpers";
+@import "explore-link";
+@import "sticky-nav";
+@import "showcase";
+@import "../node_modules/bulma-block-list/src/block-list.scss";
+
+// Remove gradient only from heroes without background images
+.hero.is-primary.is-bold.has-plain-background {
+  background-image: none !important;
+  background-color: #fff !important;
+}
+
+// Container-width border between navbar and hero content
+.hero.is-primary.is-bold.has-plain-background .hero-body .container {
+  border-top: 0;
+  padding-top: 4.5rem;
+  padding-bottom: 1.5rem;
+}
+
+// Reduce padding for plain background heroes (Shop, Showcase, Projects)
+// Desktop padding - adjusted to account for section padding below to create equal top/bottom spacing
+@media screen and (min-width: 1024px) {
+  .hero.is-primary.is-bold.has-plain-background .hero-body {
+    padding: 3rem 0 1.5rem !important;
+  }
+}
+
+// Mobile padding for plain background heroes - minimal side padding for proper left alignment
+@media screen and (max-width: 1023px) {
+  .hero.is-primary.is-bold.has-plain-background .hero-body {
+    padding: 3rem 1.5rem 1.5rem !important;
+  }
+}
+
+// Reduce section top padding on pages with plain background heroes
+// so title/subtitle is vertically centered between header border and content
+.Shop.section,
+.Showcase.section,
+.Projects.section,
+.Downloads.section {
+  padding-top: 1.5rem !important;
+}
+
+// Style text in plain background heroes (Shop, Showcase, Projects)
+// Only apply bold font and dark color to titles, not subtitles
+.hero.is-primary.is-bold.has-plain-background .title,
+.hero.is-primary.is-bold.has-plain-background h1,
+.hero.is-primary.is-bold.has-plain-background h2,
+.hero.is-primary.is-bold.has-plain-background h3,
+.hero.is-primary.is-bold.has-plain-background h4,
+.hero.is-primary.is-bold.has-plain-background h5,
+.hero.is-primary.is-bold.has-plain-background h6 {
+  color: #111 !important;
+  font-family: $is-family-primary !important;
+}
+
+// Mobile responsive fixes for plain background heroes (Shop, Showcase, Projects)
+@media screen and (max-width: 1023px) {
+  // Remove centering on mobile and align left like content below
+  .hero.is-primary.is-bold.has-plain-background .container,
+  .hero.is-primary.is-bold.has-plain-background .container.has-text-centered {
+    text-align: left !important;
+  }
+
+  // Also ensure the hero body itself is left-aligned
+  .hero.is-primary.is-bold.has-plain-background .hero-body {
+    text-align: left !important;
+  }
+
+  // Make subtitle smaller on mobile to match automat-toolkit page style
+  .hero.is-primary.is-bold.has-plain-background .subtitle {
+    font-size: 1.25rem !important; // Same as is-size-5
+  }
+}// Ensure heroes with background images work properly
+.hero.is-primary.is-bold.has-hero-image {
+  background-color: transparent !important;
+}
+
+body {
+  letter-spacing: 1px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern"1;
+  -moz-font-feature-settings: "kern"1;
+  -o-font-feature-settings: "kern"1;
+  font-feature-settings: "kern"1;
+  font-kerning: normal;
+}
+
+
+// About Page Styles
+.About .fluid-aspect_16x9 {
+  @include fluid-aspect(16 9);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.About.section {
+  padding: 3rem 1.5rem;
+  padding-top: 0;
+}
+
+// About text styling for better readability
+.about-text {
+  font-size: 1.5rem; // Match subtitle is-3 size
+  line-height: 1.6; // Improved line spacing for better readability
+  margin-bottom: 1.5rem; // Better spacing between paragraphs
+  font-weight: 400; // Normal weight for better readability
+
+  @media screen and (max-width: 1023px) {
+    font-size: 1.25rem; // Slightly smaller on mobile
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem 3rem;
+  }
+
+  .section.is-medium {
+    padding: 9rem 4.5rem;
+  }
+
+  .section.is-large {
+    padding: 18rem 6rem;
+  }
+
+  .About.section {
+    padding: 3rem 3rem;
+    padding-top: 0;
+  }
+
+  .About.section.is-medium {
+    padding: 9rem 4.5rem;
+    padding-top: 0;
+  }
+
+  .About.section.is-large {
+    padding: 18rem 6rem;
+    padding-top: 0;
+  }
+}
+
+// Headings and strong text - exclude hero elements
+h1:not(.hero *),
+h2:not(.hero *),
+h3:not(.hero *),
+h4:not(.hero *),
+h5:not(.hero *),
+h6:not(.hero *),
+strong:not(.hero *),
+.strong:not(.hero *) {
+  font-family: $is-family-primary;
+  color: #111 !important;
+}
+
+// Additional specific selectors for titles and content headings - exclude hero and white text elements
+.title:not(.hero *):not(.has-text-white),
+.subtitle:not(.hero *):not(.has-text-white),
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: #111 !important;
+}
+
+// Ensure product page titles use bold font family
+.title {
+  font-family: $is-family-primary !important;
+}
+
+// Ensure text in dark background sections remains white
+.has-background-dark .title,
+.has-background-dark .subtitle,
+.has-background-dark h1,
+.has-background-dark h2,
+.has-background-dark h3,
+.has-background-dark h4,
+.has-background-dark h5,
+.has-background-dark h6,
+.has-text-white {
+  color: #fff !important;
+}
+
+// Ensure hero text color is appropriate for background
+// White text only for dark hero backgrounds (like product pages)
+.hero.is-large.is-bold.is-primary h1,
+.hero.is-large.is-bold.is-primary h2,
+.hero.is-large.is-bold.is-primary h3,
+.hero.is-large.is-bold.is-primary h4,
+.hero.is-large.is-bold.is-primary h5,
+.hero.is-large.is-bold.is-primary h6,
+.hero.is-large.is-bold.is-primary .title,
+.hero.is-large.is-bold.is-primary .subtitle {
+  color: white !important;
+}
+
+// Dark text for light hero backgrounds (like projects, shop, showcase)
+.hero:not(.is-primary) h1,
+.hero:not(.is-primary) h2,
+.hero:not(.is-primary) h3,
+.hero:not(.is-primary) h4,
+.hero:not(.is-primary) h5,
+.hero:not(.is-primary) h6,
+.hero:not(.is-primary) .title,
+.hero:not(.is-primary) .subtitle {
+  color: #111 !important;
+}
+
+// Ensure explore links in dark heroes have white text/border to match (but not reversed ones)
+.hero.is-large.is-bold.is-primary .explore-link:not(.is-reversed) {
+  --el-color: #fff !important;
+  --el-hover-bg: #fff !important;
+  --el-hover-color: #111 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+// Explicit hover state for explore links in dark heroes (but not reversed ones)
+.hero.is-large.is-bold.is-primary .explore-link:not(.is-reversed):hover {
+  background: #fff !important;
+  color: #111 !important;
+  border-color: #fff !important;
+}
+
+.dada-a {
+  a:not(footer a) {
+    transition: color 0.4s;
+    text-decoration: underline;
+    text-decoration-color: #111;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    color: #111;
+
+    @include for-phone-only{
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+  }
+
+  a:not(footer a):hover {
+    text-decoration: underline;
+    text-decoration-color: #0000ee;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    color: #0000ee;
+
+    @include for-phone-only {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+
+.navbar-item img.header__logo {
+  height: 31px;
+  max-width: none;
+}
+
+.navbar-item img, .navbar-item img.header__logo {
+  max-height: none;
+}
+
+// Main navigation font styling
+.navbar .navbar-item {
+  font-family: $is-family-primary;
+  color: #111 !important;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.navbar .navbar-link {
+  font-family: $is-family-primary;
+  color: #111 !important;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+// Navigation hover effects - reset all text-decoration first
+.navbar .navbar-item,
+.navbar .navbar-link {
+  text-decoration: none !important;
+}
+
+// Apply underline only to direct navbar items (not dropdown items) on hover
+.navbar-end > .navbar-item:hover:not(.has-dropdown),
+.navbar-end > .navbar-item.has-dropdown > .navbar-link:hover {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+// Desktop: Add hover effect for dropdown items when individually hovered
+@media screen and (min-width: 1024px) {
+  .navbar .navbar-dropdown .navbar-item:hover {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
+// Mobile/Tablet: Ensure dropdown items don't show underlines
+@media screen and (max-width: 1023px) {
+  .navbar .navbar-dropdown .navbar-item:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Active state styling - show underline for current page
+.navbar-end > .navbar-item.is-active,
+.navbar .navbar-dropdown .navbar-item.is-active {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+// Additional safety: remove any inherited text-decoration from dropdown containers
+.navbar .navbar-dropdown {
+  text-decoration: none !important;
+}
+
+.navbar .has-dropdown .navbar-dropdown * {
+  text-decoration: none !important;
+}
+
+// Ensure navbar dropdown items also get the color
+.navbar .navbar-dropdown .navbar-item {
+  color: #111 !important;
+}
+
+// Desktop navigation font size - using standardized variable
+@media screen and (min-width: 1024px) {
+  .navbar .navbar-item,
+  .navbar .navbar-link {
+    font-size: $font-size-navigation;
+  }
+}
+
+// Mobile navigation sizing to match desktop
+@media screen and (max-width: 1023px) {
+  .navbar .navbar-item,
+  .navbar .navbar-link {
+    font-size: $font-size-navigation;
+  }
+
+  // Hamburger menu sizing to match header height (~80px)
+  .navbar-burger {
+    height: 5rem;
+    width: 5rem;
+    color: #111;
+  }
+
+  .navbar-burger span {
+    height: 3px;                    // Thicker lines to match docs site
+    width: 24px;                    // Wider lines for better visibility
+    background-color: #111;      // Use brand purple color
+    left: calc(50% - 12px);        // Center the lines properly
+    transition: transform 0.3s ease, opacity 0.3s ease; // Smooth animation
+  }
+
+  // Optimize line spacing to match docs site proportions
+  .navbar-burger span:nth-child(1) {
+    top: calc(50% - 8px);          // Top line positioned higher for better spacing
+  }
+
+  .navbar-burger span:nth-child(2) {
+    top: calc(50% - 1.5px);        // Middle line centered
+  }
+
+  .navbar-burger span:nth-child(3) {
+    top: calc(50% + 5px);          // Bottom line positioned lower for better spacing
+  }
+
+  // Ensure active (close) state also uses brand color
+  .navbar-burger.is-active span {
+    background-color: #111;
+  }
+
+  // Create X shape when burger menu is active (close icon)
+  .navbar-burger.is-active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .navbar-burger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-burger.is-active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+}
+
+.content {
+  img {
+    vertical-align: middle;
+    margin-bottom: 2rem;
+  }
+  .image-content {
+    margin-top: 2rem;
+  }
+}
+
+// Blog post font size adjustment
+.content.blog p {
+  font-size: 1.125rem; // 18px
+}
+
+.content.blog ul li {
+  font-size: 1.125rem; // 18px
+}
+
+// Video Embeds
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed,
+.embed-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.content ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ul.cv {
+
+  .time-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .time_period p {
+    color: #555;
+  }
+}
+
+ul.cv li {
+
+  &:hover {
+    background-color: #f3f3f3;
+  }
+}
+
+// Project Styles for Index
+.project-container {
+  position: relative;
+  @include fluid-aspect(16 9);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: $box-shadow;
+
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+
+  .overlay-outer {
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+  }
+
+  .overlay-inner {
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+  }
+
+  &:hover .image {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay-outer {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay-inner {
+    opacity: 1;
+  }
+
+  &:hover .project-title, &:hover .project-title h2 {
+    color: white !important;
+  }
+}
+
+// Explore Link Styles moved to _explore-link.scss
+
+// Circular Profile Image
+.image-cropper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+}
+
+.profile-image-container {
+  margin-top: 5rem;
+
+  @include for-phone-only {
+    margin-top: 4rem;
+  }
+}
+
+.profile-image {
+  display: inline;
+  margin: 0 auto;
+  //margin-left: -25%; //centers the image
+  height: 100%;
+  width: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+}
+
+// Product card styling for shop page - ryk-modular style
+.card {
+  transition: box-shadow 0.3s ease, transform 0.1s ease, border-color 0.3s ease;
+  border: 3px solid #111;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: #0000ee;
+  box-shadow: 0 8px 16px rgba(0, 0, 238, 0.15);
+  transform: translateY(-2px);
+}
+
+// Ensure card images also have sharp corners
+.card .card-image,
+.card .card-image .image,
+.card .card-image img {
+  border-radius: 0;
+}
+
+// Footer Styles
+.footer-social, .footer-social a {
+  color: #fff !important;
+}
+
+// Footer navigation styling to match header navigation exactly
+.footer-nav-item {
+  font-family: $is-family-primary;
+  font-size: $font-size-navigation !important; // Match header navigation exactly
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: text-decoration 0.3s ease;
+  padding: 0.5rem 0.75rem; // Similar padding to navbar items
+  border-bottom: none !important; // Ensure no conflicting borders
+}
+
+.footer-nav-item:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+  text-decoration-color: #fff !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+  border-bottom: none !important; // Ensure no conflicting borders
+}
+
+// Footer navigation responsive layout
+.footer-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; // Align to the right on desktop
+  align-items: center;
+}
+
+.footer-nav-list-item {
+  margin: 0;
+  padding: 0;
+}
+
+// Desktop: Keep horizontal layout with spacing
+@media screen and (min-width: 1024px) {
+  .footer-nav-list-item {
+    margin-right: 1rem;
+  }
+
+  .footer-nav-list-item:last-child {
+    margin-right: 0;
+  }
+}
+
+// Mobile: Stack navigation items vertically with proper spacing
+@media screen and (max-width: 1023px) {
+  .footer-nav-container {
+    width: 100% !important; // Take full width on mobile
+    order: 2; // Place navigation below dadamachines logo on mobile
+  }
+
+  .footer-nav-list {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important; // Reset desktop alignment
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  .footer-nav-list-item {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .footer-nav-item {
+    display: block !important;
+    width: 100% !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    text-align: center !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .footer-nav-list-item:last-child .footer-nav-item {
+    border-bottom: none !important;
+  }
+
+  // Center dadamachines logo on mobile
+  footer .mr-auto {
+    margin-right: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}// Desktop: Keep horizontal layout with spacing
+@media screen and (min-width: 1024px) {
+  .footer-nav-list-item {
+    margin-right: 1rem;
+  }
+
+  .footer-nav-list-item:last-child {
+    margin-right: 0;
+  }
+}
+
+// Ensure footer links stay white regardless of other classes - but exclude nav items
+footer.section.has-background-black a.has-text-white:not(.footer-nav-item),
+footer.section.has-background-black a.has-text-white:not(.footer-nav-item) strong,
+footer.section a.has-text-white:not(.footer-nav-item) {
+  color: #fff !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+footer.section.has-background-black a.has-text-white:not(.footer-nav-item):hover,
+footer.section a.has-text-white:not(.footer-nav-item):hover {
+  color: #fff !important;
+  opacity: 0.8;
+  border-bottom: none !important;
+}
+
+// Nuclear option - force all footer links to be white (except nav items which have their own styling)
+footer.section.has-background-black a:not(.footer-nav-item),
+footer.section.has-background-black a:not(.footer-nav-item) *,
+footer.has-background-black a:not(.footer-nav-item),
+footer.has-background-black a:not(.footer-nav-item) * {
+  color: #fff !important;
+}
+
+.footer-social .footer-icon svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: opacity 0.2s;
+}
+
+.footer-social a:hover .footer-icon svg {
+  opacity: 0.8;
+}
+
+// Responsive line breaks - hide on mobile, show on desktop
+.br-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .br-desktop {
+    display: inline;
+  }
+}
+
+// Newsletter Form Styles
+.newsletter-section {
+  background-color: #fff;
+}
+
+.newsletter-form-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.newsletter-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.newsletter-input-control {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.newsletter-button-control {
+  flex: 1 1 100%;
+}
+
+.newsletter-input {
+  border: 3px solid #000;
+  border-radius: 0;
+  width: 100%;
+  height: 3.25rem;
+}
+
+.newsletter-button {
+  white-space: nowrap;
+  height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.newsletter-captcha {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .newsletter-form-group {
+    gap: 0;
+  }
+
+  .newsletter-input-control {
+    flex: 1 1 auto;
+  }
+
+  .newsletter-button-control {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
+
+// Subscribe / preferences-center cards
+.subscribe-card {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  border: 3px solid #000;
+  background: #fff;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 #000;
+  }
+}
+
+.subscribe-card-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.subscribe-card-image {
+  width: 100%;
+  padding-top: 56.25%; // 16:9
+  background-size: cover;
+  background-position: center center;
+  background-color: #f5f5f5;
+  border-bottom: 3px solid #000;
+}
+
+.subscribe-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.subscribe-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  h3 {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.15;
+  }
+}
+
+.subscribe-card-check {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 6px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-45deg) translate(1px, -1px);
+    opacity: 0;
+  }
+}
+
+.subscribe-card-input:checked ~ .subscribe-card-body .subscribe-card-check {
+  background: #000;
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+.subscribe-card-input:focus-visible ~ .subscribe-card-body .subscribe-card-check {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+// =============================================================================
+// Shop Tabs
+// =============================================================================
+
+.shop-tabs {
+  margin-top: -0.5rem;
+
+  ul {
+    border-bottom: 3px solid #dbdbdb !important;
+  }
+
+  li a {
+    font-family: $is-family-primary;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    border-bottom-width: 3px !important;
+    border-bottom-color: transparent !important;
+    margin-bottom: -3px !important;
+  }
+
+  li.is-active a {
+    border-bottom-color: $active !important;
+  }
+}
+
+// =============================================================================
+// Regular Product Detail — matches pre-order typography
+// =============================================================================
+
+.product-detail {
+  padding: 2rem 0 3rem;
+  border-top: 3px solid #111;
+  margin-top: 0;
+}
+
+// Reduce section padding when it wraps a product detail page
+.section:has(.product-detail) {
+  padding-top: 0 !important;
+}
+
+.product-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.product-sidebar {
+  position: sticky;
+  top: 5rem;
+}
+
+.product-sidebar-title {
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-name {
+  font-family: $is-family-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+  color: #111 !important;
+}
+
+.product-detail-tagline {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.product-detail-pricing {
+  border-top: 3px solid #111;
+  padding-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-detail-price {
+  font-family: $is-family-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.product-detail-price-note {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-detail-features {
+  border-top: 1px solid #eee;
+  padding-top: 1.25rem;
+}
+
+.product-detail-features-title {
+  font-family: $is-family-primary;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111 !important;
+}
+
+.product-detail-features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0.15rem 0;
+    color: #333;
+  }
+}
+
+.product-detail-description {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.product-detail-reviews {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+// =============================================================================
+// Pre-order Campaign System — Kickstarter-style layout
+// =============================================================================
+
+.section.preorder-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.preorder-title {
+    margin-bottom: 3rem !important;
+}
+.preorder-campaign {
+  padding: 2rem 0 3rem;
+  border-top: 3px solid #111;
+  margin-top: 0;
+}
+
+// When preorder-campaign is used as a card (superbooth grid)
+.card.preorder-campaign {
+  padding: 0;
+  border-top: none;
+}
+
+// Left column — product image
+.preorder-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.preorder-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+// Form panel (hidden by default, revealed on CTA click)
+.preorder-form-panel,
+.contact-form-panel {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  .delete {
+    background-color: #111;
+
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+
+  .preorder-close-wrapper {
+    text-align: right;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.preorder-form-product-name {
+  font-size: 1.5rem;
+}
+
+.preorder-updates-link {
+  font-size: 0.95rem;
+}
+
+// Right column — sidebar
+.preorder-sidebar {
+  position: sticky;
+  top: 5rem;
+}
+
+// Progress bar & stats
+.preorder-progress.progress {
+  height: 0.5rem;
+  border-radius: 0;
+  border: none;
+  background-color: #ddd;
+  margin-bottom: 0;
+
+  &::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 0;
+  }
+  &::-webkit-progress-value {
+    background-color: #0000ee;
+    border-radius: 0;
+    transition: width 0.6s ease;
+  }
+  &::-moz-progress-bar {
+    background-color: #0000ee;
+    border-radius: 0;
+    transition: width 0.6s ease;
+  }
+}
+
+.preorder-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.preorder-stat-line {
+  font-family: $is-family-primary;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+
+  .preorder-count {
+    font-size: 1.25rem;
+  }
+}
+
+.preorder-sidebar-title {
+  margin-bottom: 1.5rem;
+}
+
+.preorder-product-name {
+  font-family: $is-family-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+}
+
+.preorder-product-tagline {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+// Price display
+.preorder-pricing {
+  border-top: 3px solid #111;
+  padding-top: 1.25rem;
+
+  .preorder-price {
+    font-family: $is-family-primary;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .preorder-price-note {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .preorder-price-regular {
+    font-size: 0.95rem;
+  }
+
+  .preorder-shipping-note {
+    font-size: 0.95rem;
+  }
+}
+
+.preorder-early-bird-tag {
+  font-family: $is-family-primary;
+  letter-spacing: 0.02em;
+  border-radius: 0;
+  border: 2px solid #111;
+}
+
+// Form
+.preorder-input.input,
+textarea.preorder-input {
+  border: 3px solid #000;
+  border-radius: 0;
+  font-size: 1.25rem;
+  background-color: #fff;
+
+  &::placeholder {
+    color: rgb(74, 74, 74);
+  }
+
+  &:focus {
+    border-color: $active;
+    box-shadow: none;
+  }
+}
+
+.preorder-input.input {
+  height: 3.25rem;
+}
+
+.preorder-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .radio + .radio {
+    margin-left: 0;
+  }
+}
+
+.preorder-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 3px solid #ddd;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+
+  &:hover {
+    border-color: #111;
+  }
+
+  input[type="radio"] {
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .preorder-radio-label {
+    strong {
+      font-size: 1.125rem;
+    }
+    .is-size-7 {
+      font-size: 0.95rem !important;
+      color: rgb(74, 74, 74) !important;
+    }
+  }
+
+  input[type="radio"]:checked ~ .preorder-radio-label {
+    color: #111;
+  }
+}
+
+.preorder-radio:has(input[type="radio"]:checked) {
+  border-color: #111;
+  background: #fafafa;
+}
+
+// Submit button loading state
+.preorder-submit.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: -0.625rem 0 0 -0.625rem;
+    border: 3px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: preorder-spin 0.5s infinite linear;
+  }
+}
+
+@keyframes preorder-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// Notifications
+.preorder-soldout,
+.preorder-success,
+.preorder-error {
+  border-radius: 0;
+  border: 3px solid;
+}
+
+.preorder-soldout { border-color: #946c00; }
+.preorder-success { border-color: #257942; }
+.preorder-error   { border-color: #cc0f35; }
+
+// Pre-order badge on shop product cards
+.preorder-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  font-family: $is-family-primary;
+  border-radius: 0;
+  border: 2px solid transparent;
+}
+
+// Superbooth landing page — mini progress bars in product grid
+.preorder-mini-progress.progress {
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0;
+  border: 1px solid #ddd;
+
+  &::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 0;
+  }
+  &::-webkit-progress-value {
+    background-color: #0000ee;
+    border-radius: 0;
+  }
+  &::-moz-progress-bar {
+    background-color: #0000ee;
+    border-radius: 0;
+  }
+}
+
+// ── Hero Slider ──
+
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+}
+.hero-slide-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-slide-image-contained { object-fit: contain; }
+.hero-slide .hero-body { position: relative; }
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+
+  &.is-active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hero-slider-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0;
+  &[hidden] { display: none; }
+}
+
+.hero-slider-dot {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  &.is-active::before { background: #fff; }
+  &:hover::before {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  &:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+}
+.hero-slider-pause {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+  &:focus-visible {
+    width: auto; height: auto; clip-path: none; z-index: 11;
+    bottom: 1.5rem; right: 1rem; padding: 8px 12px;
+    background: #111; color: #fff; border: 2px solid #fff;
+  }
+}
+@media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }

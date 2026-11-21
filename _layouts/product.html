@@ -1,0 +1,131 @@
+---
+layout: default
+---
+
+{% if page.preorder and page.preorder_id %}
+
+<!-- ── Pre-order product layout ── -->
+
+<section class="section preorder-section" id="{{ page.preorder_id }}-section">
+  <div class="container">
+    {% include preorder-form.html product_id=page.preorder_id image=page.image %}
+  </div>
+</section>
+
+{% if content != "" %}
+<section class="section">
+  <div class="container">
+    <div class="content is-medium">
+      {{ content }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<script src="{{ '/assets/js/preorder.js' | relative_url }}"></script>
+
+{% else %}
+
+<!-- ── Regular product layout ── -->
+
+<div class="product-detail">
+  <div class="columns is-variable is-6">
+
+    <!-- LEFT: Product Image -->
+    <div class="column is-8-desktop is-12-tablet">
+      <div class="product-image-wrapper{% if page.product_render %} product-image-wrapper--render{% endif %}">
+        {% if page.image %}
+          <img src="{{ page.image }}" alt="{{ page.title }}" />
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- RIGHT: Product Info -->
+    <div class="column is-4-desktop is-12-tablet">
+      <div class="product-sidebar">
+
+        <div class="product-sidebar-title">
+          <h1 class="product-detail-name">{{ page.title }}</h1>
+          <p class="product-detail-tagline">{{ page.description }}</p>
+        </div>
+
+        <div class="product-detail-pricing">
+          {% assign reference_price = site.data.product_reference_prices[page.reference_price_key] %}
+          <p class="product-detail-price">{{ reference_price.amount | default: page.price }}</p>
+          <p class="product-detail-price-note">{{ reference_price.note | default: 'Germany · incl. 19% VAT · plus shipping' }}</p>
+        </div>
+
+        {% assign notification_first_character = page.notification_url | slice: 0 %}
+        {% if notification_first_character == '#' %}
+          {% assign notification_href = page.notification_url %}
+        {% else %}
+          {% assign notification_href = page.notification_url | relative_url %}
+        {% endif %}
+
+        {% if page.legacy %}
+        <span class="tag is-medium" style="background: #666; color: #fff; border-radius: 0; font-family: inherit;">Legacy</span>
+        {% elsif page.sold_out %}
+        <p class="product-detail-price-note mt-4">Currently sold out.</p>
+        <a href="{{ notification_href }}" class="explore-link is-blue is-large mt-4">Get notified</a>
+        {% elsif page.launch_updates %}
+        <p class="product-detail-price-note mt-4">Pre-orders aren't open yet.</p>
+        <a href="{{ notification_href }}" class="explore-link is-blue is-large mt-4">Get notified</a>
+        {% elsif page.productshopurl %}
+        <a href="{{ page.productshopurl }}" class="explore-link is-blue is-large mt-4" target="_blank">Buy now</a>
+        {% endif %}
+
+        {% if page.rating %}
+            {% include rating.html rating=page.rating %}
+        {% endif %}
+
+        {% if page.features %}
+        <div class="content mt-4">
+            {% for feature in page.features %}
+            <p>
+                <span class="icon">
+                    {% if feature.icon %}
+                    <i class="fas {{ feature.icon }}"></i>
+                    {% else %}
+                    <i class="fas fa-circle fa-xs"></i>
+                    {% endif %}
+                </span>
+                <span>{{ feature.label }}</span></p>
+            {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+
+  {% if content != "" %}
+  <div class="product-detail-description">
+    <div class="content is-medium">
+      {{ content }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.keyfeatures %}
+  <section class="product-detail-features product-detail-features--below" aria-label="Key features">
+    <h2 class="product-detail-features-title">Key features</h2>
+    <ul class="product-detail-features-list">
+      {% for item in page.keyfeatures %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if site.data.reviews[page.product_code] %}
+  <div class="product-detail-reviews">
+    <h3 class="product-detail-features-title">Reviews</h3>
+    {% for review in site.data.reviews[page.product_code] %}
+    {% include review.html %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>
+
+{% endif %}

@@ -1,0 +1,17 @@
+<section class="story-split story-tone-{{ include.story.tone }}{% if include.story.image_right %} story-split--image-right{% endif %}" aria-labelledby="home-{{ include.story.id }}">
+  <div class="story-media{% if include.story.render %} story-media--render{% endif %}">
+    <img src="{{ include.story.image | relative_url }}" {% if include.story.image_small %}srcset="{{ include.story.image_small | relative_url }} 800w, {{ include.story.image | relative_url }} 1600w" sizes="(max-width: 760px) 100vw, 50vw"{% endif %} alt="{{ include.story.alt }}" width="{{ include.story.width }}" height="{{ include.story.height }}" loading="lazy">
+  </div>
+  <div class="story-copy">
+    <p class="tbd-section-label">{{ include.story.eyebrow }}</p>
+    <h2 id="home-{{ include.story.id }}">{{ include.story.title }}</h2>
+    <p>{{ include.story.description }}</p>
+    <div class="tbd-actions">
+      <a class="explore-link is-dark is-medium is-reversed" href="{{ include.story.url | relative_url }}">{{ include.story.link_text }}</a>
+      {% if include.story.notification_url %}
+      <a class="explore-link is-blue is-medium" href="{{ include.story.notification_url | relative_url }}">Get notified</a>
+      {% endif %}
+    </div>
+    {% if include.story.status %}<p class="story-status">{{ include.story.status }}</p>{% endif %}
+  </div>
+</section>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+// Minimal, reusable Explore Link component
+// Variants: .is-light (white outline), .is-dark (black outline)
+// Sizes: .is-large to match Bulma .button.is-large (~24px)
+
+.explore-link {
+  --el-color: #111;
+  --el-hover-bg: #111;
+  --el-hover-color: #fff;
+
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: .45rem 1.25rem;
+  border: 3px solid var(--el-color);
+  background: transparent;
+  border-radius: 0;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s, transform .1s;
+  color: var(--el-color);
+}
+.explore-link:focus-visible { outline: 3px solid #6969ff; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .explore-link { transition: none; }
+  .explore-link:hover { transform: none !important; }
+}
+
+.explore-link:hover {
+  transform: translateY(-1px);
+  background: var(--el-hover-bg);
+  color: var(--el-hover-color);
+  border-color: var(--el-hover-bg);
+}
+
+// color variants
+.explore-link.is-dark { --el-color: #111; --el-hover-bg: #111; --el-hover-color: #fff; }
+.explore-link.is-light { --el-color: #fff; --el-hover-bg: #fff; --el-hover-color: #111; }
+
+// Reversed light variant for main hero - starts filled, becomes outline on hover
+.explore-link.is-light.is-reversed {
+  background: #fff !important;
+  color: #111 !important;
+  border: 3px solid #fff !important;
+}
+
+.explore-link.is-light.is-reversed:hover {
+  background: transparent !important;
+  color: #fff !important;
+  border: 3px solid #fff !important;
+  transform: translateY(-1px);
+}
+
+// Reversed dark variant for showcase - starts filled, becomes outline on hover
+.explore-link.is-dark.is-reversed {
+  background: #111 !important;
+  color: #fff !important;
+  border: 3px solid #111 !important;
+}
+
+.explore-link.is-dark.is-reversed:hover {
+  background: transparent !important;
+  color: #111 !important;
+  border: 3px solid #111 !important;
+  transform: translateY(-1px);
+}
+
+// Blue variant with solid background
+.explore-link.is-blue {
+  background: #0000ee;
+  color: #fff;
+  border: 3px solid transparent !important;
+}
+
+.explore-link.is-blue:hover {
+  background: #fff;
+  color: #0000ee;
+  border: 3px solid #0000ee !important;
+  transform: translateY(-1px);
+}
+
+// size variants - standardized to match navigation sizes
+.explore-link.is-large { font-size: 1.5rem; padding: .55rem 1.5rem; }
+.explore-link.is-medium { font-size: 1.25rem; padding: .45rem 1rem; } // Match standard navigation size (20px)
+.explore-link.is-small { font-size: 0.875rem; padding: .35rem 1rem; }

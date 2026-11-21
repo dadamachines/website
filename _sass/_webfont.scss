@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Lelo-Bold';
+    src: url('/fonts/Lelo-Bold.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/Lelo-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/fonts/Lelo-Bold.woff') format('woff'), /* Modern Browsers */
+            url('/fonts/Lelo-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+    font-style:   normal;
+    font-weight:  700;
+}
+
+@font-face {
+    font-family: 'Lelo-Regular';
+    src: url('/fonts/Lelo-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/Lelo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/fonts/Lelo-Regular.woff') format('woff'), /* Modern Browsers */
+            url('/fonts/Lelo-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+    font-style:   normal;
+    font-weight:  400;
+}

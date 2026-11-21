@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" role="img" aria-labelledby="title description">
+  <title id="title">Build your own instrument on TBD-16</title>
+  <desc id="description">Custom apps run on the RP2350B and control the hardware interface and MIDI. Custom DSP plugins run on the ESP32-P4 and generate or process audio. The two layers work together on the same TBD-16 hardware.</desc>
+  <!-- Concept diagram, not a circuit schematic. Transparent, editable black vectors. -->
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #111; }
+      .label { font-size: 22px; font-weight: 700; }
+      .note { font-size: 18px; }
+      .line { fill: none; stroke: #111; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 8 5 1 9" class="line"/>
+    </marker>
+    <g id="key" class="line"><circle r="11"/></g>
+    <g id="pot" class="line"><circle r="16"/><path d="M0-16V-9"/></g>
+    <g id="screw" class="line"><circle r="7"/><path d="M-3-2 0-4 3-2V2L0 4-3 2Z"/></g>
+    <g id="step" class="line">
+      <use href="#key"/>
+      <circle cy="-17" r="2.5"/>
+    </g>
+  </defs>
+  <g text-anchor="middle" class="note">
+    <text x="120" y="36">YOUR CODE</text>
+    <text x="425" y="36">APPS &amp; SOUND ENGINES</text>
+    <text x="820" y="36">ONE INSTRUMENT</text>
+  </g>
+  <!-- Code editor: no raster assets or embedded screenshots. -->
+  <g transform="translate(20 164)">
+    <rect width="200" height="155" rx="5" class="line"/>
+    <path d="M0 28H200" class="line"/>
+    <g fill="#111"><circle cx="15" cy="14" r="3"/><circle cx="27" cy="14" r="3"/><circle cx="39" cy="14" r="3"/></g>
+    <path d="M60 65 40 82 60 99M140 65 160 82 140 99M110 56 90 110" class="line"/>
+    <text x="100" y="191" text-anchor="middle" class="label">Build &amp; modify</text>
+    <text x="100" y="220" text-anchor="middle" class="note">Apps, engines, firmware</text>
+  </g>
+  <!-- The two programmable layers; arrows describe development, not wiring. -->
+  <g class="line" marker-end="url(#arrow)">
+    <path d="M220 220H251V132H285"/>
+    <path d="M220 265H251V349H285"/>
+    <path d="M565 132H615V206H666"/>
+    <path d="M565 349H615V304H666"/>
+  </g>
+  <g transform="translate(285 81)">
+    <rect width="280" height="147" rx="5" class="line"/>
+    <text x="24" y="36" class="label">Your app</text>
+    <text x="24" y="66" class="note">RP2350B</text>
+    <text x="24" y="105" class="note">Display, controls &amp; MIDI</text>
+  </g>
+  <g transform="translate(285 282)">
+    <rect width="280" height="147" rx="5" class="line"/>
+    <text x="24" y="36" class="label">Your DSP plugin</text>
+    <text x="24" y="66" class="note">ESP32-P4</text>
+    <text x="24" y="105" class="note">Synths &amp; audio processing</text>
+  </g>
+  <!-- Front-panel centres and sizes follow controls.webp, scaled from 1018px
+       to 280 units. Keep the inset step grid and its sixteen separate LEDs. -->
+  <g transform="translate(680 110)">
+    <rect width="280" height="280" rx="3" class="line"/>
+    <use href="#screw" x="23" y="23"/><use href="#screw" x="257" y="23"/>
+    <use href="#screw" x="23" y="257"/><use href="#screw" x="257" y="257"/>
+    <rect x="65" y="9" width="150" height="76" rx="2" class="line"/>
+    <text x="140" y="43" text-anchor="middle" class="note">YOUR APP</text>
+    <path d="M79 68H99L105 53 115 75 125 60H201" class="line"/>
+    <use href="#key" x="35" y="50"/><use href="#key" x="245" y="50"/>
+    <circle cx="35" cy="80" r="2.5" class="line"/><circle cx="245" cy="80" r="2.5" class="line"/>
+    <use href="#pot" x="35" y="115"/><use href="#pot" x="105" y="115"/>
+    <use href="#pot" x="175" y="115"/><use href="#pot" x="245" y="115"/>
+    <circle cx="140" cy="132" r="2.5" class="line"/>
+    <!-- Direction pad, record/play, two function keys and A/B/X/Y cluster. -->
+    <use href="#key" x="70" y="149"/>
+    <use href="#key" x="42" y="177"/><use href="#key" x="70" y="177"/><use href="#key" x="98" y="177"/>
+    <use href="#key" x="140" y="149"/><use href="#key" x="168" y="149"/>
+    <use href="#key" x="140" y="177"/><use href="#key" x="168" y="177"/>
+    <use href="#key" x="210" y="149"/><use href="#key" x="238" y="149"/>
+    <use href="#key" x="210" y="177"/><use href="#key" x="238" y="177"/>
+    <path d="M67 151 70 147 73 151M44 174 40 177 44 180M67 175 70 179 73 175M96 174 100 177 96 180M166 145 172 149 166 153Z" class="line"/>
+    <circle cx="140" cy="149" r="2.5" fill="#111"/>
+    <g text-anchor="middle" style="font-size: 12px">
+      <text x="210" y="153">x</text><text x="238" y="153">y</text>
+      <text x="210" y="181">a</text><text x="238" y="181">b</text>
+    </g>
+    <g transform="translate(42 215)">
+      <use href="#step"/><use href="#step" x="28"/><use href="#step" x="56"/><use href="#step" x="84"/>
+      <use href="#step" x="112"/><use href="#step" x="140"/><use href="#step" x="168"/><use href="#step" x="196"/>
+      <use href="#step" y="38"/><use href="#step" x="28" y="38"/><use href="#step" x="56" y="38"/><use href="#step" x="84" y="38"/>
+      <use href="#step" x="112" y="38"/><use href="#step" x="140" y="38"/><use href="#step" x="168" y="38"/><use href="#step" x="196" y="38"/>
+      <path d="M-4 0H4M108 0H116M-4 38H4M108 38H116" class="line"/>
+    </g>
+    <text x="140" y="319" text-anchor="middle" class="label">tbd-16</text>
+  </g>
+  <text x="500" y="493" text-anchor="middle" class="note">Change the controls, the sound engine, or both.</text>
+</svg>

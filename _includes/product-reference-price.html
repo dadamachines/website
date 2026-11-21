@@ -1,0 +1,3 @@
+{% comment %}Shared price block. Pass key from _data/product_reference_prices.yml.{% endcomment %}
+{% assign reference_price = site.data.product_reference_prices[include.key] %}
+<p class="tbd-price">{{ reference_price.amount | escape }}<span>{{ reference_price.note | escape }}</span></p>

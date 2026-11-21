@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="blog-index">
+  <header class="blog-index-heading">
+    <p class="blog-eyebrow">Stories from dadamachines</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
+  {{ content }}
+  <div class="blog-grid">
+    {% for post in paginator.posts %}
+      {% include post-card.html featured=forloop.first %}
+    {% endfor %}
+  </div>
+  {% if paginator.total_pages > 1 %}<div class="blog-pagination">{% include pagination.html %}</div>{% endif %}
+  <section class="blog-subscribe" aria-label="Newsletter signup">
+    {% include newsletter-bulma.html title="Stay in the loop" button_class="is-blue is-medium" %}
+  </section>
+</div>
